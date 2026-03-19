@@ -1,0 +1,84 @@
+[05-Feb-2024 15:05:11 UTC] PHP Warning:  require(/home/clrenergyapp/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php on line 41
+[05-Feb-2024 15:05:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/clrenergyapp/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/clrenergyapp/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/clrenergy...')
+#1 /home/clrenergyapp/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/clrenergyapp/public_html/index.php(34): require('/home/clrenergy...')
+#3 {main}
+  thrown in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php on line 41
+[05-Feb-2024 15:05:14 UTC] PHP Warning:  require(/home/clrenergyapp/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php on line 41
+[05-Feb-2024 15:05:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/clrenergyapp/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/clrenergyapp/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/clrenergy...')
+#1 /home/clrenergyapp/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/clrenergyapp/public_html/index.php(34): require('/home/clrenergy...')
+#3 {main}
+  thrown in /home/clrenergyapp/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:57:52 UTC] PHP Warning:  require(/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:57:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/h2streaming/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/h2streaming/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/h2streami...')
+#1 /home/h2streaming/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/h2streaming/public_html/index.php(33): require('/home/h2streami...')
+#3 {main}
+  thrown in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Warning:  require(/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/h2streaming/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/h2streaming/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/h2streami...')
+#1 /home/h2streaming/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/h2streaming/public_html/index.php(33): require('/home/h2streami...')
+#3 {main}
+  thrown in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Warning:  require(/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/h2streaming/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/h2streaming/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/h2streami...')
+#1 /home/h2streaming/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/h2streaming/public_html/index.php(33): require('/home/h2streami...')
+#3 {main}
+  thrown in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Warning:  require(/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/h2streaming/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/h2streaming/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/h2streami...')
+#1 /home/h2streaming/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/h2streaming/public_html/index.php(33): require('/home/h2streami...')
+#3 {main}
+  thrown in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:13 UTC] PHP Warning:  require(/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php): Failed to open stream: No such file or directory in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[17-Mar-2024 20:58:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/h2streaming/public_html/vendor/composer/../../app/Helper/helpers.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/h2streaming/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/h2streaming/public_html/vendor/composer/autoload_real.php(45): {closure}('1f9e54d362959b6...', '/home/h2streami...')
+#1 /home/h2streaming/public_html/vendor/autoload.php(25): ComposerAutoloaderInit6fbf26ac30585fcaf956cdbcee5fd39a::getLoader()
+#2 /home/h2streaming/public_html/index.php(33): require('/home/h2streami...')
+#3 {main}
+  thrown in /home/h2streaming/public_html/vendor/composer/autoload_real.php on line 41
+[31-May-2025 15:14:38 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:15:39 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:16:59 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:20:32 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:23:25 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:26:08 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProofController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[31-May-2025 15:33:25 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProoffController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProoffController.php on line 10
+[31-May-2025 15:43:57 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\WithdrawProoffController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/user/WithdrawProofController.php on line 10
+[02-Jun-2025 11:26:10 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[02-Jun-2025 11:26:35 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[02-Jun-2025 11:27:12 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[02-Jun-2025 11:27:31 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[02-Jun-2025 11:28:59 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[02-Jun-2025 11:29:42 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\user\WithdrawProofPublicController, because the name is already in use in /home/lzfvhstd/public_html/app/Http/Controllers/WithdrawProofPublicController.php on line 13
+[21-Jun-2025 13:26:36 Africa/Harare] PHP Fatal error:  Cannot use App\Http\Controllers\SpinController as SpinController because the name is already in use in /home/zgvdquyg/public_html/routes/web.php on line 32
+[21-Jun-2025 13:26:55 Africa/Harare] PHP Fatal error:  Cannot use App\Http\Controllers\SpinController as SpinController because the name is already in use in /home/zgvdquyg/public_html/routes/web.php on line 32
+[21-Jun-2025 13:27:05 Africa/Harare] PHP Fatal error:  Cannot use App\Http\Controllers\SpinController as SpinController because the name is already in use in /home/zgvdquyg/public_html/routes/web.php on line 32
+[21-Jun-2025 13:27:21 Africa/Harare] PHP Fatal error:  Cannot use App\Http\Controllers\SpinController as SpinController because the name is already in use in /home/zgvdquyg/public_html/routes/web.php on line 32
+[21-Jun-2025 13:36:06 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\SpinController, because the name is already in use in /home/zgvdquyg/public_html/app/Http/Controllers/user/SpinController.php on line 11
+[21-Jun-2025 13:36:06 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\SpinController, because the name is already in use in /home/zgvdquyg/public_html/app/Http/Controllers/user/SpinController.php on line 11
+[21-Jun-2025 13:39:02 Africa/Harare] PHP Fatal error:  Cannot declare class App\Http\Controllers\SpinController, because the name is already in use in /home/zgvdquyg/public_html/app/Http/Controllers/user/SpinController.php on line 11
+[24-Jun-2025 08:38:22 Africa/Harare] PHP Fatal error:  Cannot use Carbon\Carbon as Carbon because the name is already in use in /home/zgvdquyg/public_html/storage/framework/views/e01f4ae401e2c9998926d5a8687fea50822e9a8e.php on line 153
+[24-Jun-2025 08:38:27 Africa/Harare] PHP Fatal error:  Cannot use Carbon\Carbon as Carbon because the name is already in use in /home/zgvdquyg/public_html/storage/framework/views/e01f4ae401e2c9998926d5a8687fea50822e9a8e.php on line 153
+[25-Jun-2025 02:24:52 Africa/Harare] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/zgvdquyg/fuelingtotalenergies.online/app/Http/Controllers/user/GetBonusController.php on line 4
+[25-Jun-2025 02:29:36 Africa/Harare] PHP Fatal error:  Cannot redeclare App\Http\Controllers\user\GetBonusController::preview() in /home/zgvdquyg/fuelingtotalenergies.online/app/Http/Controllers/user/GetBonusController.php on line 134
+[25-Jun-2025 02:30:29 Africa/Harare] PHP Fatal error:  Cannot redeclare App\Http\Controllers\user\GetBonusController::checkin() in /home/zgvdquyg/fuelingtotalenergies.online/app/Http/Controllers/user/GetBonusController.php on line 139
+[25-Jun-2025 02:31:45 Africa/Harare] PHP Fatal error:  Cannot redeclare App\Http\Controllers\user\GetBonusController::checkin() in /home/zgvdquyg/fuelingtotalenergies.online/app/Http/Controllers/user/GetBonusController.php on line 139
+[25-Jun-2025 02:32:25 Africa/Harare] PHP Fatal error:  Cannot redeclare App\Http\Controllers\user\GetBonusController::preview() in /home/zgvdquyg/fuelingtotalenergies.online/app/Http/Controllers/user/GetBonusController.php on line 107
