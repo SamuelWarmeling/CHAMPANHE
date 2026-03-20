@@ -23,8 +23,13 @@ php artisan route:cache
 php artisan view:cache
 
 # Roda migrations (funciona com qualquer driver: mysql, pgsql, sqlite)
-echo "==> Rodando migrations (DB_CONNECTION=${DB_CONNECTION})..."
-php artisan migrate --force
+if [ "$DB_FRESH" = "true" ]; then
+    echo "==> DB_FRESH=true: dropando todas as tabelas e rodando migrate:fresh..."
+    php artisan migrate:fresh --force
+else
+    echo "==> Rodando migrations (DB_CONNECTION=${DB_CONNECTION})..."
+    php artisan migrate --force
+fi
 
 echo "==> Iniciando nginx + php-fpm..."
 exec /usr/bin/supervisord -n -c /etc/supervisor/conf.d/supervisord.conf
