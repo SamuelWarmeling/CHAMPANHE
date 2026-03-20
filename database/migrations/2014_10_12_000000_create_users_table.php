@@ -18,10 +18,16 @@ return new class extends Migration
             $table->string('ref_by');
             $table->string('ref_id');
             $table->string('name');
+            $table->string('username')->nullable();
             $table->string('email')->unique();
+            $table->string('phone')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('type')->nullable();
+            $table->double('balance', 20, 2)->default(0);
+            $table->string('code')->nullable();
+            $table->integer('vip_level')->default(0);
+            $table->integer('investor')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
