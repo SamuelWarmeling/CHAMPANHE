@@ -9,6 +9,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
+RUN cp .env.example .env
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
 RUN php artisan key:generate --force
