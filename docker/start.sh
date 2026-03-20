@@ -18,10 +18,9 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# Roda migrations — nao derruba o container se falhar
-# (banco pode nao estar pronto ainda ou env vars ausentes)
-echo "==> Rodando migrations..."
-php artisan migrate --force || echo "[AVISO] migrate falhou — verifique DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD no Render"
+# Roda migrations (funciona com qualquer driver: mysql, pgsql, sqlite)
+echo "==> Rodando migrations (DB_CONNECTION=${DB_CONNECTION})..."
+php artisan migrate --force
 
 echo "==> Iniciando nginx + php-fpm..."
 exec /usr/bin/supervisord -n -c /etc/supervisor/conf.d/supervisord.conf

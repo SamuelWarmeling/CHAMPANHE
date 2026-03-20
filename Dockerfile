@@ -7,6 +7,9 @@ RUN apk add --no-cache \
     nodejs \
     npm \
     mysql-client \
+    postgresql-client \
+    libpq-dev \
+    sqlite \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
@@ -14,7 +17,7 @@ RUN apk add --no-cache \
     oniguruma-dev \
     gettext \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+    && docker-php-ext-install pdo_mysql pdo_pgsql pdo_sqlite mbstring exif pcntl bcmath gd zip
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -41,8 +44,12 @@ RUN mkdir -p \
     storage/logs \
     bootstrap/cache
 
+# Cria o arquivo SQLite vazio para que o driver SQLite funcione ao iniciar
+RUN touch database/database.sqlite \
+    && chmod 664 database/database.sqlite
+
 # Permissoes para Laravel
-RUN chown -R www-data:www-data storage bootstrap/cache \
+RUN chown -R www-data:www-data storage bootstrap/cache database/database.sqlite \
     && chmod -R 775 storage bootstrap/cache
 
 # Configs Docker
