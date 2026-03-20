@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
 RUN apt-get update && apt-get install -y \
     git curl zip unzip libpng-dev libonig-dev libxml2-dev nodejs npm \
@@ -6,16 +6,14 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN a2enmod rewrite
-
 WORKDIR /var/www/html
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
+RUN php artisan key:generate --force
+RUN chown -R www-data:www-data storage bootstrap/cache
 
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+EXPOSE 8000
 
-EXPOSE 80
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
