@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
-COPY . .
+WORKDIR /app
+COPY . /app
 
 RUN cp .env.example .env
 RUN composer install --no-dev --optimize-autoloader
@@ -18,4 +18,4 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 8000
 
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
