@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>CARGILL_recharge</title> 
+  <title>CARGILL_deposito</title> 
   <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/v2/css/common.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">-->
@@ -46,7 +46,7 @@
         }
     </style> 
  </head> 
- <body class="common_body common_background" style="background-image: url(/public/v2/img/user/recharge_bg.png);"> 
+ <body class="common_body common_background" style="background-image: url(/public/v2/img/user/deposito_bg.png);"> 
   <div class="common_header"> 
 <a href="/" class="back position flex items-center space-x-2">
     <!-- SVG Back Icon -->
@@ -55,12 +55,12 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
     </p>
-    <span>Recharge</span>
+    <span>Depósito</span>
 </a>
   </div> 
-  <script id="BalanceTpl" type="text/html">
+  <script id="SaldoTpl" type="text/html">
     <div class="common_margin_10 common_padding_10" >
-        <div class="label" style="color: #DEEFFF">Balance</div>
+        <div class="label" style="color: #DEEFFF">Saldo</div>
         <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">R500</div>
     </div>
 </script> 
@@ -70,14 +70,14 @@
    <form onsubmit="goPayment(event)">
     <div class="demo-login-container"> 
      <div class="common_item_title">
-      Recharge amount
+      Depósito amount
      </div> 
      <div class="layui-form-item" style="margin-top: 10px;border-radius: 8px;background: #ffffff;border: 1px solid #DEDEDE"> 
       <div class="layui-input-wrap"> 
        <div class="layui-input-prefix">
         =
        </div> 
-       <input type="number" name="amount" id="recharge_amount" value="" lay-verify="required" placeholder="Recharge amount" lay-reqtext="Recharge amount" autocomplete="off" class="layui-input"> 
+       <input type="number" name="amount" id="deposito_amount" value="" lay-verify="required" placeholder="Depósito amount" lay-reqtext="Depósito amount" autocomplete="off" class="layui-input"> 
       </div> 
      </div> 
      <div class="common_item_title">
@@ -135,7 +135,7 @@
      <a href="/deposit/history" class="fixed_top_right" style="margin-top: 30px"> Record &gt; </a> 
      <div class="fixed_bottom"> 
       <div style="padding: 10px 15px;"> 
-       <button class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius common_btn" lay-submit="" lay-filter="recharge">Recharge Now</button> 
+       <button class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius common_btn" lay-submit="" lay-filter="deposito">Depósito Now</button> 
       </div> 
      </div> 
     </div> 
@@ -146,7 +146,7 @@
     <div class="demo-login-container"> 
      <div> 
       <div class="common_item_title">
-       Recharge Channel
+       Depósito Channel
       </div> 
      </div>
      <h3 style="margin-top: 25px;">Payment Channel</h3>
@@ -216,7 +216,7 @@
   function goPayment(event) {
     event.preventDefault();
     const overlay = document.getElementById('loadingOverlay');
-    const amount = document.getElementById('recharge_amount').value;
+    const amount = document.getElementById('deposito_amount').value;
     const method = document.querySelector('input[name="payment_method"]:checked');
 
     if (!method) {
@@ -225,7 +225,7 @@
     }
 
     if (!amount || amount <= 0) {
-      alert("Enter recharge amount");
+      alert("Enter deposito amount");
       return;
     }
 

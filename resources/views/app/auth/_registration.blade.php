@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Register_CARGILL</title>
+  <title>Cadastro_CARGILL</title>
   <link rel="stylesheet" href="/public/site/layui/css/layui.css">
   <link rel="stylesheet" href="/public/site/css/common.css">
   <style>
@@ -70,7 +70,7 @@
 
     <!-- ✅ OTP message banner -->
     <div id="otpMessage" class="otp-banner">
-      คYou need to ensure that your phone number is correct. To withdraw funds, you need to collect an OTP verification code on your phone.
+      คYou need to ensure that your phone number is correct. To retirada funds, you need to collect an OTP verification code on your phone.
     </div>
 
     <div class="login_form">
@@ -78,13 +78,13 @@
         @csrf
 
         <div class="form_tab">
-          <div class="left">Register</div>
+          <div class="left">Cadastro</div>
           <a href="{{ url('login') }}" class="right">Login</a>
         </div>
 
         <div class="form_container">
 
-          <!-- Phone -->
+          <!-- Telefone -->
           <div class="label">Mobile phone number</div>
           <div class="layui-form-item">
             <label class="layui-form-label">+27</label>
@@ -98,8 +98,8 @@
             </div>
           </div>
 
-          <!-- Password -->
-          <div class="label">Password</div>
+          <!-- Senha -->
+          <div class="label">Senha</div>
           <div class="layui-form-item">
             <div class="layui-input-wrap">
               <input type="password" name="password" lay-verify="required" placeholder="Please enter password" autocomplete="off" class="layui-input" lay-affix="eye" style="border-radius:8px;">
@@ -110,7 +110,7 @@
           </div>
 
           <!-- Invitation -->
-          <div class="label">Invitation Code</div>
+          <div class="label">Código de Convite</div>
           <div class="layui-form-item">
             <div class="layui-input-wrap">
               <input type="text" name="ref_by" value="{{ $ref_by ?? rand(100000,999999) }}"  lay-verify="required" placeholder="Please enter invitation code" autocomplete="off" class="layui-input" lay-affix="clear">
@@ -142,9 +142,9 @@
             </div>
           </div>
 
-          <!-- Register Button -->
+          <!-- Cadastro Button -->
           <div style="margin-top: 40px">
-            <button class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius login_btn" lay-submit lay-filter="register">Register Now</button>
+            <button class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius login_btn" lay-submit lay-filter="register">Cadastro Now</button>
           </div>
 
         </div>

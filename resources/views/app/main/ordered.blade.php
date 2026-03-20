@@ -92,9 +92,9 @@
     <div id="order_list">
         @php
             use Carbon\Carbon;
-            use App\Models\Purchase;
+            use App\Models\Participação;
 
-            $purchases = Purchase::where('user_id', auth()->id())
+            $purchases = Participação::where('user_id', auth()->id())
                 ->with('package')
                 ->orderByDesc('id')
                 ->get();
@@ -116,7 +116,7 @@
                 </div>
                 <div class="product_card_body">
                     <div class="product_info">
-                        <p class="label">Purchase Date</p>
+                        <p class="label">Participação Date</p>
                         <p class="value">{{ $purchase->created_at->format('Y-m-d') }}</p>
                     </div>
                     <div class="product_info">

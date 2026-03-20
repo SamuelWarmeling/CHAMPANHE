@@ -95,7 +95,7 @@ fphp
                 <div class="demo-login-container" style=""> 
                     <p class="common_explain">Explain</p> 
                     <div class="common_content"> 
-                        <p>1. You add only one bank account for withdrawal purposes. </p> 
+                        <p>1. You add only one bank account for retiradaal purposes. </p> 
                         <p>2. Wrong banking details result in loss of funds .</p> 
                         <p>3. No refund in any cases make sure that your bank details is correct.</p> 
                     </div> 

@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Balance Details</title>
+    <title>Saldo Details</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
     <link rel="stylesheet" href="/public/site/layui/css/layui.css">
@@ -18,7 +18,7 @@
             margin-bottom: 0px;
             padding-bottom: 0px;
         }
-        #Balance_details{
+        #Saldo_details{
             margin: 0px;
             border-radius: 16px;
             background: #FFFFFf;
@@ -122,23 +122,23 @@
 <div class="common_header common_header_order">
     <a href="/home" class="back position">
         <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
-        Balance Details </a>
+        Saldo Details </a>
 </div>
 <div class="index_header position" style="background: none;top: -90px;">
     <div class="index_menu">
         <div class="nav nav_active" onclick="tabber(this, 1)" style="text-align: center;width: 30%;" data-type="1" data-image="all">
             <p class="title">All</p>
         </div>
-        <div class="nav" onclick="tabber(this, 2)" style="text-align: center;width: 30%" data-type="2" data-image="recharge">
-            <p class="title">Recharge</p>
+        <div class="nav" onclick="tabber(this, 2)" style="text-align: center;width: 30%" data-type="2" data-image="deposito">
+            <p class="title">Depósito</p>
         </div>
-        <div class="nav" onclick="tabber(this, 3)" style="text-align: center;width: 30%" data-type="1" data-image="withdrawal">
-            <p class="title">Withdrawal</p>
+        <div class="nav" onclick="tabber(this, 3)" style="text-align: center;width: 30%" data-type="1" data-image="retiradaal">
+            <p class="title">Retiradaal</p>
         </div>
     </div>
     <div class="bill_main" style="margin: 0px"> 
         <div class="bill_bg">
-            <div id="Balance_details">
+            <div id="Saldo_details">
                 <!-- All Transactions -->
                 <div class="record">
                     @foreach(\App\Models\UserLedger::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
@@ -155,13 +155,13 @@
                         @endforeach
                 </div>
 
-                <!-- Recharge Transactions -->
-                <div class="record" style="display: none;" id="recharge-records">
+                <!-- Depósito Transactions -->
+                <div class="record" style="display: none;" id="deposito-records">
                     @foreach(\App\Models\Deposit::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
                         
                             <div class="right">
                                 <div class="item">
-                                    <p class="label">Recharge</p>
+                                    <p class="label">Depósito</p>
                                     <p class="value in">+ {{price($element->amount)}}</p>
                                 </div>
                                 <div class="item" style="margin-top: 5px;">
@@ -171,16 +171,16 @@
                             </div>
                         
                     @endforeach
-                       <!-- <p>No recharge records found</p>-->
+                       <!-- <p>No deposito records found</p>-->
                     
                 </div>
 
-                <!-- Withdrawal Transactions -->
-                <div class="record" style="display: none;" id="withdrawal-records">
-                        @foreach(\App\Models\Withdrawal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
+                <!-- Retiradaal Transactions -->
+                <div class="record" style="display: none;" id="retiradaal-records">
+                        @foreach(\App\Models\Retiradaal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
                             <div class="right">
                                 <div class="item">
-                                    <p class="label">Withdrawal</p>
+                                    <p class="label">Retiradaal</p>
                                     <p class="value out">- R{{ number_format($element->amount, 2) }}</p>
                                 </div>
                                 <div class="item" style="margin-top: 5px;">
@@ -190,7 +190,7 @@
                             </div>
                         
                     @endforeach
-                       <!-- <p>No withdrawal records found</p>-->
+                       <!-- <p>No retiradaal records found</p>-->
                     
                 </div>
 
@@ -214,8 +214,8 @@
         _this.classList.add('nav_active');
 
         var el1 = document.querySelector('.record'); // All transactions
-        var el2 = document.querySelector('#recharge-records'); // Recharge transactions
-        var el3 = document.querySelector('#withdrawal-records'); // Withdrawal transactions
+        var el2 = document.querySelector('#deposito-records'); // Depósito transactions
+        var el3 = document.querySelector('#retiradaal-records'); // Retiradaal transactions
         if (tabNumber == 1){
             el1.style.display = 'block';
             el2.style.display = 'none';

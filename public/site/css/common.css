@@ -22,7 +22,7 @@ body {
     margin:30px 15px ;
 }
 .mail_main .mail_card{
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
     border: 1px solid #3F70CD;
     padding: 15px;
@@ -78,13 +78,13 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 22px;
 }
 .help_card{
     margin: 20px;
     padding: 15px 20px;
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
     border: 1px solid #3F70CD;
 }
@@ -115,7 +115,7 @@ body {
 .vip_main{ margin: 15px;}
 
 .vip_main .vip_card {
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
     border: 1px solid #3F70CD;
     margin-bottom: 15px;
@@ -156,7 +156,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 23px;
     text-align: left;
     font-style: normal;
@@ -184,7 +184,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 23px;
     text-align: left;
     font-style: normal;
@@ -511,7 +511,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     text-align: left;
     font-style: normal;
@@ -566,7 +566,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
 
 }
 .index_main .reward{
@@ -579,7 +579,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 21px;
     text-align: left;
     font-style: normal;
@@ -615,7 +615,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .copyright{
@@ -681,7 +681,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     margin-bottom: 8px;
     border-radius: 0px 10px 10px 0px;
@@ -804,9 +804,9 @@ body {
 .product_details_card{
     position: relative;
     display: block;
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #2B5CB9;
+    border: 1px solid #1C1C1C;
     padding: 20px;
     margin-bottom: 15px;
 }
@@ -846,7 +846,7 @@ body {
     border-bottom: 1px solid #4777D3;
 }
 .product_details_card .buy_btn{
-    background: #2257BB;
+    background: #C8A96A;
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 700;
@@ -879,7 +879,7 @@ body {
     ont-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     margin-bottom: 6px;
 }
@@ -1011,7 +1011,7 @@ body {
 
 }
 .login_body .main .login_form{
-    background: #366CC1;
+    background: #D6A86B;
     border-radius:30px;
     margin: 15px;
     margin-top: 60px;
@@ -1020,7 +1020,7 @@ body {
 .login_body .main .login_form .form_tab{
    display: flex;
    justify-content: space-between;
-   background: #366CC1;
+   background: #D6A86B;
    border-radius: 30px 30px 0px 0px;
     font-family: Arial, Arial;
     font-weight: 700;
@@ -1042,7 +1042,7 @@ body {
 .login_body .main .login_form .form_tab .right{
     width: 50%;
     height: 60px;
-    background: #366CC1;
+    background: #D6A86B;
     color: #DDE9FF!important;
     border-radius: 30px 30px 0px 0px;
 }
@@ -1092,7 +1092,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C !important;
+    color: #1C1C1C !important;
 }
 .login_body .main .login_form .form_container .layui-input-wrap .layui-input,.layui-input-affix {
 
@@ -1117,7 +1117,7 @@ body {
 
 .user_header{
     position: relative;
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 12px 12px 12px 12px;
     border: 1px solid #3769C7;
     height: 130px;
@@ -1306,7 +1306,7 @@ body {
 
 .user_main .user_list {
     margin-top: 15px;
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
     border: 1px solid #3769C7;
 }
@@ -1478,7 +1478,7 @@ body {
 }
 
 .common_card{
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 16px 16px 16px 16px;
     border: 1px solid #3F70CD;
     padding: 15px;
@@ -1502,7 +1502,7 @@ body {
      font-family: Arial, Arial;
      font-weight: 400;
      font-size: 14px;
-     color: #2A415C;
+     color: #1C1C1C;
      line-height: 22px;
 }
 .common_content p{
@@ -1554,7 +1554,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
 }
 .dialog .item .value{
@@ -1578,7 +1578,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 22px;
 }
 
@@ -1625,3 +1625,20 @@ body {
 
 .layui-layer-page{ background: none !important;}
 
+
+/* EMI – Cores personalizadas */
+.layui-btn-normal, .layui-btn-primary.layui-btn-radius {
+    background-color: #C8A96A !important;
+    border-color: #C8A96A !important;
+    color: #fff !important;
+}
+.login_btn, .buy_btn {
+    background: #C8A96A !important;
+    border-color: #C8A96A !important;
+}
+.index_header {
+    background: linear-gradient(180deg, #1C1C1C 0%, #3a3a3a 100%) !important;
+}
+.header {
+    background: #1C1C1C !important;
+}

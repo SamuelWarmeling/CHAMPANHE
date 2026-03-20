@@ -30,8 +30,8 @@
      </div> 
      <div class="right"> 
       <div class="item flex_space"> 
-       <p class="label">Total Recharge：</p> 
-       <p class="value position"><span class="unit">R</span> {{$lv1Recharge}}</p> 
+       <p class="label">Total Depósito：</p> 
+       <p class="value position"><span class="unit">R</span> {{$lv1Depósito}}</p> 
       </div> 
       <div class="item flex_space"> 
        <p class="label">My Commission：</p> 
@@ -55,8 +55,8 @@
      </div> 
      <div class="right"> 
       <div class="item flex_space"> 
-       <p class="label">Total Recharge：</p> 
-       <p class="value position"><span class="unit">R</span> {{$lv2Recharge}}</p> 
+       <p class="label">Total Depósito：</p> 
+       <p class="value position"><span class="unit">R</span> {{$lv2Depósito}}</p> 
       </div> 
       <div class="item flex_space"> 
        <p class="label">My Commission：</p> 
@@ -80,8 +80,8 @@
      </div> 
      <div class="right"> 
       <div class="item flex_space"> 
-       <p class="label">Total Recharge：</p> 
-       <p class="value position"><span class="unit">R</span> {{$lv3Recharge}}</p> 
+       <p class="label">Total Depósito：</p> 
+       <p class="value position"><span class="unit">R</span> {{$lv3Depósito}}</p> 
       </div> 
       <div class="item flex_space"> 
        <p class="label">My Commission：</p> 

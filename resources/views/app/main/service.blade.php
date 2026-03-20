@@ -30,7 +30,7 @@
   <div class="help_card" style="margin-top: -80px;"> 
    <a href="https://t.me/profelartech" class="help_flex"> 
     <div class="logo"> 
-     <img src="/public/v2/img/help/recharge.png" style="background:#fff;border-radius:50px;"> 
+     <img src="/public/v2/img/help/deposito.png" style="background:#fff;border-radius:50px;"> 
     </div> 
     <div> 
      <p class="title">Your deposit has not been received yet?</p> 

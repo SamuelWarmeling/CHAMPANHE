@@ -180,7 +180,7 @@ body {
 
   <!-- OTP Info -->
   <div id="otpMessage" class="otp-banner">
-    Please ensure your phone number is correct. OTP is required for withdrawals.
+    Please ensure your phone number is correct. OTP is required for retiradaals.
   </div>
 
   <!-- Card -->

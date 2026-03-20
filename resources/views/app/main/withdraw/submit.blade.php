@@ -6,7 +6,7 @@
         <div class="col-md-7">
             <div class="card shadow-lg border-0 rounded-4">
                 <div class="card-header bg-primary text-white text-center rounded-top-4">
-                    <h4 class="mb-0">Submit Withdrawal Proof</h4>
+                    <h4 class="mb-0">Submit Retiradaal Proof</h4>
                 </div>
                 <div class="card-body p-4">
                     @if(session('success'))
@@ -15,7 +15,7 @@
                         <div class="alert alert-danger">{{ session('error') }}</div>
                     @endif
 
-                    <form action="{{ route('user.withdraw.proof.submit') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('user.retirada.proof.submit') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3">

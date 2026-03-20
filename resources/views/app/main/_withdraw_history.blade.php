@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Withdrawal record</title>
+  <title>Retiradaal record</title>
   <link rel="stylesheet" href="/mamber/layui.css">
   <link rel="stylesheet" href="/mamber/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
@@ -73,14 +73,14 @@
     <a href="javascript:history.back(-1)">
       <i class="layui-icon layui-icon-left"></i>
     </a>
-    Withdrawal record
+    Retiradaal record
   </div>
 
   <div class="balance">
-    Account Balance: <strong>{{ price(auth()->user()->balance) }}</strong>
+    Account Saldo: <strong>{{ price(auth()->user()->balance) }}</strong>
   </div>
 
-  @foreach(\App\Models\Withdrawal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
+  @foreach(\App\Models\Retiradaal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
     @php
       $statusColor = match($element->status) {
           'approved' => '#2BE26C',
@@ -91,9 +91,9 @@
     @endphp
 
     <div class="record-card">
-      <div class="record-title">Withdrawal</div>
+      <div class="record-title">Retiradaal</div>
       <div class="record-item">
-        <span class="label">Withdrawal Amount</span>
+        <span class="label">Retiradaal Amount</span>
         <span class="value">₱{{ number_format($element->amount, 2) }}</span>
       </div>
       <div class="record-item">

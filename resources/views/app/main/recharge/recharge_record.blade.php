@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>rechargeLists</title> 
+  <title>depositoLists</title> 
   <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/v2/css/common.css"> 
   <style>
@@ -50,74 +50,74 @@
  </head> 
  <body class="common_background" style="background-image: url(/public/v2/img/order/bg.png);"> 
   <div class="common_header"> 
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> rechargeLists </a> 
+   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> depositoLists </a> 
   </div> 
   <div style="margin: 15px"> 
    <div class="common_card " style="background: #FFFFFF;"> 
     <p class="value" style="font-family: Arial, Arial;font-weight: 700;font-size: 18px;color:#333333;line-height: 21px;"> ₹30.00</p> 
-    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Balance </p> 
+    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Saldo </p> 
    </div> 
    <div style="margin-top:20px"> 
-    <a href="/rechargeDetails/68202" class="common_card position" style="display:block"> 
+    <a href="/depositoDetails/68202" class="common_card position" style="display:block"> 
      <div class="flex_space padding bottom_order"> 
-      <p class="label">Recharge status</p> 
+      <p class="label">Depósito status</p> 
       <p class="value"> <span style="color: #FF8725">Processing</span> </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
-      <p class="label">Recharge Amount </p> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
+      <p class="label">Depósito Amount </p> 
       <p class="value position"> <span>₹</span>970.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">Received Amount</p> 
       <p class="value position"> <span>₹</span>970.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">tax amount</p> 
       <p class="value position"> <span>₹</span> 0.00 </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">Initiation time</p> 
       <p class="value position"> 2025-08-01 20:40:29 </p> 
      </div> </a> 
-    <a href="/rechargeDetails/68201" class="common_card position" style="display:block"> 
+    <a href="/depositoDetails/68201" class="common_card position" style="display:block"> 
      <div class="flex_space padding bottom_order"> 
-      <p class="label">Recharge status</p> 
+      <p class="label">Depósito status</p> 
       <p class="value"> <span style="color: #FF8725">Processing</span> </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68201" class="flex_space padding bottom_order"> 
-      <p class="label">Recharge Amount </p> 
+     <div href="/retiradaRecordDetails/68201" class="flex_space padding bottom_order"> 
+      <p class="label">Depósito Amount </p> 
       <p class="value position"> <span>₹</span>19070.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68201" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68201" class="flex_space padding bottom_order"> 
       <p class="label">Received Amount</p> 
       <p class="value position"> <span>₹</span>19070.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68201" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68201" class="flex_space padding bottom_order"> 
       <p class="label">tax amount</p> 
       <p class="value position"> <span>₹</span> 0.00 </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68201" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68201" class="flex_space padding bottom_order"> 
       <p class="label">Initiation time</p> 
       <p class="value position"> 2025-08-01 20:40:14 </p> 
      </div> </a> 
-    <a href="/rechargeDetails/68197" class="common_card position" style="display:block"> 
+    <a href="/depositoDetails/68197" class="common_card position" style="display:block"> 
      <div class="flex_space padding bottom_order"> 
-      <p class="label">Recharge status</p> 
+      <p class="label">Depósito status</p> 
       <p class="value"> <span style="color: #FF8725">Processing</span> </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68197" class="flex_space padding bottom_order"> 
-      <p class="label">Recharge Amount </p> 
+     <div href="/retiradaRecordDetails/68197" class="flex_space padding bottom_order"> 
+      <p class="label">Depósito Amount </p> 
       <p class="value position"> <span>₹</span>1970.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68197" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68197" class="flex_space padding bottom_order"> 
       <p class="label">Received Amount</p> 
       <p class="value position"> <span>₹</span>1970.00</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68197" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68197" class="flex_space padding bottom_order"> 
       <p class="label">tax amount</p> 
       <p class="value position"> <span>₹</span> 0.00 </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68197" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68197" class="flex_space padding bottom_order"> 
       <p class="label">Initiation time</p> 
       <p class="value position"> 2025-08-01 20:39:40 </p> 
      </div> </a> 
@@ -139,14 +139,14 @@
         $(document).on('click','.cancel', function () {
             layer.closeAll()
         })
-        var is_withdraw = 0;
+        var is_retirada = 0;
         // 提交事件
-        form.on('submit(withdraw)', function(data){
-            if(is_withdraw){
-                $('#withdraw').addClass('layui-btn-disabled')
+        form.on('submit(retirada)', function(data){
+            if(is_retirada){
+                $('#retirada').addClass('layui-btn-disabled')
                 layer.msg('การถอนเงินกำลังดำเนินการอยู่ โปรดอย่าส่งใหม่!');return false;
             }
-            is_withdraw = 1;
+            is_retirada = 1;
             layer.msg('loading', {
                 icon: 16,
                 shade: 0.01
@@ -154,7 +154,7 @@
             var pay_way_id = $('input[name=pay_way_id]').val();
             var data = data.field; // 获取表单字段值
             data.pay_way_id = pay_way_id
-            $.post('/withdraw',data,function (res) {
+            $.post('/retirada',data,function (res) {
                 if(res.status==1){
                     layer.msg(res.msg,{end:function () {
                             window.location.href = '/my'
@@ -162,16 +162,16 @@
                 }else{
                     layer.msg(res.msg);
                 }
-                is_withdraw = 0;
-                $('#withdraw').removeClass('layui-btn-disabled')
+                is_retirada = 0;
+                $('#retirada').removeClass('layui-btn-disabled')
             })
             return false; // 阻止默认 form 跳转
         });
 
-        // $('#withdrawal_amount').bind('input propertychange',function () {
+        // $('#retiradaal_amount').bind('input propertychange',function () {
         //     $('#received_amount').val($(this).val())
         // })
-        $('#withdrawal_amount').on('input', function() {
+        $('#retiradaal_amount').on('input', function() {
             var ratio = "0.05"
             $('#received_amount').html($(this).val()-$(this).val()*ratio)
             // 当input的value值改变时，这里的代码会被执行

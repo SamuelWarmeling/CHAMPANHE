@@ -71,7 +71,7 @@
     <img src="/mbtech/mb/1 (1).png" class="about_img"> 
     <p class="about_sub_title">OUR VISION</p> 
     <div class="about_text">
-      Our vision is to be a responsible mining company, demonstrating leadership by going beyond industry standards and continuing to raise the bar on our own performance. One of the key reasons for our success is delivering on our promises of fairness, respect, transparency and accountability. These principles are part of the B2Gold corporate culture and are applied globally across our corporate social responsibility projects. 
+      Our vision is to be a responsible experiência company, demonstrating leadership by going beyond industry standards and continuing to raise the bar on our own performance. One of the key reasons for our success is delivering on our promises of fairness, respect, transparency and accountability. These principles are part of the B2Gold corporate culture and are applied globally across our corporate social responsibility projects. 
     </div> 
    </div> 
   </div> 

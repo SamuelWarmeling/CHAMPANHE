@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>My</title> 
+  <title>Minha Conta – EMI</title> 
   <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/v2/css/swiper-bundle.min.css"> 
   <link rel="stylesheet" href="/public/v2/css/common.css">
@@ -39,7 +39,7 @@
 
     @php
     $vipLevel = $user->vip_level ?? 0;
-    $totalInvestment = \App\Models\Purchase::where('user_id', auth()->id())->sum('amount');
+    $totalInvestimento = \App\Models\Participação::where('user_id', auth()->id())->sum('amount');
 
     $vipTargets = [
         1 => 500,
@@ -55,9 +55,9 @@
     ];
 
     $nextVipLevel = $vipLevel < 10 ? $vipLevel + 1 : 10;
-    $nextTarget = $vipTargets[$nextVipLevel] ?? $totalInvestment;
+    $nextTarget = $vipTargets[$nextVipLevel] ?? $totalInvestimento;
 
-    $progressPercent = $nextTarget > 0 ? min(100, ($totalInvestment / $nextTarget) * 100) : 0;
+    $progressPercent = $nextTarget > 0 ? min(100, ($totalInvestimento / $nextTarget) * 100) : 0;
 @endphp
     <div class="user_main"> 
   <a href="/vip" class="user_vip_card position common_margin_15" style="margin-bottom:0px;display: block"> 
@@ -66,21 +66,21 @@
         <div class="my_vip flex_left"> 
           <img src="/public/v2/img/vip/vip_icon.png" style="width: 20px;height: 20px;display: inline"> 
           <p style="font-weight:bold;font-size: 16px;color: #FFE9B5;border-right: 2px solid #FFE9B5;padding-right: 10px;height:20px;line-height: 22px">
-            VIP LEVEL
+            Nível EMI
           </p> 
           <div class="user_vip_level" style="border-radius:4px;padding:0 4px;margin-left:10px;width: 40px;height: 20px;line-height:20px;text-align:center;color:#fff;background: linear-gradient(270deg, #83848B 0%, #C2C3C3 100%);">
-            VIP {{ $vipLevel }}
+            Nível {{ $vipLevel }}
           </div> 
         </div> 
 
         <div> 
           <div class="flex_space"> 
             <div class="layui-progress" lay-filter="demo-filter-progress" style="width: 100%;margin-top: 10px;height: 10px;"> 
-              <div class="layui-progress-bar" lay-percent="{{ number_format($totalInvestment, 2) }} / {{ number_format($nextTarget, 2) }}" style="width: {{ number_format($progressPercent, 2) }}%;"></div> 
+              <div class="layui-progress-bar" lay-percent="{{ number_format($totalInvestimento, 2) }} / {{ number_format($nextTarget, 2) }}" style="width: {{ number_format($progressPercent, 2) }}%;"></div> 
             </div> 
           </div> 
           <div style="margin-top:5px;color: #ffffff">
-            Current progress {{ number_format($totalInvestment, 2) }} / {{ number_format($nextTarget, 2) }}
+            Current progress {{ number_format($totalInvestimento, 2) }} / {{ number_format($nextTarget, 2) }}
           </div> 
         </div> 
       </div> 
@@ -92,22 +92,22 @@
   </a>  
 
    <div class="user_balance_card common_margin_15 flex_space" style="margin-top: 0px"> 
-    <a href="/recharge" class="flex_center" style="width: 49%;border-right: 2px solid #F5F7F8"> <img src="/public/v2/img/account/recharge.png" style="width: 26px;height: 26px"> 
+    <a href="/deposito" class="flex_center" style="width: 49%;border-right: 2px solid #F5F7F8"> <img src="/public/v2/img/account/deposito.png" style="width: 26px;height: 26px"> 
      <div class="user_balance_card_right">
-       Recharge 
+       Depósito 
       <i class="layui-icon layui-icon-right"></i>
      </div> </a> 
-    <a href="/withdraw" class="flex_center" style="width: 49%"> <img src="/public/v2/img/account/withdraw.png" style="width: 26px;height: 26px"> 
+    <a href="/retirada" class="flex_center" style="width: 49%"> <img src="/public/v2/img/account/retirada.png" style="width: 26px;height: 26px"> 
      <div class="user_balance_card_right">
-       Withdrawal 
+       Retiradaal 
       <i class="layui-icon layui-icon-right"></i>
      </div> </a> 
    </div> 
    <div class="index_menu common_margin_15"> 
     <a href="/orders" class="nav nav_active"> <img src="/public/v2/img/account/orders.png" style="width: 30px;height: 30px"> <p class="title">My Orders</p> </a> 
     <a href="/balanceDetails" class="nav nav_active"> <img src="/public/v2/img/account/balance.png" style="width: 30px;height: 30px"> <p class="title">My Bill</p> </a> 
-    <a href="/team" class="nav nav_active"> <img src="/public/v2/img/account/team.png" style="width: 30px;height: 30px"> <p class="title">My Team</p> </a> 
-    <a href="/add-bank" class="nav nav_active"> <img src="/public/v2/img/account/wallet.png" style="width: 30px;height: 30px"> <p class="title">Bank Card</p> </a> 
+    <a href="/team" class="nav nav_active"> <img src="/public/v2/img/account/team.png" style="width: 30px;height: 30px"> <p class="title">Minha Equipe</p> </a> 
+    <a href="/add-bank" class="nav nav_active"> <img src="/public/v2/img/account/wallet.png" style="width: 30px;height: 30px"> <p class="title">Conta Bancária</p> </a> 
    </div> 
    <div class="common_card common_margin_15"> 
     <div style="border-bottom: 1px solid #F6F6F6;padding: 10px 0"> 
@@ -122,17 +122,17 @@
     <div class="flex_space" style="border-bottom: 1px solid #F6F6F6;padding: 10px 0"> 
      <div> 
       <div class="label" style="margin-top: 0px;color: #888888;text-align: center">
-       Recharge Balance
+       Depósito Saldo
       </div> 
-      <div class="value recharge_balance" style="font-size: 18px;color: #5274F0;font-weight: 700;margin-top: 10px;text-align: center">
+      <div class="value deposito_balance" style="font-size: 18px;color: #5274F0;font-weight: 700;margin-top: 10px;text-align: center">
        {{ price(auth()->user()->balance) }}
       </div> 
      </div> 
      <div> 
       <div class="label" style="margin-top: 0px;color: #888888;text-align: center">
-       Withdrawal Balance
+       Retiradaal Saldo
       </div> 
-      <div class="value withdraw_balance" style="font-size: 18px;color: #5274F0;font-weight: 700;margin-top: 10px;text-align: center">
+      <div class="value retirada_balance" style="font-size: 18px;color: #5274F0;font-weight: 700;margin-top: 10px;text-align: center">
        {{ price(auth()->user()->balance) }}
       </div> 
      </div> 
@@ -151,7 +151,7 @@
        Order Num
       </div> 
       <div class="value order_num" style="font-size: 18px;color: #5274F0;font-weight: 700;margin-top: 10px;text-align: center">
-       {{ \App\Models\Purchase::where('user_id', auth()->id())->count() }}
+       {{ \App\Models\Participação::where('user_id', auth()->id())->count() }}
       </div> 
      </div> 
     </div> 

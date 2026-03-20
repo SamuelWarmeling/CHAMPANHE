@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Home_</title> 
+  <title>EMI – Enoteca Millesimi</title> 
   <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/v2/css/swiper-bundle.min.css"> 
   <link rel="stylesheet" href="/public/v2/css/common.css?t=1.2">
@@ -69,7 +69,7 @@
      <p class="value product_total_income"> ₹3000 </p> 
     </div> 
     <div class="product_item flex_space"> 
-     <p class="label">Max Investment</p> 
+     <p class="label">Max Investimento</p> 
      <p class="value product_maximum_share"> 10 </p> 
     </div> 
    </div> 
@@ -150,8 +150,8 @@
      </div> 
     </div> 
     <div class="flex_space"> 
-     <a class="menu" href="/recharge"> <img src="/public/v2/img/index/recharge.png"> <p class="menu_title">Recharge</p> </a> 
-     <a class="menu" href="/withdraw"> <img src="/public/v2/img/index/withdraw.png"> <p class="menu_title">Withdraw</p> </a> 
+     <a class="menu" href="/deposito"> <img src="/public/v2/img/index/deposito.png"> <p class="menu_title">Depósito</p> </a> 
+     <a class="menu" href="/retirada"> <img src="/public/v2/img/index/retirada.png"> <p class="menu_title">Retirada</p> </a> 
      <a class="menu" href="/team"> <img src="/public/v2/img/index/team.png"> <p class="menu_title">Team</p> </a> 
      <a class="menu" href="/help"> <img src="/public/v2/img/index/blog.png"> <p class="menu_title">service</p> </a> 
      <a class="menu" href="{{setting('telegram')}}"> <img src="/public/v2/img/index/telegram.png"> <p class="menu_title">Telegram</p> </a> 
@@ -250,7 +250,7 @@
     <div class="cancel">
      Cancel
     </div> 
-    <a href="" id="jump_url" class="confirm">Go recharge</a> 
+    <a href="" id="jump_url" class="confirm">Go deposito</a> 
    </div> 
   </div> 
    

@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>rechargeLists</title> 
+  <title>depositoLists</title> 
   <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/v2/css/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
@@ -51,12 +51,12 @@
  </head> 
  <body class="common_background" style="background-image: url(/public/v2/img/order/bg1.png);"> 
   <div class="common_header"> 
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> rechargeLists </a> 
+   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> depositoLists </a> 
   </div> 
   <div style="margin: 15px"> 
    <div class="common_card " style="background: #FFFFFF;"> 
     <p class="value" style="font-family: Arial, Arial;font-weight: 700;font-size: 18px;color:#333333;line-height: 21px;"> {{ price(auth()->user()->balance) }}</p> 
-    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Balance </p> 
+    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Saldo </p> 
    </div> 
    <div style="margin-top:20px">
            @foreach(\App\Models\Deposit::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
@@ -68,24 +68,24 @@
             default => '#FF8725'
         };
     @endphp
-    <a ref="/rechargeDetails/68202" class="common_card position" style="display:block"> 
+    <a ref="/depositoDetails/68202" class="common_card position" style="display:block"> 
      <div class="flex_space padding bottom_order"> 
-      <p class="label">Recharge status</p> 
+      <p class="label">Depósito status</p> 
       <p class="value"> <span style="color: {{ $statusColor }}">{{ ucfirst($element->status) }}</span> </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
-      <p class="label">Recharge Amount </p> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
+      <p class="label">Depósito Amount </p> 
       <p class="value position"> <span></span>{{ price($element->amount) }} </p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">Received Amount</p> 
       <p class="value position"> <span></span>{{ price($element->final_amount) }}</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">tax amount</p> 
       <p class="value position"> <span></span> {{ price($element->charge_amount) }}</p> 
      </div> 
-     <div href="/withdrawRecordDetails/68202" class="flex_space padding bottom_order"> 
+     <div href="/retiradaRecordDetails/68202" class="flex_space padding bottom_order"> 
       <p class="label">Initiation time</p> 
       <p class="value position"> {{ $element->created_at }} </p> 
      </div> </a> @endforeach

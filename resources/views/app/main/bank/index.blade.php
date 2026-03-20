@@ -119,7 +119,7 @@
     <div class="demo-login-container" style=""> 
      <p class="common_explain">Explain</p> 
      <div class="common_content"> 
-      <p> 1. You can only add one card for withdrawal </p> 
+      <p> 1. You can only add one card for retiradaal </p> 
       <p> 2. Bank card numbers cannot contain letters and symbols </p> 
       <p> 3. IFSC is 11 digits, the first 4 digits are letters and represent the bank number, the 5th digit = 0 </p> 
      </div> 

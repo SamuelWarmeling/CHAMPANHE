@@ -20,7 +20,7 @@
      </div>
      @php
     $vipLevel = $user->vip_level ?? 0;
-    $totalInvestment = \App\Models\Purchase::where('user_id', auth()->id())->sum('amount');
+    $totalInvestimento = \App\Models\Participação::where('user_id', auth()->id())->sum('amount');
 
     $vipTargets = [
         1 => 500,
@@ -36,9 +36,9 @@
     ];
 
     $nextVipLevel = $vipLevel < 10 ? $vipLevel + 1 : 10;
-    $nextTarget = $vipTargets[$nextVipLevel] ?? $totalInvestment;
+    $nextTarget = $vipTargets[$nextVipLevel] ?? $totalInvestimento;
 
-    $progressPercent = $nextTarget > 0 ? min(100, ($totalInvestment / $nextTarget) * 100) : 0;
+    $progressPercent = $nextTarget > 0 ? min(100, ($totalInvestimento / $nextTarget) * 100) : 0;
 @endphp
      <div style=" background: #B6CDFA;border-radius: 50%;width: 35px;height: 35px;text-align: center;line-height: 35px;"> 
       <a href="/vip"> <img src="{{ asset('public/site/img/vip/lv' . $vipLevel . '.png') }}" style="width: 24px;height: 24px;display: inline"> </a> 
@@ -48,7 +48,7 @@
     <div class="balance"> 
      <div class="flex_space"> 
       <div class="item"> 
-       <p class="value">{{ \App\Models\Purchase::where('user_id', auth()->id())->count() }}</p> 
+       <p class="value">{{ \App\Models\Participação::where('user_id', auth()->id())->count() }}</p> 
        <p class="label">Buy</p> 
       </div> 
       <div class="item"> 
@@ -65,11 +65,11 @@
   </div> 
   <div class="user_main"> 
    <div class="index_menu"> 
-    <a href="/recharge" class="nav nav_active" style="text-align: center;width: 30%;" data-type="1" data-image="fixed"> <img class="nav_fixed" src="/public/site/img/user/recharge.png" style="width: 50px;height: 50px;"> <p class="title">Recharge</p> <p class="value">{{ price(\App\Models\Deposit::where('user_id', auth()->id())->where('status', 'approved')->sum('amount')) }}
+    <a href="/deposito" class="nav nav_active" style="text-align: center;width: 30%;" data-type="1" data-image="fixed"> <img class="nav_fixed" src="/public/site/img/user/deposito.png" style="width: 50px;height: 50px;"> <p class="title">Depósito</p> <p class="value">{{ price(\App\Models\Deposit::where('user_id', auth()->id())->where('status', 'approved')->sum('amount')) }}
     </p> </a> 
-    <a href="/withdraw" class="nav nav_active" style="text-align: center;width: 30%" data-type="2" data-image="welfare"> <img class="nav_welfare" src="/public/site/img/user/withdrawal.png" style="width: 50px;height: 50px;"> <p class="title">Withdrawal</p> <p class="value">{{ price(\App\Models\Withdrawal::where('user_id', auth()->id())->where('status', 'approved')->sum('amount')) }}
+    <a href="/retirada" class="nav nav_active" style="text-align: center;width: 30%" data-type="2" data-image="welfare"> <img class="nav_welfare" src="/public/site/img/user/retiradaal.png" style="width: 50px;height: 50px;"> <p class="title">Retiradaal</p> <p class="value">{{ price(\App\Models\Retiradaal::where('user_id', auth()->id())->where('status', 'approved')->sum('amount')) }}
     </p></a> 
-    <a href="/orders" class="nav nav_active" style="text-align: center;width: 30%" data-type="1" data-image="activity"> <img class="nav_activity" src="/public/site/img/user/orders.png" style="width: 50px;height: 50px;"> <p class="title">Orders </p> <p class="value">{{ \App\Models\Purchase::where('user_id', user()->id)->count() }}</p> </a> 
+    <a href="/orders" class="nav nav_active" style="text-align: center;width: 30%" data-type="1" data-image="activity"> <img class="nav_activity" src="/public/site/img/user/orders.png" style="width: 50px;height: 50px;"> <p class="title">Orders </p> <p class="value">{{ \App\Models\Participação::where('user_id', user()->id)->count() }}</p> </a> 
    </div> 
    <div class="user_list"> 
     <div class="user_card"> 
@@ -184,8 +184,8 @@
                 }
             });
         })
-        $('.recharge').click(function () {
-            layer.msg('Please contact customer service to recharge');
+        $('.deposito').click(function () {
+            layer.msg('Please contact customer service to deposito');
         })
     });
 </script> 

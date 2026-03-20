@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>rechargeLists</title> 
+  <title>depositoLists</title> 
   <link rel="stylesheet" href="/mbtech/layui.css"> 
   <link rel="stylesheet" href="/mbtech/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
@@ -44,13 +44,13 @@
   <div class="common_header common_header_order"> 
    <a href="javascript:history.back(-1)" class="back position"> 
     <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> 
-    rechargeLists 
+    depositoLists 
    </a> 
   </div> 
   <div style="margin: 20px"> 
    <div class="common_card " style="background: #FFFFFF;"> 
     <p class="value" style="font-family: Arial, Arial;font-weight: 700;font-size: 18px;color:#333333;line-height: 21px;"> {{price(auth()->user()->balance)}}</p> 
-    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Balance </p> 
+    <p class="label" style="font-family: Arial, Arial;font-weight: 400;font-size: 14px;color: #444444;line-height: 21px;"> Account Saldo </p> 
    </div> 
    <div> 
     @foreach(\App\Models\Deposit::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
@@ -64,13 +64,13 @@
     @endphp
     <div class="common_card position">
      <a href="" class="flex_space padding bottom_order"> 
-      <p class="label">Withdrawal status</p> 
+      <p class="label">Retiradaal status</p> 
       <p class="value"> 
        <span style="color: {{ $statusColor }}">{{ ucfirst($element->status) }}</span> 
       </p> 
      </a> 
      <a href="" class="flex_space padding bottom_order"> 
-      <p class="label">Recharge Amount </p> 
+      <p class="label">Depósito Amount </p> 
       <p class="value position"> 
        <span class="unit"></span>{{ price($element->amount) }} 
       </p> 

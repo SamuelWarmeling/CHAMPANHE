@@ -1,7 +1,7 @@
 <?php
-use App\Models\Purchase;
+use App\Models\Participação;
 
-$purchases = Purchase::where('status', 'active')
+$purchases = Participação::where('status', 'active')
     ->where('user_id', auth()->id())
     ->with('package') // include related package
     ->get();

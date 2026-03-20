@@ -3,7 +3,7 @@ body {
     font-family: Arial, Arial;
 }
 .common_body{
-    background: linear-gradient( 180deg, #EBF6EC 0%, #F6FDF6 100%);
+    background: linear-gradient( 180deg, #F8F6F2 0%, #F8F6F2 100%);
     height: 100vh;
 }
 .common_background{
@@ -26,7 +26,7 @@ body {
     right: 0;
     width: 80px;
     height: 30px;
-    background: #36A267;
+    background: #C8A96A;
     border-radius: 100px 0px 0px 100px;
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
@@ -38,7 +38,7 @@ body {
 }
 
 .header{
-    background: #058C43;
+    background: #C8A96A;
     border-radius: 0px 0px 0px 0px;
     height: 30px;
     line-height: 30px;
@@ -106,7 +106,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 22px;
 }
 .help_card{
@@ -130,7 +130,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 22px;
 }
 .help_card .help_flex .describe{
@@ -167,7 +167,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #D6E4FF;
+    color: #F8F6F2;
     line-height: 28px;
 }
 
@@ -184,7 +184,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 23px;
     text-align: left;
     font-style: normal;
@@ -212,7 +212,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 23px;
     text-align: left;
     font-style: normal;
@@ -322,7 +322,7 @@ body {
     /*background-image: url("/public/v2/img/product/btn_bg.png");*/
     /*background-size: 100%;*/
     /*background-repeat: no-repeat;*/
-    background: linear-gradient( 270deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 270deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-weight: 700;
     font-size: 16px;
@@ -337,7 +337,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     margin-bottom: 10px;
 }
 #product_dialog .product_vip_btn{
@@ -361,8 +361,8 @@ body {
     margin-top: 10px;
     border-radius: 15px;
     padding: 15px;
-    background: #06B556;
-    border: 1px solid #5BCD71;
+    background: #C8A96A;
+    border: 1px solid #C8A96A;
 }
 .notice_btn_content{
     display: block;
@@ -374,7 +374,7 @@ body {
 .notice_btn_title{
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 26px;
     text-align: left;
 }
@@ -431,7 +431,7 @@ body {
     display: block;
     width: 100%;
     height: 40px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     box-shadow: 0px 4px 10px 0px rgba(18,132,246,0.15);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
@@ -446,7 +446,7 @@ body {
 .telegram_btn_title{
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
     text-align: left;
 
@@ -679,7 +679,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #E4EDFF;
+    color: #F8F6F2;
     line-height: 16px;
     text-align: left;
 }
@@ -687,7 +687,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #E4EDFF;
+    color: #F8F6F2;
     padding-left: 12px;
 }
 .position{
@@ -720,7 +720,7 @@ body {
 .product_nav_type_desc{
     background: #05A74F;
     border-radius: 14px 14px 14px 14px;
-    border: 2px solid #5BCD71;
+    border: 2px solid #C8A96A;
     padding: 10px;
     margin-bottom: 15px;
 }
@@ -753,7 +753,7 @@ body {
 }
 .product_nav .product_nav_type_active{
     margin-top: 0px;
-    background: #06B556;
+    background: #C8A96A;
     border-radius: 12px 12px 0px 0px;
     text-align: center;
     font-size: 16px;
@@ -813,7 +813,7 @@ body {
     width: 30%;
     background: #6298FF;
     border-radius: 100px;
-    border: 1px solid #93B8FF;
+    border: 1px solid #D6A86B;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
@@ -839,7 +839,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     text-align: left;
     font-style: normal;
@@ -894,7 +894,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
 
 }
 .index_main .reward{
@@ -907,7 +907,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 21px;
     text-align: left;
     font-style: normal;
@@ -943,7 +943,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .copyright{
@@ -1009,7 +1009,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     margin-bottom: 8px;
     border-radius: 0px 10px 10px 0px;
@@ -1050,7 +1050,7 @@ body {
     position: absolute;
     right: 0px;
     top: 0px;
-    background: linear-gradient( 270deg, #06B556 0%, #0BD065 100%);
+    background: linear-gradient( 270deg, #C8A96A 0%, #0BD065 100%);
     border-radius: 100px 100px 100px 100px;
     width: 25%;
     font-family: Arial, Arial;
@@ -1094,7 +1094,7 @@ body {
     line-height: 34px;
     width: 110px;
     height: 34px;
-    background: linear-gradient( 270deg, #4A6DEB 0%, #5C7DF5 100%) !important;
+    background: linear-gradient( 270deg, #C8A96A 0%, #D6A86B 100%) !important;
     border-radius: 6px;
     text-align: center;
     font-weight: 700;
@@ -1120,7 +1120,7 @@ body {
 .product_card .product_content .product_title .product_name{
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 24px;
     margin-bottom: 5px;
     text-align: left;
@@ -1243,7 +1243,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 21px;
     margin-bottom: 20px;
 }
@@ -1251,7 +1251,7 @@ body {
     ont-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
     margin-bottom: 6px;
 }
@@ -1259,7 +1259,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 21px;
     text-align: left;
 }
@@ -1267,7 +1267,7 @@ body {
     font-family: Arial, Arial;
     font-weight: normal;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 31px;
 }
 .product_details_card .product_details_item .unit {
@@ -1339,7 +1339,7 @@ body {
     border-radius: 50%;
     background: none;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.1);
-    border: 3px solid #93B8FF;
+    border: 3px solid #D6A86B;
     text-align: center;
 }
 
@@ -1396,12 +1396,12 @@ body {
 .login_body .main .login_form .form_tab{
     display: flex;
     justify-content: space-between;
-    background: #366CC1;
+    background: #D6A86B;
     border-radius: 30px 30px 0px 0px;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #DDE9FF;
+    color: #F8F6F2;
     line-height: 60px;
     text-align: center;
     font-style: normal;
@@ -1418,8 +1418,8 @@ body {
 .login_body .main .login_form .form_tab .right{
     width: 50%;
     height: 60px;
-    background: #366CC1;
-    color: #DDE9FF!important;
+    background: #D6A86B;
+    color: #F8F6F2!important;
     border-radius: 30px 30px 0px 0px;
 }
 
@@ -1480,7 +1480,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #2A415C !important;
+    color: #1C1C1C !important;
 }
 .login_body .main .login_form .form_container .layui-input-wrap .layui-input,.layui-input-affix {
     height: 44px !important;
@@ -1516,7 +1516,7 @@ body {
 
 .user_header{
     position: relative;
-    background: #2B5CB9;
+    background: #1C1C1C;
     border-radius: 12px 12px 12px 12px;
     border: 1px solid #3769C7;
     height: 130px;
@@ -1624,7 +1624,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .user_invite_card  .desc{
@@ -1654,7 +1654,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .user_service_card  .desc{
@@ -1775,7 +1775,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .user_main .user_list .item_title_order{
@@ -1799,7 +1799,7 @@ body {
     display: inline-block;
     font-weight: 400;
     font-size: 14px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .user_main .user_card .item img{
@@ -1834,7 +1834,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #D6E4FF;
+    color: #F8F6F2;
     line-height: 22px;
     text-align: center;
     padding-top: 20px;
@@ -1908,7 +1908,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 11px;
-    color: #9EBDF9;
+    color: #D6A86B;
     line-height: 22px;
     margin-bottom: 12px;
 }
@@ -1933,7 +1933,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #9EBDF9;
+    color: #D6A86B;
     line-height: 22px;
 }
 .team_card .right .value{
@@ -1959,7 +1959,7 @@ body {
 .common_explain{
     font-weight: 700;
     font-size: 16px;
-    color: #4A6DEB;
+    color: #C8A96A;
     line-height: 21px;
 }
 .common_content{
@@ -2006,7 +2006,7 @@ body {
 .dialog .dialog_title{
     font-weight: 700;
     font-size: 16px;
-    color: #4A6DEB;
+    color: #C8A96A;
     line-height: 28px;
     padding-bottom: 20px;
 }
@@ -2020,7 +2020,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #2A415C;
+    color: #1C1C1C;
     line-height: 16px;
 }
 .dialog .item .value{
@@ -2071,7 +2071,7 @@ body {
     width: 145px;
     height: 36px;
     line-height: 36px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);    border-radius: 100px;
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);    border-radius: 100px;
     text-align: center;
 
     font-family: Arial, Arial;
@@ -2103,7 +2103,7 @@ body {
 .vip_text{
     font-weight: 400;
     font-size: 12px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 22px;
     text-align: left;
 
@@ -2235,7 +2235,7 @@ body {
     margin-bottom: 20px;
 }
 #blog_dialog .i_know{
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     width: 100%;
     height: 44px;
     line-height: 44px;
@@ -2251,7 +2251,7 @@ body {
     font-family: Arial, Arial;
     font-weight: bold;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 21px;
     text-align: left;
     margin: 10px 0;
@@ -2337,7 +2337,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 15px;
     text-align: left;
 }
@@ -2345,7 +2345,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 20px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 15px;
     text-align: left;
     margin-top: 10px;
@@ -2384,7 +2384,7 @@ body {
     width: 50px;
     height: 18px;
     padding: 4px 10px;
-    background: linear-gradient( 90deg, #5C7DF5 0%, #4A6DEB 100%);
+    background: linear-gradient( 90deg, #D6A86B 0%, #C8A96A 100%);
     border-radius: 100px 100px 100px 100px;
     font-weight: 700;
     font-size: 16px;
@@ -2480,7 +2480,7 @@ body {
 .tasks_invite_rewards .title{
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
 }
 
 .common_padding_5 {
@@ -2551,7 +2551,7 @@ body {
 .copy_btn{
     width: 60px;
     height: 26px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 400;
@@ -2604,7 +2604,7 @@ body {
 .invite_friends_card_item .value{
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .invite_friends_card_item .label{
@@ -2680,7 +2680,7 @@ body {
 .tasks_reward_title{
     font-weight: 700;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     text-align: left;
     margin-bottom: 10px;
 }
@@ -2688,7 +2688,7 @@ body {
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
     font-size: 14px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 26px;
     text-align: left;
     margin-bottom: 10px;
@@ -2696,7 +2696,7 @@ body {
 
 .common_top{
     height: 60px;
-    background: #058C43;
+    background: #C8A96A;
     border-radius: 0 0 30px 30px;
 }
 
@@ -2770,7 +2770,7 @@ body {
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
     font-size: 18px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 20px;
     text-align: left;
     margin-bottom: 5px;
@@ -2789,7 +2789,7 @@ body {
     right: 0;
     width: 80px;
     height: 30px;
-    background: #4A6DEB;
+    background: #C8A96A;
     border-radius: 100px 0px 0px 100px;
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
@@ -2811,14 +2811,14 @@ body {
 }
 .withdraw_btn{
     height: 44px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     line-height: 44px;
     text-align: center;
 }
 
 .common_btn{
     height: 44px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     box-shadow: 0px 4px 10px 0px rgba(103,173,79,0.15);
     line-height: 44px;
     font-weight: 700;
@@ -2827,7 +2827,7 @@ body {
 }
 
 .recharge_card_content{
-    background: #058C43;
+    background: #C8A96A;
     border-radius: 0 0 30px 30px;
     padding: 15px;
 }
@@ -2836,7 +2836,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #07262C;
+    color: #1C1C1C;
     line-height: 18px;
 }
 .common_item_desc{
@@ -2885,7 +2885,7 @@ body {
     left: 50%;
     width: 20px;
     height: 4px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient( 180deg, #C8A96A 0%, #D6A86B 100%);
     transform: translateX(-50%);
 }
 .common_nav_menu .nav{
@@ -2923,4 +2923,23 @@ body {
 
     border-radius: 15px;
     box-shadow: none;
+}
+/* EMI – Cores personalizadas */
+.layui-btn-normal {
+    background-color: #C8A96A !important;
+    border-color: #C8A96A !important;
+    color: #fff !important;
+}
+.login_btn, .buy_btn, .buy-btn {
+    background: #C8A96A !important;
+    border-color: #C8A96A !important;
+}
+.index_header {
+    background: linear-gradient(180deg, #1C1C1C 0%, #2a2a2a 100%) !important;
+}
+.header {
+    background: #1C1C1C !important;
+}
+.reward_card, .common_card {
+    background: #1C1C1C !important;
 }

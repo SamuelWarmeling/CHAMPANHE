@@ -132,12 +132,12 @@ body{
 <!-- FILTER TABS -->
 <div class="common_nav_menu">
   <div class="nav nav_active" data-type="all">All</div>
-  <div class="nav" data-type="recharge">Recharge</div>
-  <div class="nav" data-type="withdrawal">Withdrawal</div>
+  <div class="nav" data-type="deposito">Depósito</div>
+  <div class="nav" data-type="retiradaal">Retiradaal</div>
 </div>
 
 <!-- HISTORY -->
-<div class="history-wrap" id="Balance_details">
+<div class="history-wrap" id="Saldo_details">
 
   {{-- ✅ USER LEDGER --}}
   @foreach(\App\Models\UserLedger::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
@@ -158,9 +158,9 @@ body{
 
   {{-- ✅ RECHARGE --}}
   @foreach(\App\Models\Deposit::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
-  <div class="history-card in" data-type="recharge">
+  <div class="history-card in" data-type="deposito">
     <div class="history-top">
-      <div class="history-title">Recharge</div>
+      <div class="history-title">Depósito</div>
       <div class="history-amount in">+ {{ price($row->amount) }}</div>
     </div>
     <div class="history-bottom">
@@ -171,10 +171,10 @@ body{
   @endforeach
 
   {{-- ✅ WITHDRAWAL --}}
-  @foreach(\App\Models\Withdrawal::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
-  <div class="history-card out" data-type="withdrawal">
+  @foreach(\App\Models\Retiradaal::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
+  <div class="history-card out" data-type="retiradaal">
     <div class="history-top">
-      <div class="history-title">Withdrawal</div>
+      <div class="history-title">Retiradaal</div>
       <div class="history-amount out">- {{ price($row->amount) }}</div>
     </div>
     <div class="history-bottom">

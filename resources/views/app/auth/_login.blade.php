@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Login</title>
+  <title>EMI – Enoteca Millesimi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="/public/site/layui/css/layui.css">
   <link rel="stylesheet" href="/public/site/css/common.css">
@@ -22,34 +22,34 @@
           @csrf
 
           <div class="form_tab">
-            <div class="left">Login</div>
-            <a href="{{ url('register') }}" class="right">Register</a>
+            <div class="left">Entrar</div>
+            <a href="{{ url('register') }}" class="right">Cadastrar</a>
           </div>
 
           <div class="form_container">
             <!-- Phone Number -->
-            <div class="label">Mobile phone number</div>
+            <div class="label">Número de telefone</div>
             <div class="layui-form-item">
               <label class="layui-form-label">+27</label>
               <div class="layui-input-block">
                 <div class="layui-input-wrap">
-                  <input type="text" name="phone" placeholder="Please enter your phone number" class="layui-input" lay-verify="required" required>
+                  <input type="text" name="phone" placeholder="Digite seu telefone" class="layui-input" lay-verify="required" required>
                 </div>
               </div>
             </div>
 
             <!-- Password -->
-            <div class="label">Password</div>
+            <div class="label">Senha</div>
             <div class="layui-form-item">
               <div class="layui-input-wrap" style="border: none; background: none;">
-                <input type="password" name="password" placeholder="password" class="layui-input" style="border-radius:8px;" lay-verify="required" required>
+                <input type="password" name="password" placeholder="Senha" class="layui-input" style="border-radius:8px;" lay-verify="required" required>
               </div>
             </div>
 
             <!-- Submit Button -->
             <div style="margin-top: 40px;">
               <button type="submit" class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius login_btn" lay-submit lay-filter="demo-login">
-                Login Now
+                Entrar
               </button>
             </div>
           </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Balance Details</title>
+  <title>Saldo Details</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <link rel="stylesheet" href="/public/site/layui/css/layui.css">
   <link rel="stylesheet" href="/public/site/css/common.css">
@@ -18,7 +18,7 @@
       margin-bottom: 0px;
       padding-bottom: 0px;
     }
-    #Balance_details {
+    #Saldo_details {
       margin: 15px;
     }
     .record {
@@ -119,7 +119,7 @@
   <div class="common_header">
     <a href="javascript:history.back(-1)" class="back position">
       <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
-      Balance Details
+      Saldo Details
     </a>
   </div>
 
@@ -129,20 +129,20 @@
         <img class="nav_all" src="/public/site/img/bill/all_active.png" style="width: 50px; height: 50px;">
         <p class="title">All</p>
       </div>
-      <div class="nav" data-type="recharge">
-        <img class="nav_recharge" src="/public/site/img/bill/recharge.png" style="width: 50px; height: 50px;">
-        <p class="title">Recharge</p>
+      <div class="nav" data-type="deposito">
+        <img class="nav_deposito" src="/public/site/img/bill/deposito.png" style="width: 50px; height: 50px;">
+        <p class="title">Depósito</p>
       </div>
-      <div class="nav" data-type="withdrawal">
-        <img class="nav_withdrawal" src="/public/site/img/bill/withdrawal.png" style="width: 50px; height: 50px;">
-        <p class="title">Withdrawal</p>
+      <div class="nav" data-type="retiradaal">
+        <img class="nav_retiradaal" src="/public/site/img/bill/retiradaal.png" style="width: 50px; height: 50px;">
+        <p class="title">Retiradaal</p>
       </div>
     </div>
   </div>
 
   <div class="bill_main">
     <div class="bill_bg">
-      <div id="Balance_details">
+      <div id="Saldo_details">
 
         <!-- Task reward (shown in all) -->
         @foreach(\App\Models\UserLedger::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
@@ -154,37 +154,37 @@
             </div>
             <div class="item" style="margin-top: 5px;">
               <p class="date">{{ $element->created_at }}</p>
-              <p class="date">recharge balance</p>
+              <p class="date">deposito balance</p>
             </div>
           </div>
         </div>@endforeach
 
-        <!-- Recharge -->
+        <!-- Depósito -->
         @foreach(\App\Models\Deposit::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
-        <div class="record" data-type="all recharge">
+        <div class="record" data-type="all deposito">
           <div class="right">
             <div class="item">
-              <p class="label">Recharge</p>
+              <p class="label">Depósito</p>
               <p class="value in">+ {{price($element->amount)}}</p>
             </div>
             <div class="item" style="margin-top: 5px;">
               <p class="date">{{ $element->created_at }}</p>
-              <p class="date">recharge balance</p>
+              <p class="date">deposito balance</p>
             </div>
           </div>
         </div>@endforeach
 
-        <!-- Withdrawal -->
-        @foreach(\App\Models\Withdrawal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
-        <div class="record" data-type="all withdrawal">
+        <!-- Retiradaal -->
+        @foreach(\App\Models\Retiradaal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
+        <div class="record" data-type="all retiradaal">
           <div class="right">
             <div class="item">
-              <p class="label">Withdrawal</p>
+              <p class="label">Retiradaal</p>
               <p class="value out">- {{price($element->amount)}}</p>
             </div>
             <div class="item" style="margin-top: 5px;">
               <p class="date">{{ $element->created_at }}</p>
-              <p class="date">withdrawal</p>
+              <p class="date">retiradaal</p>
             </div>
           </div>
         </div>@endforeach
@@ -225,8 +225,8 @@
 
           // update icons
           document.querySelector('.nav_all').src = (type === 'all') ? '/public/site/img/bill/all_active.png' : '/public/site/img/bill/all.png';
-          document.querySelector('.nav_recharge').src = (type === 'recharge') ? '/public/site/img/bill/recharge_active.png' : '/public/site/img/bill/recharge.png';
-          document.querySelector('.nav_withdrawal').src = (type === 'withdrawal') ? '/public/site/img/bill/withdrawal_active.png' : '/public/site/img/bill/withdrawal.png';
+          document.querySelector('.nav_deposito').src = (type === 'deposito') ? '/public/site/img/bill/deposito_active.png' : '/public/site/img/bill/deposito.png';
+          document.querySelector('.nav_retiradaal').src = (type === 'retiradaal') ? '/public/site/img/bill/retiradaal_active.png' : '/public/site/img/bill/retiradaal.png';
         });
       });
     });

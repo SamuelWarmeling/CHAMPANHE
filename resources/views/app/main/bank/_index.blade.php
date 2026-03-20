@@ -103,7 +103,7 @@
     <div class="demo-login-container" style=""> 
      <p class="common_explain">Explain</p> 
      <div class="common_content"> 
-      <p> 1 - You can only add a bank card for withdrawals </p> 
+      <p> 1 - You can only add a bank card for retiradaals </p> 
       <p> 2 - Please ensure that the bank accounts are correct and functioning properly </p> 
      </div> 
     </div> 

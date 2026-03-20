@@ -215,7 +215,7 @@
     <a href="/" class="item "> <img src="/mbtech/home.png"> <p>Home</p> </a> 
     <a href="/vip" class="item "> <img src="/mbtech/invest.png"> <p>Invest</p> </a> 
     <a href="/invite" class="item position" style=""> <p style="position:absolute;top: -12px;left: 0px;width: 100%"> <img src="/mbtech/Tasks.png" style="display:inline-block;height: 45px;width: 45px;"> </p> </a> 
-    <a href="/withdrawal-proofs" class="item "> <img src="/mbtech/mboard.png"> <p>Blog</p> </a> 
+    <a href="/retiradaal-proofs" class="item "> <img src="/mbtech/mboard.png"> <p>Blog</p> </a> 
     <a href="/profile" class="item "> <img src="/mbtech/account.png"> <p>Account</p> </a> 
    </div> 
   </div> 

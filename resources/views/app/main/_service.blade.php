@@ -68,7 +68,7 @@
    <div class="help_card"> 
     <a href="https://t.me/+AxzjFD0FlchiNzI0" class="flex_left"> 
      <div class="logo"> 
-      <img src="/public/site/img/help/recharge.png"> 
+      <img src="/public/site/img/help/deposito.png"> 
      </div> 
      <div> 
       <p class="title">Your deposit has not been received yet?</p> 

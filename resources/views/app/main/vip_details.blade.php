@@ -2,21 +2,21 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Buy Product_</title>
+  <title>Detalhes da Experiência – EMI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/site/css/common.css"> 
  </head> 
  <body class="common_body"> 
   <div class="common_header"> 
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Buy Product <p class="service"> <img src="/public/site/img/common/service.png"></p> </a> 
+   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Detalhes da Experiência <p class="service"> <img src="/public/site/img/common/service.png"></p> </a> 
   </div>
   @php
     $user = auth()->user();
 @endphp
   <div class="product_details_main"> 
    <div class="product_details_card" style="padding: 15px;"> 
-    <div style="background: #2E56A2;border-radius: 16px;padding: 10px"> 
+    <div style="background: #C8A96A;border-radius: 16px;padding: 10px"> 
      <img src="{{ asset($package->photo) }}" style="width: 100%;height: auto;border-radius: 16px;"> 
     </div> 
    </div> 
@@ -26,17 +26,17 @@
     <div style="background: #FFFFFF;border-radius: 16px;padding: 15px"> 
      <div class="product_details_item"> 
       <div> 
-       <p class="label">Price</p> 
+       <p class="label">Acesso</p> 
        <p class="value price"><span class="unit">R</span>{{ ($package->price) }}</p> 
       </div> 
      </div> 
      <div class="product_details_item"> 
       <div style="width: 50%"> 
-       <p class="label">Buy Share</p> 
+       <p class="label">Quantidade</p> 
        <p class="value buy_share">3</p> 
       </div> 
       <div style="width: 50%"> 
-       <p class="label">Daily Income</p> 
+       <p class="label">Recompensa Diária</p> 
        <p class="value"><span class="unit">R</span> <span class="daily_income">{{ (($package->commission_with_avg_amount ?? 0) / $package->validity) }}</span></p> 
       </div> 
      </div> 
@@ -60,23 +60,23 @@
       </div>-->
      </div> 
      <div class="product_details_item"> 
-      <p class="value"><span class="label">Total Money </span> <span class="unit">R</span> <span id="total_money">{{ ($package->price) }}</span></p> 
+      <p class="value"><span class="label">Total </span> <span class="unit">R</span> <span id="total_money">{{ ($package->price) }}</span></p> 
      </div> 
      <div class="layui-btn layui-btn-lg layui-btn-radius buy-btn layui-btn-fluid buy_btn" onclick="buyConfirm()">
-      Buy Now
+      Participar Agora
      </div> 
     </div> 
    </div> 
    <div class="product_details_card"> 
     <img class="lianjie lianjie_left" src="/public/site/img/common/lianjie.png"> 
     <img class="lianjie lianjie_right" src="/public/site/img/common/lianjie.png"> 
-    <div style="background: #F0F5FF;border-radius: 16px;padding: 15px"> 
+    <div style="background: #F8F6F2;border-radius: 16px;padding: 15px"> 
      <div class="product_details_name">
          {{$package->name}}
       {{--Buy upgrade to VIP{{ $package->is_default == '1' ? '0' : $user->vip_level + 1 }}--}}
      </div> 
      <div class="product_details_item"> 
-      <p class="label">Price</p> 
+      <p class="label">Acesso</p> 
       <p class="value price"><span class="unit">R</span>{{ ($package->price) }}</p> 
      </div> 
      <div class="product_details_item"> 
@@ -84,7 +84,7 @@
       <p class="value">{{ $package->validity }} days</p> 
      </div> 
      <div class="product_details_item"> 
-      <p class="label">Daily Income</p> 
+      <p class="label">Recompensa Diária</p> 
       <p class="value"><span class="unit">R</span> {{ (($package->commission_with_avg_amount ?? 0) / $package->validity) }}</p> 
      </div> 
      <div class="product_details_item"> 
@@ -100,7 +100,7 @@
    <div class="product_details_card"> 
     <img class="lianjie lianjie_left" src="/public/site/img/common/lianjie.png"> 
     <img class="lianjie lianjie_right" src="/public/site/img/common/lianjie.png"> 
-    <div style="background: #F0F5FF;border-radius: 16px;padding: 15px"> 
+    <div style="background: #F8F6F2;border-radius: 16px;padding: 15px"> 
      <div class="product_details_name" style="border-left: 4px solid #EBD8A3 ;padding-left: 10px;">
        Monthly fund 
      </div> 

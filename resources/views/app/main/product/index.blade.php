@@ -85,7 +85,7 @@ class="layui-form layui-layer-wrap" style="">
     <div class="flex_left">
         <img src="/public/uploads/product/20250616114007591351.jpg" class="product_dialog_image">
         <div>
-            <div class="product_title">Purchase will upgrade to VIP1</div>
+            <div class="product_title">Participação will upgrade to VIP1</div>
         <div class="flex_space product_vip_btn">
                 <!--<img class="product_vip_icon" src="/public/site/img/v.png"  style="height: 14px;width: 14px;margin-right: 2px">-->
                 <span class="vip_level">VIP0</span>
@@ -112,7 +112,7 @@ class="layui-form layui-layer-wrap" style="">
             <p class="value product_total_income">₹12544</p>
         </div>
         <div class="product_item flex_space">
-            <p class="label">Max Investment</p>
+            <p class="label">Max Investimento</p>
             <p class="value product_maximum_share">100</p>
         </div>
     </div>
@@ -133,7 +133,7 @@ class="layui-form layui-layer-wrap" style="">
     </button></div>
 
 <div class="product_top">
-    Investment List 
+    Investimento List 
   </div> 
   <div class="flex_space" style=" background: #ffffff;margin-bottom: 70px;"> 
    <div class="product_type_nav"> 

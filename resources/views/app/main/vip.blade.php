@@ -7,7 +7,7 @@ $packages = Package::where('status', 'active')->get();
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>product_</title> 
+  <title>Experiências – EMI</title> 
   <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/site/css/common.css"> 
   <link rel="stylesheet" href="/public/site/css/swiper-bundle.min.css">
@@ -29,15 +29,15 @@ $packages = Package::where('status', 'active')->get();
    <div class="index_menu"> 
     <div class="nav nav_active" style="text-align: center;width: 30%;" data-type="1" data-image="fixed" onclick="setActiveTab(1)">
      <img class="nav_fixed" src="/public/site/img/product/fixed_active.png" style="width: 50px;height: 50px;"> 
-     <p class="title">Stable Fund</p> 
+     <p class="title">Experiências</p> 
     </div> 
     <div class="nav" style="text-align: center;width: 30%" data-type="2" data-image="welfare" onclick="setActiveTab(2)"> 
      <img class="nav_welfare" src="/public/site/img/product/welfare.png" style="width: 50px;height: 50px;"> 
-     <p class="title">Daily Fund</p> 
+     <p class="title">Premium</p> 
     </div> 
     <div class="nav" style="text-align: center;width: 30%" data-type="3" data-image="activity" onclick="setActiveTab(3)">
      <img class="nav_activity" src="/public/site/img/product/activity.png" style="width: 50px;height: 50px;"> 
-     <p class="title">Welfare Fund</p> 
+     <p class="title">Harmonie</p> 
     </div> 
    </div> 
   </div> 
@@ -57,7 +57,7 @@ $packages = Package::where('status', 'active')->get();
          <img src="/public/site/img/vip/lv{{ $package->vip_level ?? 0 }}.png" style="border:none;border-radius:0px;width: 18px;height: 18px;margin-right: 5px;">{{$package->name}}
         </div> 
         <div class="product_price flex_left"> 
-         <p class="label">Each Price</p> 
+         <p class="label">Acesso</p> 
          <p class="value position"> <span class="unit">R</span> <span class="price"> {{ ($package->price) }}</span> </p> 
         </div> 
        </div> 
@@ -98,7 +98,7 @@ $packages = Package::where('status', 'active')->get();
          <img src="/public/site/img/vip/lv{{ $package->vip_level ?? 0 }}.png" style="border:none;border-radius:0px;width: 18px;height: 18px;margin-right: 5px;">{{$package->name}}
         </div> 
         <div class="product_price flex_left"> 
-         <p class="label">Each Price</p> 
+         <p class="label">Acesso</p> 
          <p class="value position"> <span class="unit">R</span> <span class="price"> {{ ($package->price) }}</span> </p> 
         </div> 
        </div> 
@@ -139,7 +139,7 @@ $packages = Package::where('status', 'active')->get();
          <img src="/public/site/img/vip/lv{{ $package->vip_level ?? 0 }}.png" style="border:none;border-radius:0px;width: 18px;height: 18px;margin-right: 5px;">{{$package->name}}
         </div> 
         <div class="product_price flex_left"> 
-         <p class="label">Each Price</p> 
+         <p class="label">Acesso</p> 
          <p class="value position"> <span class="unit">R</span> <span class="price"> {{ ($package->price) }}</span> </p> 
         </div> 
        </div> 

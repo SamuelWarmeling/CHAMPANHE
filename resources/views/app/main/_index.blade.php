@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Home_</title>
+  <title>EMI – Enoteca Millesimi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/site/css/common.css?t=1.2"> 
@@ -16,17 +16,17 @@
    </div> 
    <div class="index_banner" style="padding: 20px 25px;height: auto"> 
     <div class="title">
-     Main Wallet
+     Carteira MIL
     </div> 
     <div class="label">
-     Your Balnace
+     Seu Saldo
     </div> 
     <div class="title" style="font-size: 26px;margin-top: 10px">
      {{price(auth()->user()->balance)}}
     </div> 
     <div class="flex_space" style="margin-top: 20px"> 
-     <a href="/recharge" class="wallet_btn" style="margin-right: 15px;"> <img src="/public/site/img/index/recharge.png"> Recharge </a> 
-     <a href="/withdraw" class="wallet_btn"> <img src="/public/site/img/index/withdraw.png"> Withdraw </a> 
+     <a href="/deposito" class="wallet_btn" style="margin-right: 15px;"> <img src="/public/site/img/index/deposito.png"> Depositar </a> 
+     <a href="/retirada" class="wallet_btn"> <img src="/public/site/img/index/retirada.png"> Retirar </a> 
     </div> 
    </div> 
    <div class="index_menu"> 
@@ -312,11 +312,11 @@
    <div class="border" style="height: 20px;"> 
    </div> 
    <div class="content"> 
-    <a href="/" class="item active"> <img src="/public/site/img/footer/home_active.png"> <p>Home</p> </a> 
-    <a href="/product" class="item "> <img src="/public/site/img/footer/invest.png"> <p>Invest</p> </a> 
-    <a href="/team" class="item "> <img src="/public/site/img/footer/team.png"> <p>Team</p> </a> 
+    <a href="/" class="item active"> <img src="/public/site/img/footer/home_active.png"> <p>Início</p> </a> 
+    <a href="/product" class="item "> <img src="/public/site/img/footer/invest.png"> <p>Experiências</p> </a> 
+    <a href="/team" class="item "> <img src="/public/site/img/footer/team.png"> <p>Equipe</p> </a> 
     <a href="/blog" class="item "> <img src="/public/site/img/footer/mboard.png"> <p>MBoard</p> </a> 
-    <a href="/my" class="item "> <img src="/public/site/img/footer/account.png"> <p>Account</p> </a> 
+    <a href="/my" class="item "> <img src="/public/site/img/footer/account.png"> <p>Conta</p> </a> 
    </div> 
   </div> 
   

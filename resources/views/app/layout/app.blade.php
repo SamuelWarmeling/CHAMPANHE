@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/app')}}/plugins/turbo-slider/turbo.css">
     <link rel="stylesheet" href="{{asset('public/app')}}/css/slick-theme.css">
     <link rel="stylesheet" href="{{asset('public/app')}}/css/slick.css">
-    <link rel="stylesheet" href="{{asset('public/app/developer/withdraw.css')}}">
+    <link rel="stylesheet" href="{{asset('public/app/developer/retirada.css')}}">
     <link rel="stylesheet" href="{{asset('public/app')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('public/app/developer/developer.css')}}">
     <style>
@@ -96,9 +96,9 @@
                 </li>
                 <li>
 
-                    <a href="{{route('user.mining')}}">
+                    <a href="{{route('user.experiência')}}">
                         <img src="{{asset('public/app/nav/ttttt.png')}}" alt="">
-                        <p>Mining</p>
+                        <p>Experiência</p>
                     </a>
                 </li>
                 <li>
