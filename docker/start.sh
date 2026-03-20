@@ -7,6 +7,10 @@ export PORT=${PORT:-10000}
 echo "==> Porta: $PORT"
 envsubst '${PORT}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf
 
+# Corrige permissoes do storage em runtime
+echo "==> Corrigindo permissoes do storage..."
+chown -R www-data:www-data /var/www/html/storage && chmod -R 775 /var/www/html/storage
+
 # Cria symlink do storage publico
 echo "==> Criando storage:link..."
 php artisan storage:link || echo "[AVISO] storage:link falhou (pode ja existir)"
