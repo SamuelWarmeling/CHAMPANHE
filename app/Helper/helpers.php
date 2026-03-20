@@ -50,7 +50,7 @@ if (! function_exists('depositPrice')) {
 if (! function_exists('currency')) {
     function currency()
     {
-        return '$';
+        return 'MIL ';
     }
 }
 
