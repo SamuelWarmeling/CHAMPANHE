@@ -223,12 +223,12 @@ class UserController extends Controller
 
     public function history_all()
     {
-        return view('app.main.history_all');
+        return view('app.main.history');
     }
 
     public function history_income()
     {
-        return view('app.main.history_income');
+        return view('app.main.history');
     }
 
 
