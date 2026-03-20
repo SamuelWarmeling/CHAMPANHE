@@ -35,7 +35,7 @@ RUN mkdir -p \
     bootstrap/cache
 
 RUN chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+    && chmod -R 777 storage bootstrap/cache
 
 COPY docker/nginx.conf.template /etc/nginx/nginx.conf.template
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
