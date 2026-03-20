@@ -9,13 +9,10 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 COPY . /app
 
-RUN cp .env.example .env
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
-RUN php artisan key:generate --force
-RUN php artisan storage:link || true
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 8000
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD php artisan key:generate --force && php artisan storage:link || true && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
