@@ -18,7 +18,7 @@
             <div style="width: 100%;">
               <div class="product_name">{{ $package->name }}</div>
               <div class="product_vip">
-                <img src="/public/v2/img/common/vip_icon.png" style="width: 16px;height: 16px;">
+                <img src="/v2/img/common/vip_icon.png" style="width: 16px;height: 16px;">
                 <span>VIP{{ $package->vip_level ?? 0 }}"</span>
               </div>
             </div>

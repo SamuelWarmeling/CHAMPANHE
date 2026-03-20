@@ -12,7 +12,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <!-- Layui -->
-<link rel="stylesheet" href="/public/v2/layui/css/layui.css">
+<link rel="stylesheet" href="/v2/layui/css/layui.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 

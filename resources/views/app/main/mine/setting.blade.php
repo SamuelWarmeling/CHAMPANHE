@@ -3,8 +3,8 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>Setting Info</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css"> 
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
         .layui-panel-window {

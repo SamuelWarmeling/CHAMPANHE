@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css">
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
   <title>Post Proof</title>
   <style>
     body {
@@ -128,7 +128,7 @@
     }
   </style>
 </head>
-<body class="common_background" style="background-image: url(/public/v2/img/order/bg1.png);">
+<body class="common_background" style="background-image: url(/v2/img/order/bg1.png);">
 
 <div class="common_header">
   <a href="javascript:history.back(-1)" class="back position">

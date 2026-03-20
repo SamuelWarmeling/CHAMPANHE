@@ -9,9 +9,9 @@ $packages = Package::where('status', 'active')->get();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>product_CARGILL</title>
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css">
-  <link rel="stylesheet" href="/public/v2/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="/public/v2/css/common.css?t=1.2">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/v2/css/common.css?t=1.2">
    
   <style>
         .layui-col-space10>* {
@@ -138,15 +138,15 @@ class="layui-form layui-layer-wrap" style="">
   <div class="flex_space" style=" background: #ffffff;margin-bottom: 70px;"> 
    <div class="product_type_nav"> 
     <div class="nav nav_active flex_left" data-type="1" data-image="fixed" onclick="setActiveTab(1)"> 
-     <img class="nav_icon" src="/public/v2/img/product/stable_active.png"> 
+     <img class="nav_icon" src="/v2/img/product/stable_active.png"> 
      <p class="title">Fund</p> 
     </div> 
     <div class="nav flex_left" data-type="2" data-image="welfare" onclick="setActiveTab(2)"> 
-     <img class="nav_icon" src="/public/v2/img/product/welfare.png"> 
+     <img class="nav_icon" src="/v2/img/product/welfare.png"> 
      <p class="title">New</p> 
     </div> 
     <div class="nav flex_left" data-type="3" data-image="activity" onclick="setActiveTab(3)">
-     <img class="nav_icon" src="/public/v2/img/product/activity.png">
+     <img class="nav_icon" src="/v2/img/product/activity.png">
      <p class="title">Pro</p> 
     </div> 
    </div> 
@@ -184,11 +184,11 @@ class="layui-form layui-layer-wrap" style="">
 <!-- Footer Menu -->
 <div class="footer_menu">
   <div class="content">
-    <a href="/" class="item"><img src="/public/v2/img/footer/home.png"><p>Home</p></a>
-    <a href="/product" class="item active"><img src="/public/v2/img/footer/invest_active.png"><p>Invest</p></a>
-    <a href="/invitation" class="item"><img src="/public/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px;"></a>
-    <a href="/blog" class="item"><img src="/public/v2/img/footer/blog.png"><p>Blog</p></a>
-    <a href="/my" class="item"><img src="/public/v2/img/footer/account.png"><p>Account</p></a>
+    <a href="/" class="item"><img src="/v2/img/footer/home.png"><p>Home</p></a>
+    <a href="/product" class="item active"><img src="/v2/img/footer/invest_active.png"><p>Invest</p></a>
+    <a href="/invitation" class="item"><img src="/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px;"></a>
+    <a href="/blog" class="item"><img src="/v2/img/footer/blog.png"><p>Blog</p></a>
+    <a href="/my" class="item"><img src="/v2/img/footer/account.png"><p>Account</p></a>
   </div>
 </div>
 @include('alert-message')

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Product</title>
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css">
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
     body {
-      background-image: url('/public/v2/img/order/bg.png');
+      background-image: url('/v2/img/order/bg.png');
     }
     .nav {
       text-align: center;
@@ -149,7 +149,7 @@
             </div>
         @empty
             <div class="product_card empty_card">
-                <img src="/public/v2/img/order/none_order.png" class="empty_img">
+                <img src="/v2/img/order/none_order.png" class="empty_img">
                 <p class="empty_text">No Order</p>
             </div>
         @endforelse

@@ -3,8 +3,8 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>withdraw</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
     .layui-input{
@@ -13,7 +13,7 @@
 
     </style> 
  </head>
- <body class="common_background" style="   background-image: url(/public/v2/img/user/recharge_bg.png);">
+ <body class="common_background" style="   background-image: url(/v2/img/user/recharge_bg.png);">
 <div class="common_header">
     <a href="javascript:history.back(-1)" class="back position">
         <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>

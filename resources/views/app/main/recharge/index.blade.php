@@ -3,8 +3,8 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>CARGILL_recharge</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">-->
   <style>
         .quick{
@@ -37,7 +37,7 @@
         .header{
             border: none;
             background: none;
-            background-image: url("/public/v2/img/user/bill_bg.png");
+            background-image: url("/v2/img/user/bill_bg.png");
             background-size: 100% 180px;
             background-repeat: no-repeat;
             height:180px;
@@ -46,7 +46,7 @@
         }
     </style> 
  </head> 
- <body class="common_body common_background" style="background-image: url(/public/v2/img/user/recharge_bg.png);"> 
+ <body class="common_body common_background" style="background-image: url(/v2/img/user/recharge_bg.png);"> 
   <div class="common_header"> 
 <a href="/" class="back position flex items-center space-x-2">
     <!-- SVG Back Icon -->

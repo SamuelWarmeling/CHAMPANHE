@@ -47,7 +47,7 @@ class RegisteredUserController extends Controller
         }*/
 
         // ✅ Get registration bonus from settings
-        $bonus = Setting::first()->registration_bonus ?? 0;
+        $bonus = Setting::first()?->registration_bonus ?? 0;
 
         // ✅ Generate referral code
         $referralCode = $this->generateUniqueReferralCode();

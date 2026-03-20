@@ -3,14 +3,14 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>My</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/swiper-bundle.min.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
         .common_body{
             background: #F5F7F8;
-            background-image: url("/public/v2/img/account/bg.png");
+            background-image: url("/v2/img/account/bg.png");
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -31,8 +31,8 @@
      </div> 
     </div> 
     <div class="flex_space"> 
-     <a href="#" class="setting" style="width: 30px;height: 30px;line-height:30px;border-radius: 50%;text-align:center;background: rgba(255,255,255,0.8);margin-right: 10px;"> <img src="/public/v2/img/account/setting.png" style="height: 20px;width: 20px;"> </a> 
-     <a href="#" style="width: 30px;height: 30px;line-height:30px;border-radius: 50%;text-align:center;background: rgba(255,255,255,0.8);"> <img src="/public/v2/img/account/notice.png" style="height:20px;width: 20px;"> </a> 
+     <a href="#" class="setting" style="width: 30px;height: 30px;line-height:30px;border-radius: 50%;text-align:center;background: rgba(255,255,255,0.8);margin-right: 10px;"> <img src="/v2/img/account/setting.png" style="height: 20px;width: 20px;"> </a> 
+     <a href="#" style="width: 30px;height: 30px;line-height:30px;border-radius: 50%;text-align:center;background: rgba(255,255,255,0.8);"> <img src="/v2/img/account/notice.png" style="height:20px;width: 20px;"> </a> 
     </div> 
    </div> 
   </div> 
@@ -64,7 +64,7 @@
     <div class="flex_space"> 
       <div class="user_vip_card_left"> 
         <div class="my_vip flex_left"> 
-          <img src="/public/v2/img/vip/vip_icon.png" style="width: 20px;height: 20px;display: inline"> 
+          <img src="/v2/img/vip/vip_icon.png" style="width: 20px;height: 20px;display: inline"> 
           <p style="font-weight:bold;font-size: 16px;color: #FFE9B5;border-right: 2px solid #FFE9B5;padding-right: 10px;height:20px;line-height: 22px">
             VIP LEVEL
           </p> 
@@ -86,28 +86,28 @@
       </div> 
 
       <div class="user_vip_card_right">
-        <img src="/public/v2/img/vip/lv{{ $vipLevel }}.png" style="width: 36px;height:36px;">
+        <img src="/v2/img/vip/lv{{ $vipLevel }}.png" style="width: 36px;height:36px;">
       </div> 
     </div> 
   </a>  
 
    <div class="user_balance_card common_margin_15 flex_space" style="margin-top: 0px"> 
-    <a href="/recharge" class="flex_center" style="width: 49%;border-right: 2px solid #F5F7F8"> <img src="/public/v2/img/account/recharge.png" style="width: 26px;height: 26px"> 
+    <a href="/recharge" class="flex_center" style="width: 49%;border-right: 2px solid #F5F7F8"> <img src="/v2/img/account/recharge.png" style="width: 26px;height: 26px"> 
      <div class="user_balance_card_right">
        Recharge 
       <i class="layui-icon layui-icon-right"></i>
      </div> </a> 
-    <a href="/withdraw" class="flex_center" style="width: 49%"> <img src="/public/v2/img/account/withdraw.png" style="width: 26px;height: 26px"> 
+    <a href="/withdraw" class="flex_center" style="width: 49%"> <img src="/v2/img/account/withdraw.png" style="width: 26px;height: 26px"> 
      <div class="user_balance_card_right">
        Withdrawal 
       <i class="layui-icon layui-icon-right"></i>
      </div> </a> 
    </div> 
    <div class="index_menu common_margin_15"> 
-    <a href="/orders" class="nav nav_active"> <img src="/public/v2/img/account/orders.png" style="width: 30px;height: 30px"> <p class="title">My Orders</p> </a> 
-    <a href="/balanceDetails" class="nav nav_active"> <img src="/public/v2/img/account/balance.png" style="width: 30px;height: 30px"> <p class="title">My Bill</p> </a> 
-    <a href="/team" class="nav nav_active"> <img src="/public/v2/img/account/team.png" style="width: 30px;height: 30px"> <p class="title">My Team</p> </a> 
-    <a href="/add-bank" class="nav nav_active"> <img src="/public/v2/img/account/wallet.png" style="width: 30px;height: 30px"> <p class="title">Bank Card</p> </a> 
+    <a href="/orders" class="nav nav_active"> <img src="/v2/img/account/orders.png" style="width: 30px;height: 30px"> <p class="title">My Orders</p> </a> 
+    <a href="/balanceDetails" class="nav nav_active"> <img src="/v2/img/account/balance.png" style="width: 30px;height: 30px"> <p class="title">My Bill</p> </a> 
+    <a href="/team" class="nav nav_active"> <img src="/v2/img/account/team.png" style="width: 30px;height: 30px"> <p class="title">My Team</p> </a> 
+    <a href="/add-bank" class="nav nav_active"> <img src="/v2/img/account/wallet.png" style="width: 30px;height: 30px"> <p class="title">Bank Card</p> </a> 
    </div> 
    <div class="common_card common_margin_15"> 
     <div style="border-bottom: 1px solid #F6F6F6;padding: 10px 0"> 
@@ -167,28 +167,28 @@
   <div class="cards_container">
     <a href="/vip" class="card">
       <div class="card_content">
-        <img src="/public/v2/img/account/vip.png" alt="VIP">
+        <img src="/v2/img/account/vip.png" alt="VIP">
         <p class="title">VIP</p>
       </div>
     </a>
 
     <a href="/help" class="card">
       <div class="card_content">
-        <img src="/public/v2/img/account/help.png" alt="Help Center">
+        <img src="/v2/img/account/help.png" alt="Help Center">
         <p class="title">Help Center</p>
       </div>
     </a>
 
     <a href="https://t.me/profelartech" class="card">
       <div class="card_content">
-        <img src="/public/v2/img/account/telegram.png" alt="Telegram">
+        <img src="/v2/img/account/telegram.png" alt="Telegram">
         <p class="title">Telegram</p>
       </div>
     </a>
 
     <a href="/setting" class="card">
       <div class="card_content">
-        <img src="/public/v2/img/account/info.png" alt="Setting">
+        <img src="/v2/img/account/info.png" alt="Setting">
         <p class="title">Setting</p>
       </div>
     </a>
@@ -258,11 +258,11 @@
   </div> 
   <div class="footer_menu"> 
    <div class="content"> 
-    <a href="/" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/home.png"> <p>Home</p> </a> 
-    <a href="/product" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/invest.png"> <p>Invest</p> </a> 
-    <a href="/invitation" class="item" style="padding: 0px;position: relative"> <img src="/public/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px; "> </a> 
-    <a href="/blog" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/blog.png"> <p>Blog</p> </a> 
-    <a href="/my" class="item active" style="margin-top: 10px;"> <img src="/public/v2/img/footer/account_active.png"> <p>Account</p> </a> 
+    <a href="/" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/home.png"> <p>Home</p> </a> 
+    <a href="/product" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/invest.png"> <p>Invest</p> </a> 
+    <a href="/invitation" class="item" style="padding: 0px;position: relative"> <img src="/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px; "> </a> 
+    <a href="/blog" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/blog.png"> <p>Blog</p> </a> 
+    <a href="/my" class="item active" style="margin-top: 10px;"> <img src="/v2/img/footer/account_active.png"> <p>Account</p> </a> 
    </div> 
   </div> 
  </body>

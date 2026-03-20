@@ -3,15 +3,15 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>Help Center</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
 
     </style> 
   <style id="ss-chat-custom-css">.ss-chat-body {overflow: hidden !important}</style>
  </head> 
- <body class="common_background" style="background-image: url(/public/v2/img/help/bg.png);"> 
+ <body class="common_background" style="background-image: url(/v2/img/help/bg.png);"> 
   <div class="common_header"> 
    <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Help Center </a> 
   </div> 
@@ -30,7 +30,7 @@
   <div class="help_card" style="margin-top: -80px;"> 
    <a href="https://t.me/profelartech" class="help_flex"> 
     <div class="logo"> 
-     <img src="/public/v2/img/help/recharge.png" style="background:#fff;border-radius:50px;"> 
+     <img src="/v2/img/help/recharge.png" style="background:#fff;border-radius:50px;"> 
     </div> 
     <div> 
      <p class="title">Your deposit has not been received yet?</p> 
@@ -40,7 +40,7 @@
   <div class="help_card"> 
    <div href="/chatlink.html?&amp;language=en" class="help_flex service"> 
     <div class="logo"> 
-     <img src="/public/v2/img/help/service.png"> 
+     <img src="/v2/img/help/service.png"> 
     </div> 
     <div> 
      <p class="title">Online service</p> 
@@ -51,7 +51,7 @@
   <div class="help_card"> 
    <a href="{{setting('telegram')}}" class="help_flex"> 
     <div class="logo"> 
-     <img src="/public/v2/img/help/telegram.png"> 
+     <img src="/v2/img/help/telegram.png"> 
     </div> 
     <div> 
      <p class="title">Telegram</p> 

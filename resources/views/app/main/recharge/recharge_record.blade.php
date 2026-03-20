@@ -3,8 +3,8 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>rechargeLists</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css"> 
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css"> 
   <style>
         .layui-layer-page {
             background-color: #FFFFFf;
@@ -48,7 +48,7 @@
         }
     </style> 
  </head> 
- <body class="common_background" style="background-image: url(/public/v2/img/order/bg.png);"> 
+ <body class="common_background" style="background-image: url(/v2/img/order/bg.png);"> 
   <div class="common_header"> 
    <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> rechargeLists </a> 
   </div> 

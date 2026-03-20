@@ -3,9 +3,9 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>Home_</title> 
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/v2/css/swiper-bundle.min.css"> 
-  <link rel="stylesheet" href="/public/v2/css/common.css?t=1.2">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css?t=1.2">
   <link rel="stylesheet" href="/public/site/css/swiper-bundle.min.css">
   <style>
         .layui-col-space10>* {
@@ -25,7 +25,7 @@
     <div class="swiper-wrapper" id="swiper-wrapper"> 
      <div class="swiper-slide vip_card"> 
       <div class="flex_space"> 
-       <img src="/public/v2/img/vip/lv0.png" style="width: 40px;height: 40px;"> 
+       <img src="/v2/img/vip/lv0.png" style="width: 40px;height: 40px;"> 
        <img src="{{setting('logo')}}" style="width: 40px;height: 40px;"> 
       </div> 
       <div class="vip_text">
@@ -40,13 +40,13 @@
   <div id="product_dialog" class="layui-form" style="display: none"> 
    <input type="hidden" id="product_id" name="product_id"> 
    <div class="flex_left"> 
-    <img src="/public/v2/img/index/product.png" class="product_dialog_image"> 
+    <img src="/v2/img/index/product.png" class="product_dialog_image"> 
     <div> 
      <div class="product_title">
        Official Channel 
      </div> 
      <div class="flex_space product_vip_btn"> 
-      <img class="product_vip_icon" src="/public/v2/img/vip/lv0.png" style="height: 14px;width: 14px;margin-right: 2px"> 
+      <img class="product_vip_icon" src="/v2/img/vip/lv0.png" style="height: 14px;width: 14px;margin-right: 2px"> 
       <span class="vip_level">VIP0</span> 
      </div> 
     </div> 
@@ -150,11 +150,11 @@
      </div> 
     </div> 
     <div class="flex_space"> 
-     <a class="menu" href="/recharge"> <img src="/public/v2/img/index/recharge.png"> <p class="menu_title">Recharge</p> </a> 
-     <a class="menu" href="/withdraw"> <img src="/public/v2/img/index/withdraw.png"> <p class="menu_title">Withdraw</p> </a> 
-     <a class="menu" href="/team"> <img src="/public/v2/img/index/team.png"> <p class="menu_title">Team</p> </a> 
-     <a class="menu" href="/help"> <img src="/public/v2/img/index/blog.png"> <p class="menu_title">service</p> </a> 
-     <a class="menu" href="{{setting('telegram')}}"> <img src="/public/v2/img/index/telegram.png"> <p class="menu_title">Telegram</p> </a> 
+     <a class="menu" href="/recharge"> <img src="/v2/img/index/recharge.png"> <p class="menu_title">Recharge</p> </a> 
+     <a class="menu" href="/withdraw"> <img src="/v2/img/index/withdraw.png"> <p class="menu_title">Withdraw</p> </a> 
+     <a class="menu" href="/team"> <img src="/v2/img/index/team.png"> <p class="menu_title">Team</p> </a> 
+     <a class="menu" href="/help"> <img src="/v2/img/index/blog.png"> <p class="menu_title">service</p> </a> 
+     <a class="menu" href="{{setting('telegram')}}"> <img src="/v2/img/index/telegram.png"> <p class="menu_title">Telegram</p> </a> 
     </div> 
    </div> 
   </div> 
@@ -202,7 +202,7 @@
     </div> 
     <div class="go_btn flex_space"> 
      <p>Go</p> 
-     <img src="/public/v2/img/tasks/go.png"> 
+     <img src="/v2/img/tasks/go.png"> 
     </div> </a> 
    <a href="/tasks" class="daily_tasks_card"> 
     <div class="title">
@@ -213,7 +213,7 @@
     </div> 
     <div class="go_btn flex_space"> 
      <p>Go</p> 
-     <img src="/public/v2/img/tasks/go.png"> 
+     <img src="/v2/img/tasks/go.png"> 
     </div> </a> 
    <a href="/lottery" class="tasks_lottery_card"> 
     <div class="title">
@@ -224,7 +224,7 @@
     </div> 
     <div class="go_btn flex_space"> 
      <p>Go</p> 
-     <img src="/public/v2/img/tasks/go.png"> 
+     <img src="/v2/img/tasks/go.png"> 
     </div> </a> 
    <!--<a href="/product" class="flex_space" style="margin-bottom: 10px">--> 
    <!--    <div class="common_h1">Hot Products</div>--> 
@@ -241,7 +241,7 @@
   <textarea id="notice_content" style="display: none"></textarea> 
   <div id="dialog" class="dialog" style="display: none"> 
    <div class="dialog_title">
-    <img class="dialog_icon" src="/public/v2/img/common/dialog_icon.png">Kind reminder
+    <img class="dialog_icon" src="/v2/img/common/dialog_icon.png">Kind reminder
    </div> 
    <div class="dialog_contents"> 
     <p class="text" id="dialog_text"></p> 
@@ -255,15 +255,15 @@
   </div> 
    
   <!--<a href="/help" id="service">--> 
-  <!--    <img src="/public/v2/img/common/service.png" style="width: 40px;height: 40px">--> 
+  <!--    <img src="/v2/img/common/service.png" style="width: 40px;height: 40px">--> 
   <!--</a>--> 
   <div class="footer_menu"> 
    <div class="content"> 
-    <a href="/" class="item active" style="margin-top: 10px;"> <img src="/public/v2/img/footer/home_active.png"> <p>Home</p> </a> 
-    <a href="/product" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/invest.png"> <p>Invest</p> </a> 
-    <a href="/invitation" class="item" style="padding: 0px;position: relative"> <img src="/public/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px; "> </a> 
-    <a href="/blog" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/blog.png"> <p>Blog</p> </a> 
-    <a href="/my" class="item " style="margin-top: 10px;"> <img src="/public/v2/img/footer/account.png"> <p>Account</p> </a> 
+    <a href="/" class="item active" style="margin-top: 10px;"> <img src="/v2/img/footer/home_active.png"> <p>Home</p> </a> 
+    <a href="/product" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/invest.png"> <p>Invest</p> </a> 
+    <a href="/invitation" class="item" style="padding: 0px;position: relative"> <img src="/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px; "> </a> 
+    <a href="/blog" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/blog.png"> <p>Blog</p> </a> 
+    <a href="/my" class="item " style="margin-top: 10px;"> <img src="/v2/img/footer/account.png"> <p>Account</p> </a> 
    </div> 
   </div> 
   <div class="layui-layer-shade" id="layui-layer-shade1" times="1" style="z-index: 19891014; background-color: rgb(0, 0, 0); opacity: 0.3;"></div>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
-  <link rel="stylesheet" href="/public/v2/layui/css/layui.css">
-  <link rel="stylesheet" href="/public/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f5f7 url(/public/v2/img/blog/bg.png) no-repeat center top;
+      background: #f4f5f7 url(/v2/img/blog/bg.png) no-repeat center top;
       background-size: cover;
       margin: 0;
       padding-bottom: 80px; /* for footer */
@@ -158,7 +158,7 @@
 
 <a href="/postBlog" class="blog_btn">
   <div>
-    <img src="/public/v2/img/blog/publish.png" alt="Publish">
+    <img src="/v2/img/blog/publish.png" alt="Publish">
     <div>
       <p class="blog_btn_title">Publish</p>
       <p class="blog_btn_desc">Go publish</p>
@@ -206,22 +206,22 @@
 <div class="footer_menu">
   <div class="content">
     <a href="/" class="item" style="margin-top: 10px;">
-      <img src="/public/v2/img/footer/home.png">
+      <img src="/v2/img/footer/home.png">
       <p>Home</p>
     </a>
     <a href="/product" class="item" style="margin-top: 10px;">
-      <img src="/public/v2/img/footer/invest.png">
+      <img src="/v2/img/footer/invest.png">
       <p>Invest</p>
     </a>
     <a href="/invitation" class="item" style="padding: 0px; position: relative;">
-      <img src="/public/v2/img/footer/invite.png" style="width: 80px; height: 80px; margin-top: -25px;">
+      <img src="/v2/img/footer/invite.png" style="width: 80px; height: 80px; margin-top: -25px;">
     </a>
     <a href="/blog" class="item active" style="margin-top: 10px;">
-      <img src="/public/v2/img/footer/blog_active.png">
+      <img src="/v2/img/footer/blog_active.png">
       <p>Blog</p>
     </a>
     <a href="/my" class="item" style="margin-top: 10px;">
-      <img src="/public/v2/img/footer/account.png">
+      <img src="/v2/img/footer/account.png">
       <p>Account</p>
     </a>
   </div>
