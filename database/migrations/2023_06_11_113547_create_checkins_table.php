@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('date');
+            $table->double('amount', 20, 2)->default(0);
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
