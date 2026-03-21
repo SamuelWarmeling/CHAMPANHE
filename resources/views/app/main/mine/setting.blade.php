@@ -1,137 +1,162 @@
-<html>
- <head> 
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Configurações – EMI</title> 
-  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Configurações – EMI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/common.css">
-  <link rel="stylesheet" href="/v2/css/emi-theme.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <style>
-        .layui-panel-window {
-            background: #FFFFFF !important;
-            border-top: none
-        }
+    *{font-family:'Inter',sans-serif;box-sizing:border-box}
+    body{background:#F8F6F2;color:#1C1C1C;margin:0;padding:0 0 80px}
+    h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
+    .emi-header{background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);padding:14px 16px;color:#fff}
+    .emi-back{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:15px;font-weight:600}
+    .page-wrap{padding:16px;}
 
-        .layui-form-item {
-            background: none;
-            border-radius: 8px;
-            background: #F6F6F6;
-            height: 44px;
-            line-height: 44px;
-        }
+    .settings-card{
+      background:#fff;border:1px solid #E8DCC8;border-radius:12px;
+      box-shadow:0 2px 8px rgba(200,169,106,.15);padding:20px;
+    }
 
-        .layui-input {
-            background: none;
-            font-weight: 700;
-            font-size: 18px;
-            color: #1C1C1C;
-            border: none;
-            height: 44px;
-            line-height: 44px;
-        }
-        .layui-input::placeholder {
-            font-weight: 400;
-            font-size: 16px;
-            color: #B3B3B3;
-        }
+    .avatar-block{
+      display:flex;align-items:center;gap:14px;margin-bottom:24px;
+      padding-bottom:20px;border-bottom:1px solid #F5EDD8;
+    }
+    .avatar-block img{
+      width:64px;height:64px;border-radius:50%;
+      border:2.5px solid #C8A96A;
+      box-shadow:0 2px 10px rgba(200,169,106,0.25);
+      object-fit:cover;cursor:pointer;
+    }
+    .avatar-hint h3{
+      font-family:'Inter',sans-serif;
+      font-size:14px;font-weight:600;color:#1C1C1C;margin:0 0 4px;
+    }
+    .avatar-hint p{font-size:12px;color:#6B6B6B;margin:0;line-height:1.5;}
 
-        .login_btn {
-            background: linear-gradient( 135deg, #C8A96A 0%, #D6A86B 100%);
-            box-shadow: 0px 4px 10px 0px rgba(200,169,106,0.25);
-            font-family: Arial, Arial;
-            font-weight: 700;
-            font-size: 18px;
-            color: #FFFFFF;
-            height: 44px;
-            line-height: 44px;
+    .field-label{font-size:13px;font-weight:500;color:#6B6B6B;margin-bottom:6px;display:block;}
+    .field-group{margin-bottom:16px;}
+    .field-wrap{
+      display:flex;align-items:center;
+      background:#F8F6F2;border:1px solid #E8DCC8;
+      border-radius:10px;height:48px;overflow:hidden;
+      transition:border-color 0.2s;
+    }
+    .field-wrap:focus-within{border-color:#C8A96A;}
 
-        }
-        .password_item{
-            display: block;
-            padding: 10px;
-            border-bottom: 1px solid #EDEDED;
-            font-family: Arial, sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            color: #1C1C1C;
-            line-height: 20px;
-        }
-    </style> 
- </head> 
- <body class="common_body"> 
-  <div class="common_header">
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Configurações </a> 
-  </div> 
-  <div style="margin: 30px 15px;"> 
-   <div style="background: #FFFFFF;padding: 15px;border-radius: 8px;"> 
-    <div class="layui-panel-window layui-font-16" style="border-radius: 8px;"> 
-     <form class="layui-form" lay-filter="saveBankCardInfoForm"> 
-      <input name="avatar" id="avatar" type="hidden" value="/public/uploads/user/avatar.png"> 
-      <div class="demo-login-container"> 
-       <div class="user-header" style="margin-top: 10px;display: flex;justify-content: flex-start"> 
-        <div> 
-         <img src="{{setting('logo')}}" style="width: 60px;height: 60px" class="layui-circle" id="upload_avatar">
-         <input class="layui-upload-file" type="file" accept="image/*" name="file"> 
-        </div> 
-        <div style="padding-left: 10px;color: #818393"> 
-         <h1 class="layui-font-16" style="color: #1C1C1C;margin-bottom: 10px;">Clique para alterar a foto</h1>
-         <p>Recomendamos imagens 1:1 maiores que 100px</p> 
-        </div> 
-        <div style="clear: both"></div> 
-       </div> 
-       <div style="margin-top: 20px;margin-bottom: 7px;color: #474747;font-size: 18px;">
-        Apelido
-       </div> 
-       <div class="layui-form-item"> 
-        <input type="text" name="nickname" value="{{ auth()->user()->nickname ?? '' }}" lay-verify="required" placeholder="Seu apelido" autocomplete="off" class="layui-input"> 
-       </div> 
-       <!--<div style="margin-top: 20px;margin-bottom: 7px;color: #474747;font-size: 18px;">E-mail</div>--> 
-       <!--<div class="layui-form-item">--> 
-       <!--    <input type="text" name="email"  value="" lay-verify="required" placeholder="Email" autocomplete="off" class="layui-input">--> 
-       <!--</div>--> 
-       <div class="layui-form-item" style="border: none;       margin-top: 30px;"> 
-        <button class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius login_btn" lay-submit="" lay-filter="saveInfo"> Salvar </button> 
-       </div> 
-      </div> 
-     </form> 
-    </div> 
-   </div> 
-  </div> 
+    /* layui input inside our wrap */
+    .field-wrap .layui-input{
+      flex:1;border:none !important;background:transparent !important;
+      padding:0 14px !important;font-size:15px !important;color:#1C1C1C !important;
+      outline:none;height:48px !important;line-height:48px !important;
+      font-family:'Inter',sans-serif !important;font-weight:400 !important;
+    }
+    .field-wrap .layui-input::placeholder{color:#BBBBBB !important;}
+
+    .btn-save{
+      display:block;width:100%;padding:14px;
+      background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);
+      color:#fff;font-size:16px;font-weight:700;
+      border:none;border-radius:10px;cursor:pointer;
+      letter-spacing:0.5px;transition:opacity 0.2s;margin-top:8px;
+    }
+    .btn-save:active{opacity:0.88;}
+
+    /* hide layui upload file input visually */
+    .layui-upload-file{
+      position:absolute;opacity:0;width:64px;height:64px;cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="emi-header">
+    <a href="javascript:history.back(-1)" class="emi-back">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Configurações
+    </a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="settings-card">
+      <form class="layui-form" lay-filter="saveBankCardInfoForm">
+        <input name="avatar" id="avatar" type="hidden" value="/public/uploads/user/avatar.png">
+
+        <div class="avatar-block">
+          <div style="position:relative;">
+            <img src="{{setting('logo')}}" style="width:64px;height:64px;" class="layui-circle" id="upload_avatar" alt="Avatar">
+            <input class="layui-upload-file" type="file" accept="image/*" name="file">
+          </div>
+          <div class="avatar-hint">
+            <h3>Clique para alterar a foto</h3>
+            <p>Recomendamos imagens 1:1<br>maiores que 100px</p>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Apelido</label>
+          <div class="field-wrap">
+            <input type="text" name="nickname" value="{{ auth()->user()->nickname ?? '' }}"
+                   lay-verify="required" placeholder="Seu apelido" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+
+        {{-- E-mail field (commented in original, preserved here) --}}
+        {{-- <div class="field-group">
+          <label class="field-label">E-mail</label>
+          <div class="field-wrap">
+            <input type="text" name="email" value="" lay-verify="required" placeholder="E-mail" autocomplete="off" class="layui-input">
+          </div>
+        </div> --}}
+
+        <button class="btn-save layui-btn layui-btn-fluid" lay-submit lay-filter="saveInfo">
+          Salvar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/v2/layui/layui.js"></script>
   <script>
     layui.use(function(){
-        var $ = layui.jquery;
-        var layer = layui.layer;
-        var form = layui.form;
-        var upload = layui.upload;
-        var element = layui.element;
-        var uploadInst = upload.render({
-            elem: '#upload_avatar'
-            ,url: '/api/user/uploadAvatar'
-            ,acceptMime: 'image/*'
-            ,accept: 'jpg|png|gif|jpeg'
-            ,data: {'directory': 'avatar'}
-            ,done: function(res){
-                layer.msg(res.msg);
-                if(res.status == 1){
-                    $('#avatar').val(res.result.path);
-                    $('#upload_avatar').attr('src', res.result.show_path);
-                }
-            }
-            ,error: function(){}
-        });
-        form.on('submit(saveInfo)', function(data){
-            var data = data.field;
-            $.post('/info', data, function(res){
-                layer.msg(res.msg);
-                if(res.status == 1){
-                    window.location.href = '/my';
-                }
-            });
-            return false;
-        });
+      var $ = layui.jquery;
+      var layer = layui.layer;
+      var form = layui.form;
+      var upload = layui.upload;
+      var element = layui.element;
 
+      var uploadInst = upload.render({
+        elem: '#upload_avatar',
+        url: '/api/user/uploadAvatar',
+        acceptMime: 'image/*',
+        accept: 'jpg|png|gif|jpeg',
+        data: {'directory': 'avatar'},
+        done: function(res){
+          layer.msg(res.msg);
+          if(res.status == 1){
+            $('#avatar').val(res.result.path);
+            $('#upload_avatar').attr('src', res.result.show_path);
+          }
+        },
+        error: function(){}
+      });
+
+      form.on('submit(saveInfo)', function(data){
+        var data = data.field;
+        $.post('/info', data, function(res){
+          layer.msg(res.msg);
+          if(res.status == 1){
+            window.location.href = '/my';
+          }
+        });
+        return false;
+      });
     });
-</script> 
- </body>
+  </script>
+</body>
 </html>

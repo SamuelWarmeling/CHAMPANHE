@@ -1,278 +1,136 @@
-<html>
- <head> 
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Tasks</title> 
-  <!--<link rel="stylesheet" href="/public/site/layui/csss/layui.css"> 
-  <link rel="stylesheet" href="/public/site/csss/common.css"> -->
-  <style>
+@include('alert-message')
 
-        .invite_btn{
-            width: 47%;
-            height: 40px;
-            text-align: center;
-            line-height: 40px;
-            background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
-            border-radius: 100px 100px 100px 100px;
-            cursor: pointer;
-        }
-        .copy_link_btn{
-            font-family: Arial, Arial;
-            font-weight: 700;
-            font-size: 14px;
-            color: #1C1C1C;
-        }
-        .qr_code_btn{
-            font-family: Arial, Arial;
-            font-weight: 700;
-            font-size: 14px;
-            color: #1C1C1C;
-            background: #A3B18A;
-        }
-        .label{
-            font-family: Arial, Arial;
-            font-weight: 400;
-            font-size: 14px;
-            color: #EDE8DF;
-            line-height: 22px;
-        }
-        .value{
-            font-family: Arial, Arial;
-            font-weight: 700;
-            font-size: 24px;
-            color: #C8A96A;
-            line-height: 28px;
-        }
-        .common_card .title{
-            padding-left: 10px;
-            font-family: Arial, Arial;
-            font-weight: 700;
-            font-size: 18px;
-            color: #1C1C1C;
-            height: 30px;
-            line-height: 30px;
-            display: flex;
-            justify-content:space-between;
-        }
-        .reward_card{
-            height: auto;
-            background-image: url("/public/site/img/tasks/bg.png?t=222");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            border-radius: 15px;
-            padding-top: 40px;
-        }
+@php
+  $path = request()->path();
+  $homeActive    = ($path === '/' || $path === '');
+  $vipActive     = str_contains($path, 'vip') || str_contains($path, 'product') || str_contains($path, 'fund');
+  $inviteActive  = str_contains($path, 'invite') || str_contains($path, 'task');
+  $blogActive    = str_contains($path, 'withdrawal-proof') || str_contains($path, 'notice');
+  $accountActive = str_contains($path, 'profile') || str_contains($path, 'mine');
+@endphp
 
-        .reward_icon{
-            height: 30px;
-            width: 30px;
-        }
-        .reward_card .title{
-           padding-left: 15px;
-            font-family: Arial, Arial;
-            font-weight: 400;
-            font-size: 18px;
-            color: #333333;
-        }
-        .reward_card .label{
-            font-family: Arial, Arial;
-            font-weight: 400;
-            font-size: 14px;
-            color: #333333;
-            line-height: 16px;
-        }
-        .reward_card .value{
-            font-family: Arial, Arial;
-            font-weight: 400;
-            font-size: 16px;
-            color: #333333;
-            line-height: 18px;
-        }
-        .reward_card .content{
-            margin-bottom: 15px;
-            margin-top: unset;
-            width: 100%;
-        }
-        .reward_text{
-            margin-top: 10px;
-            font-family: Arial, Arial;
-            font-weight: 400;
-            font-size: 14px;
-            color: #666666;
-            line-height: 24px;
-        }
-        .link{
-            padding-left: 10px;
-            margin-bottom: 10px;
-        }
-         .footer_menu{
-    position: fixed;
-    z-index:9999;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    /*height: 80px;*/
-    background:none;
-    /*box-shadow: 0px 4px 10px 0px rgba(42,65,92,0.3);*/
-    /*border: 1px solid #ACC8FD;*/
-    border-radius: 120px 120px 0  0;
-    padding: 0;
-    margin: 0;
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.footer_menu {
+  position: fixed; z-index: 9999; bottom: 0; left: 0; right: 0;
+  background: #FFFFFF;
+  box-shadow: 0 -2px 12px rgba(200,169,106,0.12);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
-
-.footer_menu .content{
-    background-image:url(/mbtech/menu_bg.png) ;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100%;
-    color: #A1BFF6;
+.footer_menu .content {
+  display: flex; width: 100%; align-items: flex-end;
+  background: #FFFFFF; position: relative;
 }
-.footer_menu .content a{
-    color: #888888 !important;
-    font-weight: 400;
+.footer_menu .content a {
+  color: #999999 !important; text-decoration: none;
+  font-family: 'Inter', sans-serif; font-weight: 500;
 }
-.footer_menu .content .item{
-    padding: 10px;
-    width: 20%;
-    text-align: center;
-    justify-content: center;
+.footer_menu .content .item {
+  flex: 1; padding: 10px 0 8px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
 }
-.footer_menu .content .item img{
-    width: 21px;
-    height: 21px;
+.footer_menu .content .item svg { width: 22px; height: 22px; }
+.footer_menu .content .item p {
+  margin: 0; font-size: 11px; color: #999; font-family: 'Inter', sans-serif;
 }
-.footer_menu .content .item p{
-    margin-top: 4px;
-    font-family: Arial, Arial;
-    font-weight: 400;
-    font-size: 14px;
-    color: #AFAFAF;
-    height: 20px;
-    line-height: 20px;
+.footer_menu .content .item.active svg { color: #C8A96A !important; }
+.footer_menu .content .item.active p  { color: #C8A96A !important; }
+.footer_menu .content .center-item {
+  flex: 1; text-align: center; padding: 0 0 8px; position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
 }
-.footer_menu .content .active{
-    text-align: center;
-    font-family: Arial, Arial;
-    font-weight: 400;
-    font-size: 14px;
-    color: #C8A96A;
+.center-fab {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
+  box-shadow: 0 4px 14px rgba(200,169,106,0.4);
+  margin-top: -20px; color: #fff;
 }
-
-#service{
-    position: fixed;
-    z-index:9999;
-    bottom: 200px;
-    right: 0px;
-    width: 40px;
-    height: 40px;
-    padding: 3px;
-    padding-left: 5px;
-    padding-top: 5px;
-    box-shadow: 0px 4px 10px 0px rgba(200,169,106,0.3);
-    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
-    border-radius: 12px 12px 12px 12px;
-    border: 1px solid #D6A86B;
-    text-align: center;
+.center-fab svg { width: 24px; height: 24px; color: #fff; }
+.center-item p {
+  margin: 0; font-size: 11px; font-family: 'Inter', sans-serif;
 }
-    </style> 
- </head> 
- <!--<body class="common_body"> 
-  <div class="common_header common_header_order" style="height: 150px;"> 
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Tasks </a> 
-   <a href="/help" style="position:absolute;top:15px; right:15px;height: 36px;width: 36px;background: #20C57A;border-radius: 12px 12px 12px 12px;border: 1px solid #7DD8A2;"> <img src="/public/site/img/common/service.png" style="height:22px;width: 22px;padding-top: 8px;padding-left: 8px "> </a> 
-   <div style="padding: 10px 20px;"> 
-    <p class="label">Total Commission Rate</p> 
-    <p class="value" style="margin-top: 10px">36%</p> 
-   </div> 
-  </div> 
-  <div style="padding: 15px; margin-bottom: 20px;position: relative;top: -80px"> 
-   <div class="common_card" style="margin-bottom: 0px"> 
-    <div class="flex_left"> 
-     <img class="reward_icon" src="/public/site/img/tasks/reward_icon.png"> 
-     <div class="title">
-       Reward Description 
-     </div> 
-    </div> 
-    <p class="reward_text"> If your friend gets up to VIP1 or above then you will get more rewards! </p> 
-   </div> 
-   <div class="common_card" style=" margin-top:20px;background: #FFFFFF;border-radius: 16px;"> 
-    <div class="title"> 
-     <p>Invite Link</p> 
-    </div> 
-    <p class="link">https://www.elsewedyelectricnf.cc/?invitation_code=C8120</p> 
-    <div class="flex_space"> 
-     <p class="invite_btn copy_link_btn" id="copy">Copy invitation link</p> 
-     <p class="invite_btn qr_code_btn" id="poster">Invitation QR code</p> 
-    </div> 
-   </div> 
-  </div>-->
-  <div class="footer_menu"> 
-   <div class="content"> 
-    <a href="/" class="item "> <img src="/mbtech/home.png"> <p>Home</p> </a> 
-    <a href="/vip" class="item "> <img src="/mbtech/invest.png"> <p>Invest</p> </a> 
-    <a href="/invite" class="item position" style=""> <p style="position:absolute;top: -12px;left: 0px;width: 100%"> <img src="/mbtech/Tasks.png" style="display:inline-block;height: 45px;width: 45px;"> </p> </a> 
-    <a href="/withdrawal-proofs" class="item "> <img src="/mbtech/mboard.png"> <p>Blog</p> </a> 
-    <a href="/profile" class="item "> <img src="/mbtech/account.png"> <p>Account</p> </a> 
-   </div> 
-  </div> 
-  <textarea style="height: 1px;opacity: 0" name="copyTxt" id="copyTxt" readonly>https://www.elsewedyelectricnf.cc/?invitation_code=C8120</textarea> 
-  <!--&lt;!&ndash;	底部内容-开始	  &ndash;&gt;--> 
-  <!--<div class="footer_menu">
+.center-item.active p { color: #C8A96A !important; }
+.center-item p { color: #999; }
 
-    <div class="content">
-        <a  href="/" class="item ">
-            <img src="/public/site/img/footer/home.png"/>
-            <p>Home</p>
-        </a>
-        <a  href="/product" class="item ">
-            <img src="/public/site/img/footer/invest.png"/>
-            <p>Invest</p>
-        </a>
-        <a  href="/tasks" class="item position" style="">
-            <p style="position:absolute;top: -12px;left: 0px;width: 100%">
-                <img src="/public/site/img/footer/Tasks.png" style="display:inline-block;height: 45px;width: 45px;"/>
-            </p>
+#service {
+  position: fixed; z-index: 9999; bottom: 90px; right: 0;
+  width: 42px; height: 42px; padding: 9px;
+  box-shadow: 0 4px 10px rgba(200,169,106,0.3);
+  background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
+  border-radius: 12px 0 0 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+#service svg { width: 22px; height: 22px; color: #fff; }
+</style>
 
-        </a>
-        <a  href="/blog" class="item " >
-            <img src="/public/site/img/footer/mboard.png"/>
-            <p>Blog</p>
-        </a>
+<div class="footer_menu">
+  <div class="content">
 
-        <a href="/my" class="item ">
-            <img src="/public/site/img/footer/account.png"/>
-            <p>Account</p>
-        </a>
-    </div>
-</div>--> 
-  <!--&lt;!&ndash;	底部内容-结束	  &ndash;&gt;--> 
-  <!-- body 末尾处引入 layui --> 
-  <script>
-    layui.use(function(){
-        var  $= layui.jquery;
-        var  layer= layui.layer;
-        var flow = layui.flow;
+    {{-- Início --}}
+    <a href="/" class="item {{ $homeActive ? 'active' : '' }}">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+      <p>Início</p>
+    </a>
 
-        $('#copy').click(function () {
-            var copyText = document.getElementById("copyTxt");
-            copyText.select(); // 选择对象
-            document.execCommand("Copy");
-            layer.msg('copy success');
-        })
-        $('#poster').click(function () {
-            // var json_data =JSON.parse( "[{"alt":"Qrcode","pid":1,"src":"https:\/\/www.elsewedyelectricnf.cc\/public\/uploads\/poster\/h5\/poster_888978_1.jpg"}]");
-            var json_data =[{"alt":"Qrcode","pid":1,"src":"https:\/\/www.elsewedyelectricnf.cc\/public\/uploads\/poster\/h5\/poster_888978_1.jpg"}];
-            layer.photos({
-                photos: {
-                    "title": "Photos Demo",
-                    "start": 0,
-                    "data": json_data
-                }
-            });
-        })
+    {{-- Investir --}}
+    <a href="/vip" class="item {{ $vipActive ? 'active' : '' }}">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v7H3v-7zm4-5h2v12H7V8zm4-3h2v15h-2V5zm4 5h2v10h-2v-10zm4-3h2v13h-2V7z"/></svg>
+      <p>Investir</p>
+    </a>
 
+    {{-- Center FAB --}}
+    <a href="/invite" class="center-item {{ $inviteActive ? 'active' : '' }}">
+      <span class="center-fab">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 12v10H4V12H2v-2h20v2h-2zM6 12v8h12v-8H6zm2-6a2 2 0 0 0 0 4h4V6a2 2 0 0 0-4 0zm8 0a2 2 0 0 0-4 0v4h4a2 2 0 0 0 0-4z"/></svg>
+      </span>
+      <p>Tarefas</p>
+    </a>
+
+    {{-- Blog --}}
+    <a href="/withdrawal-proofs" class="item {{ $blogActive ? 'active' : '' }}">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16zm0-6h4v1.5H8V10z"/></svg>
+      <p>Blog</p>
+    </a>
+
+    {{-- Conta --}}
+    <a href="/profile" class="item {{ $accountActive ? 'active' : '' }}">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+      <p>Conta</p>
+    </a>
+
+  </div>
+</div>
+
+{{-- Service / support floating button --}}
+<a href="/help" id="service">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+</a>
+
+<textarea style="height: 1px; opacity: 0; position: absolute; pointer-events: none;" name="copyTxt" id="copyTxt" readonly></textarea>
+
+<script>
+  layui.use(function(){
+    var $ = layui.jquery;
+    var layer = layui.layer;
+
+    $('#copy').click(function () {
+      var copyText = document.getElementById("copyTxt");
+      copyText.select();
+      document.execCommand("Copy");
+      layer.msg('copy success');
     });
-</script> 
- </body>
-</html>
+
+    $('#poster').click(function () {
+      var json_data = [{"alt":"Qrcode","pid":1,"src":"https:\/\/www.elsewedyelectricnf.cc\/public\/uploads\/poster\/h5\/poster_888978_1.jpg"}];
+      layer.photos({
+        photos: {
+          "title": "Photos Demo",
+          "start": 0,
+          "data": json_data
+        }
+      });
+    });
+  });
+</script>

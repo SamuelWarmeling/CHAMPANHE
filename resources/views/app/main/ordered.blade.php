@@ -1,288 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Meus Pedidos – EMI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="/v2/css/emi-theme.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
-    body {
-      background-image: url('/v2/img/order/bg.png');
-    }
-    .nav {
-      text-align: center;
-      width: 32%;
-      padding: 10px 0;
-      cursor: pointer;
-    }
-    .nav_active .title {
-      font-weight: bold;
-      color: #C8A96A;
-      border-bottom: 3px solid #C8A96A;
-    }
-    .product_details_card {
-      background: #fff;
-      border-radius: 8px;
-      margin: 15px;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .product_details_item {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-    }
-    .product_details_name {
-      font-weight: bold;
-      color: #1C1C1C;
-    }
-    .product_details_status {
-      font-size: 14px;
-      padding-left: 10px;
-    }
-    .normal {
-      color: #C8A96A;
-    }
-    .label {
-      color: #666;
-    }
-    .value {
-      color: #1C1C1C;
-    }
-    .price {
-      color: #C8A96A;
-    }
-    .order_details {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 100px;
-      padding: 3px 15px;
-      font-size: 14px;
-      color: #666;
-      text-decoration: none;
-    }
+    *{font-family:'Inter',sans-serif;box-sizing:border-box}
+    body{background:#F8F6F2;color:#1C1C1C;margin:0;padding:0 0 80px}
+    h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
+    .emi-header{background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);padding:14px 16px;color:#fff}
+    .emi-back{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:15px;font-weight:600}
+    .emi-card{background:#fff;border:1px solid #E8DCC8;border-radius:12px;box-shadow:0 2px 8px rgba(200,169,106,.15);padding:16px;margin-bottom:12px}
+    .emi-btn{background:#C8A96A;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-weight:600;font-size:14px;cursor:pointer;display:block;width:100%;text-align:center}
+    .emi-btn:hover{background:#D6A86B}
+    .emi-label{font-size:12px;color:#6B6B6B}
+    .emi-value{font-size:15px;font-weight:700;color:#1C1C1C}
+    .emi-gold{color:#C8A96A}
+    .flex-between{display:flex;justify-content:space-between;align-items:center}
+    .flex-left{display:flex;align-items:center;gap:10px}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+    .stat-box{background:#F8F6F2;border:1px solid #E8DCC8;border-radius:8px;padding:10px 6px}
+    .stat-box .s{font-weight:700;color:#C8A96A;font-size:14px}
+    .stat-box .n{font-size:11px;color:#6B6B6B;margin-top:2px}
+    .tag{background:#F5EDD8;color:#8A6C2A;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600}
+    .divider{border:none;border-top:1px solid #E8DCC8;margin:12px 0}
+
+    /* Tab bar */
+    .tab-bar{display:flex;background:#fff;border-bottom:1px solid #E8DCC8}
+    .tab-item{flex:1;text-align:center;padding:13px 0;font-size:14px;font-weight:600;color:#9A9087;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s}
+    .tab-item.nav_active{color:#C8A96A;border-bottom-color:#C8A96A;background:#FFFDF9}
+
+    .order-list{padding:16px}
+
+    /* Status badges */
+    .status-active{background:#EBF8E8;color:#3A7D2A;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600}
+    .status-inactive{background:#F5EDD8;color:#8A6C2A;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600}
+    .status-pending{background:#F0F0F0;color:#6B6B6B;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600}
+
+    /* Accent left border */
+    .card-accent-active{border-left:4px solid #5A9A3A}
+    .card-accent-pending{border-left:4px solid #C8A96A}
+    .card-accent-inactive{border-left:4px solid #D0C8BC}
+
+    /* Info rows */
+    .info-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0}
+    .info-row .lbl{font-size:12px;color:#6B6B6B}
+    .info-row .val{font-size:13px;font-weight:600;color:#1C1C1C}
+    .info-row .val.gold{color:#C8A96A}
+
+    /* Empty */
+    .empty-state{text-align:center;padding:60px 20px}
+    .empty-state p{color:#9A9087;font-size:14px;margin:8px 0 0}
   </style>
 </head>
-<body class="common_background">
+<body>
 
-  <div class="common_header">
-    <a href="javascript:history.back(-1)" class="back position">
-      <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
-      Meus Pedidos
-    </a>
-  </div>
-
-  <!-- Tabs -->
-  <div class="common_nav_menu flex_space" style="margin-top: 20px; background: #ffffff">
-    <div class="nav nav_active" data-type="">
-      <p class="title">Todos</p>
-    </div>
-    <div class="nav" data-type="normal">
-      <p class="title">Ativo</p>
-    </div>
-    <div class="nav" data-type="finish">
-      <p class="title">Concluído</p>
-    </div>
-  </div>
-
-<!-- Order List -->
-<div class="common_main">
-    <div id="order_list">
-        @php
-            use Carbon\Carbon;
-            use App\Models\Purchase;
-
-            $purchases = Purchase::where('user_id', auth()->id())
-                ->with('package')
-                ->orderByDesc('id')
-                ->get();
-        @endphp
-
-        @forelse($purchases as $purchase)
-            @php
-                $package = $purchase->package;
-                $daysPassed = Carbon::parse($purchase->created_at)->diffInDays(now());
-                $dailyIncome = $purchase->daily_income ?? 0;
-                $totalIncome = $dailyIncome * $daysPassed;
-                $status = $purchase->status === 'active' ? 'Active' : ($purchase->status === 'pending' ? 'Pending' : 'Inactive');
-            @endphp
-
-            <div class="product_card">
-                <div class="product_card_header">
-                    <div class="product_name">{{ $package->name }}</div>
-                    <div class="product_status {{ strtolower($status) }}">{{ $status }}</div>
-                </div>
-                <div class="product_card_body">
-                    <div class="product_info">
-                        <p class="label">Data de Compra</p>
-                        <p class="value">{{ $purchase->created_at->format('Y-m-d') }}</p>
-                    </div>
-                    <div class="product_info">
-                        <p class="label">Valor</p>
-                        <p class="value price">{{ price($purchase->amount) }}</p>
-                    </div>
-                    <div class="product_info">
-                        <p class="label">Renda Diária</p>
-                        <p class="value price">{{ price($dailyIncome) }}</p>
-                    </div>
-                    <div class="product_info">
-                        <p class="label">Renda Total</p>
-                        <p class="value price">{{ price($totalIncome) }}</p>
-                    </div>
-                    <div class="product_info">
-                        <p class="label">Validade</p>
-                        <p class="value">{{ $purchase->validity }}</p>
-                    </div>
-                    <div class="product_info">
-                        <p class="label">Categoria</p>
-                        <p class="value">{{ ucfirst($purchase->category) }}</p>
-                    </div>
-                    @if($purchase->note)
-                    <div class="product_info">
-                        <p class="label">Nota</p>
-                        <p class="value">{{ $purchase->note }}</p>
-                    </div>
-                    @endif
-                </div>
-            </div>
-        @empty
-            <div class="product_card empty_card">
-                <img src="/v2/img/order/none_order.png" class="empty_img">
-                <p class="empty_text">Nenhum Pedido</p>
-            </div>
-        @endforelse
-    </div>
+<div class="emi-header">
+  <a href="javascript:history.back(-1)" class="emi-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+    Meus Pedidos
+  </a>
 </div>
 
-<!-- Modern CSS -->
-<style>
-.common_main {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+{{-- Tab bar --}}
+<div class="tab-bar">
+  <div class="tab-item nav_active" data-type="">Todos</div>
+  <div class="tab-item" data-type="normal">Ativo</div>
+  <div class="tab-item" data-type="finish">Concluído</div>
+</div>
 
-.product_card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 20px;
-    color: #1C1C1C;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-left: 4px solid #C8A96A;
-}
+{{-- Order list --}}
+<div class="order-list" id="order_list">
+  @php
+    use Carbon\Carbon;
+    use App\Models\Purchase;
+    $purchases = Purchase::where('user_id', auth()->id())
+      ->with('package')
+      ->orderByDesc('id')
+      ->get();
+  @endphp
 
-.product_card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(200,169,106,0.2);
-}
+  @forelse($purchases as $purchase)
+    @php
+      $package    = $purchase->package;
+      $daysPassed = Carbon::parse($purchase->created_at)->diffInDays(now());
+      $dailyIncome = $purchase->daily_income ?? 0;
+      $totalIncome = $dailyIncome * $daysPassed;
+      $statusRaw   = $purchase->status;
+      $statusLabel = $statusRaw === 'active' ? 'Ativo' : ($statusRaw === 'pending' ? 'Pendente' : 'Concluído');
+      $statusClass = $statusRaw === 'active' ? 'status-active' : ($statusRaw === 'pending' ? 'status-pending' : 'status-inactive');
+      $accentClass = $statusRaw === 'active' ? 'card-accent-active' : ($statusRaw === 'pending' ? 'card-accent-pending' : 'card-accent-inactive');
+      $dataStatus  = $statusRaw === 'active' ? 'normal' : 'finish';
+    @endphp
 
-.product_card_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
+    <div class="emi-card {{ $accentClass }}" data-status="{{ $dataStatus }}">
 
-.product_name {
-    font-size: 18px;
-    font-weight: 600;
-}
+      {{-- Header row --}}
+      <div class="flex-between" style="margin-bottom:10px">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#1C1C1C;flex:1;min-width:0;padding-right:8px">
+          {{ $package->name ?? 'Plano' }}
+        </div>
+        <span class="{{ $statusClass }}">{{ $statusLabel }}</span>
+      </div>
 
-.product_status {
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
+      <hr class="divider" style="margin:8px 0">
 
-.product_status.active {
-    background-color: rgba(163,177,138,0.2);
-    color: #5a7c4a;
-}
+      {{-- Key info rows --}}
+      <div class="info-row">
+        <span class="lbl">Data de Compra</span>
+        <span class="val">{{ $purchase->created_at->format('d/m/Y') }}</span>
+      </div>
+      <div class="info-row">
+        <span class="lbl">Valor Pago</span>
+        <span class="val gold">{{ price($purchase->amount) }}</span>
+      </div>
+      <div class="info-row">
+        <span class="lbl">Renda Diária</span>
+        <span class="val gold">{{ price($dailyIncome) }}</span>
+      </div>
+      <div class="info-row">
+        <span class="lbl">Renda Gerada</span>
+        <span class="val gold">{{ price($totalIncome) }}</span>
+      </div>
+      <div class="info-row">
+        <span class="lbl">Validade</span>
+        <span class="val">{{ $purchase->validity }}</span>
+      </div>
+      <div class="info-row">
+        <span class="lbl">Categoria</span>
+        <span class="val">{{ ucfirst($purchase->category) }}</span>
+      </div>
+      @if($purchase->note)
+      <div class="info-row">
+        <span class="lbl">Nota</span>
+        <span class="val">{{ $purchase->note }}</span>
+      </div>
+      @endif
 
-.product_status.pending {
-    background-color: rgba(200,169,106,0.2);
-    color: #8a6c2a;
-}
+    </div>
+  @empty
+    <div class="empty-state">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E8DCC8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <p>Nenhum pedido encontrado.</p>
+    </div>
+  @endforelse
+</div>
 
-.product_status.inactive {
-    background-color: rgba(180,120,80,0.15);
-    color: #8a4a30;
-}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs  = document.querySelectorAll('.tab-item');
+  const cards = document.querySelectorAll('#order_list [data-status]');
 
-.product_card_body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-}
-
-.product_info .label {
-    font-size: 12px;
-    color: #888;
-}
-
-.product_info .value {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1C1C1C;
-}
-
-.product_info .price {
-    color: #C8A96A;
-}
-
-.empty_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-    box-shadow: none;
-}
-
-.empty_img {
-    width: 160px;
-}
-
-.empty_text {
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 15px;
-    color: #888;
-}
-</style>
-
-
-  <!-- Pure JS Tab Filter -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tabs = document.querySelectorAll(".nav");
-      const cards = document.querySelectorAll(".product_details_card");
-
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(t => t.classList.remove("nav_active"));
-          tab.classList.add("nav_active");
-
-          const type = tab.getAttribute("data-type");
-
-          cards.forEach(card => {
-            const status = card.getAttribute("data-status");
-            if (type === "" || type === status) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('nav_active'));
+      tab.classList.add('nav_active');
+      const type = tab.getAttribute('data-type');
+      cards.forEach(card => {
+        const s = card.getAttribute('data-status');
+        card.style.display = (type === '' || type === s) ? 'block' : 'none';
       });
     });
-  </script>
+  });
+});
+</script>
 
 </body>
 </html>

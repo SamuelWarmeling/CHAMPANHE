@@ -1,149 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Redeem Code</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Resgatar Código de Bônus – EMI</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/v2/css/common.css"
-  <link rel="stylesheet" href="/v2/css/emi-theme.css">> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <style>
-    body {
-      background: #f2f5fa;
-      font-family: 'Arial', sans-serif;
+    *{font-family:'Inter',sans-serif;box-sizing:border-box}
+    body{background:#F8F6F2;color:#1C1C1C;margin:0;padding:0 0 80px}
+    h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
+    .emi-header{background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);padding:14px 16px;color:#fff}
+    .emi-back{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:15px;font-weight:600}
+    .emi-gold{color:#C8A96A}
+    .page-wrap{padding:16px;}
+
+    .bonus-card{
+      background:#fff;border:1px solid #E8DCC8;border-radius:12px;
+      box-shadow:0 2px 8px rgba(200,169,106,.15);
+      padding:28px 20px;text-align:center;position:relative;
+      overflow:hidden;
+    }
+    .bonus-card::before{
+      content:'';position:absolute;top:-40px;right:-40px;
+      width:120px;height:120px;border-radius:50%;
+      background:radial-gradient(circle, rgba(200,169,106,0.12) 0%, transparent 70%);
     }
 
-    .common_header {
-      background: #183b78;
-      color: #fff;
+    .gift-icon-wrap{
+      width:72px;height:72px;border-radius:50%;margin:0 auto 16px;
+      background:linear-gradient(135deg,#C8A96A,#D6A86B);
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 4px 16px rgba(200,169,106,0.35);
+    }
+    .gift-icon-wrap svg{width:36px;height:36px;color:#fff;}
+
+    .bonus-title{
+      font-family:'Playfair Display',serif;
+      font-size:20px;font-weight:600;color:#1C1C1C;margin:0 0 8px;
+    }
+    .bonus-subtitle{font-size:14px;color:#6B6B6B;margin:0 0 24px;line-height:1.6;}
+
+    .field-label{font-size:13px;font-weight:500;color:#6B6B6B;margin-bottom:6px;display:block;text-align:left;}
+    .field-wrap{
+      display:flex;align-items:center;
+      background:#F8F6F2;border:1px solid #E8DCC8;
+      border-radius:10px;height:48px;overflow:hidden;
+      transition:border-color 0.2s;margin-bottom:16px;
+    }
+    .field-wrap:focus-within{border-color:#C8A96A;}
+    .field-wrap .layui-input{
+      flex:1;border:none !important;background:transparent !important;
+      padding:0 14px !important;font-size:15px !important;color:#1C1C1C !important;
+      outline:none;height:48px !important;line-height:48px !important;
+      font-family:'Inter',sans-serif !important;text-align:center;letter-spacing:2px;
+    }
+    .field-wrap .layui-input::placeholder{
+      color:#BBBBBB !important;letter-spacing:0;font-style:italic;
     }
 
-    .common_header a {
-      color: #fff;
-      font-weight: bold;
+    .btn-redeem{
+      display:block;width:100%;padding:14px;
+      background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);
+      color:#fff;font-size:16px;font-weight:700;
+      border:none;border-radius:10px;cursor:pointer;
+      letter-spacing:0.5px;transition:opacity 0.2s;
     }
+    .btn-redeem:active{opacity:0.88;}
 
-    .redeem_card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      margin: 20px 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
-      position: relative;
+    .msg-box{
+      text-align:center;font-size:14px;margin-top:14px;
+      min-height:20px;font-weight:500;
     }
+    .msg-box.success{color:#2E7D32;}
+    .msg-box.error{color:#C62828;}
 
-    .vip-badge {
-      position: absolute;
-      top: -15px;
-      right: -15px;
-      background: linear-gradient(45deg, #FFD700, #FF8C00);
-      color: white;
-      padding: 6px 12px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    #confetti{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      pointer-events:none;z-index:9999;display:none;
     }
-
-    .redeem_title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #1C1C1C;
-    }
-
-    .redeem_subtitle {
-      font-size: 14px;
-      color: #777;
-      margin-top: 8px;
-      margin-bottom: 20px;
-    }
-
-    .layui-input {
-      background: #f9f9f9;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .layui-btn {
-      width: 100%;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 15px;
-      background: #3262BE;
-    }
-
-    .layui-btn:hover {
-      background: #2a55a0;
-    }
-
-    .msg {
-      text-align: center;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .msg.success { color: #28a745; }
-    .msg.error { color: #f44336; }
-
-    #confetti {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-      display: none;
-    }
-
-    canvas {
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    #service {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
+    canvas{width:100% !important;height:100% !important;}
   </style>
 </head>
-<body class="common_body">
-
-  <div class="common_header">
-    <a href="javascript:history.back(-1)" class="back position">
-      <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Redeem Code
+<body>
+  <div class="emi-header">
+    <a href="javascript:history.back(-1)" class="emi-back">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Resgatar Código de Bônus
     </a>
   </div>
 
-  <div class="redeem_card">
-    <div class="vip-badge">VIP+</div>
-    <p class="redeem_title">🎁 Redeem Your Bonus</p>
-    <p class="redeem_subtitle">Enter your code and receive exclusive rewards</p>
-
-    <form class="layui-form" id="redeem-form">
-      <div class="layui-form-item">
-        <input type="text" name="bonus_code" required placeholder="Enter your bonus code" class="layui-input">
+  <div class="page-wrap">
+    <div class="bonus-card">
+      <div class="gift-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 12v10H4V12H2v-2h20v2h-2zM6 12v8h12v-8H6zm5-10a2 2 0 0 0-2 2c0 1.1.9 2 2 2h1V4a2 2 0 0 0-1 0zm4 0a2 2 0 0 1 0 4h-1V4a2 2 0 0 1 1-2zm-5 4H4v4h7V6zm2 0v4h7V6h-7z"/>
+        </svg>
       </div>
-      <button class="layui-btn layui-btn-normal" lay-submit lay-filter="submitBonus">Redeem Now</button>
-    </form>
 
-    <div class="msg" id="messageBox"></div>
+      <h2 class="bonus-title">Resgate seu Bônus</h2>
+      <p class="bonus-subtitle">Insira seu código exclusivo e desbloqueie<br>recompensas especiais da EMI.</p>
+
+      <form class="layui-form" id="redeem-form">
+        <label class="field-label">Código de Bônus</label>
+        <div class="field-wrap">
+          <input type="text" name="bonus_code" required
+                 placeholder="Digite seu código" class="layui-input" autocomplete="off">
+        </div>
+        <button class="btn-redeem layui-btn" lay-submit lay-filter="submitBonus">
+          Resgatar Agora
+        </button>
+      </form>
+
+      <div class="msg-box" id="messageBox"></div>
+    </div>
   </div>
-
-  <a href="/help" target="_blank" id="service">
-    <img src="/v2/img/common/service.png" style="width: 40px;height: 40px">
-  </a>
 
   <div id="confetti">
     <canvas id="canvas"></canvas>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/layui.min.js"></script>
+  @include('app.layout.menu')
+
+  <script src="/v2/layui/layui.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
@@ -165,17 +150,17 @@
           success: function(res){
             layer.closeAll('loading');
             if(res.status === 1){
-              $('#messageBox').text(res.message).addClass('msg success');
+              $('#messageBox').text(res.message).addClass('success');
               layer.msg(res.message, {icon: 1});
               showConfetti();
             } else {
-              $('#messageBox').text(res.message).addClass('msg error');
+              $('#messageBox').text(res.message).addClass('error');
               layer.msg(res.message, {icon: 2});
             }
           },
           error: function(){
             layer.closeAll('loading');
-            $('#messageBox').text("An error occurred.").addClass('msg error');
+            $('#messageBox').text('Ocorreu um erro. Tente novamente.').addClass('error');
           }
         });
 
@@ -184,15 +169,14 @@
     });
 
     function showConfetti() {
-      const duration = 2 * 1000;
-      const animationEnd = Date.now() + duration;
-      const confettiSettings = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
-
-      const interval = setInterval(function() {
-        if (Date.now() > animationEnd) {
-          return clearInterval(interval);
-        }
-
+      var duration = 2 * 1000;
+      var animationEnd = Date.now() + duration;
+      var confettiSettings = {
+        startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000,
+        colors: ['#C8A96A', '#D6A86B', '#F5EDD8', '#fff', '#E8DCC8']
+      };
+      var interval = setInterval(function() {
+        if (Date.now() > animationEnd) return clearInterval(interval);
         confetti(Object.assign({}, confettiSettings, {
           particleCount: 50,
           origin: { x: Math.random(), y: Math.random() - 0.2 }

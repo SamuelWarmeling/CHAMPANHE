@@ -1,164 +1,148 @@
 <!DOCTYPE html>
-<html>
-<head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-    <title>Tarefas – EMI</title> 
-    <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
-    <link rel="stylesheet" href="/v2/css/common.css">
-  <link rel="stylesheet" href="/v2/css/emi-theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-    <style>
-        .common_body {
-            background-image: url("/v2/img/tasks/bg.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .tasks_progress {
-            width: 90px;
-            height: 30px;
-            background-image: url("/v2/img/tasks/finish_bg.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            text-align: left;
-            padding-top: 5px;
-            padding-left: 7px;
-            color: #FFFFFF;
-            font-weight: 700;
-            font-size: 14px;
-        }
-        .tasks_progress_active {
-            width: 90px;
-            height: 30px;
-            background-image: url("/v2/img/tasks/progress_bg.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            text-align: left;
-            padding-top: 5px;
-            padding-left: 7px;
-            color: #FFFFFF;
-            font-size: 14px;
-            font-weight: 700;
-        }
-    </style> 
-</head> 
-<body class="common_body common_background"> 
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Tarefas – EMI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/v2/layui/css/layui.css">
+<link rel="stylesheet" href="/v2/css/common.css">
+<link rel="stylesheet" href="/v2/css/emi-theme.css">
+<style>
+*{font-family:'Inter',sans-serif;box-sizing:border-box}
+body{background:#F8F6F2;color:#1C1C1C;margin:0;padding:0 0 80px}
+h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
+.emi-header{background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);padding:14px 16px;color:#fff}
+.emi-back{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:15px;font-weight:600}
+.emi-card{background:#fff;border:1px solid #E8DCC8;border-radius:12px;box-shadow:0 2px 8px rgba(200,169,106,.15);padding:16px;margin-bottom:12px}
+.emi-btn{background:#C8A96A;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-weight:600;font-size:14px;cursor:pointer;display:inline-block;text-align:center;text-decoration:none}
+.emi-label{font-size:12px;color:#6B6B6B}
+.emi-value{font-size:15px;font-weight:700;color:#1C1C1C}
+.emi-gold{color:#C8A96A}
+.flex-between{display:flex;justify-content:space-between;align-items:center}
+.flex-left{display:flex;align-items:center;gap:10px}
+.divider{border:none;border-top:1px solid #E8DCC8;margin:12px 0}
+.progress-bar-bg{background:#E8DCC8;border-radius:4px;height:8px;overflow:hidden}
+.progress-bar-fill{background:linear-gradient(90deg,#C8A96A,#D6A86B);height:8px;border-radius:4px;transition:width .3s}
 
-    <div class="common_header"> 
-        <a href="javascript:history.back(-1)" class="back position"> 
-            <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Tarefas 
-        </a> 
+.commission-card{background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);border-radius:12px;padding:20px 16px;margin:16px;color:#fff}
+.commission-label{font-size:13px;color:rgba(255,255,255,0.85)}
+.commission-value{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-top:6px}
+.invite-link-sub{font-size:12px;color:rgba(255,255,255,0.75);margin-top:8px;word-break:break-all}
+
+.invite-info-card{background:#fff;border:1px solid #E8DCC8;border-radius:12px;padding:14px 16px;margin:0 16px 16px}
+.invite-info-title{font-size:14px;font-weight:700;color:#1C1C1C;margin-bottom:4px}
+.invite-info-text{font-size:13px;color:#6B6B6B}
+
+.section-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#1C1C1C;margin:0 16px 10px}
+
+.task-card{background:#fff;border:1px solid #E8DCC8;border-radius:12px;box-shadow:0 2px 8px rgba(200,169,106,.15);padding:16px;margin:0 16px 12px}
+.task-top{display:flex;gap:12px;align-items:flex-start}
+.task-icon{width:52px;height:52px;flex-shrink:0;object-fit:contain}
+.task-info{flex:1;min-width:0}
+.task-req{font-size:13px;color:#6B6B6B;margin-bottom:4px}
+.task-req strong{color:#1C1C1C}
+.task-reward{font-size:13px;color:#6B6B6B}
+.task-reward strong{color:#C8A96A;font-size:15px}
+.task-progress-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.task-progress-count{font-size:13px;font-weight:700;white-space:nowrap}
+.task-progress-count span{color:#C8A96A}
+.task-action{margin-top:12px}
+.btn-claim{display:inline-block;padding:9px 20px;background:#C8A96A;color:#fff;font-weight:700;font-size:13px;border-radius:8px;border:none;cursor:pointer;text-decoration:none}
+.btn-claimed{display:inline-block;padding:9px 20px;background:#E8DCC8;color:#999;font-size:13px;border-radius:8px;border:none;cursor:default}
+.btn-unavailable{display:inline-block;padding:9px 20px;background:#F0EBE0;color:#AAA;font-size:13px;border-radius:8px;border:none;cursor:default}
+
+.copy-link-btn{display:block;margin-top:10px;padding:9px;background:#C8A96A;color:#fff;font-weight:600;font-size:13px;border-radius:8px;border:none;cursor:pointer;width:100%;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="emi-header">
+    <a href="javascript:history.back(-1)" class="emi-back">
+        <i class="layui-icon layui-icon-left layui-font-18"></i>
+        Tarefas
+    </a>
+</div>
+
+<!-- Commission + Invite Link Summary -->
+<div class="commission-card">
+    <div class="commission-label">Comissão de Tarefas Acumulada</div>
+    <div class="commission-value">{{ price(\App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'task')->sum('amount')) }}</div>
+    <div class="invite-link-sub">{{ url('register').'?ref='.auth()->user()->ref_id }}</div>
+    <button class="copy-link-btn" onclick="copyLink('{{ url('register').'?ref='.auth()->user()->ref_id }}')">
+        Copiar Link de Convite
+    </button>
+</div>
+
+<!-- Invite Info -->
+<div class="invite-info-card">
+    <div class="invite-info-title">Recompensas por Convite</div>
+    <div class="invite-info-text">
+        Se você convidar amigos e eles se ativarem com sucesso, você receberá
+        <strong style="color:#C8A96A">R50</strong> de recompensa por convite.
     </div>
-    <div class="common_margin_15" id="invite_friends_card"> <div class="common_margin_10 common_padding_10"> <div class="label" style="color: #DEEFFF">Comissão</div> <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">{{ price(\App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'task')->sum('amount')) }}</div> </div> <div class="common_card common_margin_top_20 flex_space position" style="padding-left: 50px;"> <img src="/v2/img/team/link_icon.png" style="width: 44px;height: 44px;position: absolute;top: 10px;left: 0"> <div class="invite_friends_card_item"> <div class="value invite_code">Link de Convite</div> <div class="label" style="color: #C8A96A">{{url('register').'?ref='.auth()->user()->ref_id}}</div> </div> <div class="copy_btn" id="copy" style="text-align: center" onclick="copyLink('{{url('register').'?ref='.auth()->user()->ref_id}}')"> Copiar </div> </div> </div>
+</div>
 
-    <div class="common_margin_15" id="invite_friends_card"> </div> 
+<!-- Task List -->
+<div class="section-title">Recompensas de Tarefas</div>
 
-    <div class="common_margin_15"> 
-        <div class="tasks_invite_rewards"> 
-            <div class="flex_space"> 
-                <div> 
-                    <div class="title">Recompensas por Convite</div> 
-                    <div class="text" style="font-weight: 400;font-size: 14px;color: #666666;margin-top: 10px;">
-                        Se você convidar amigos e eles se ativarem com sucesso, você receberá
-                        <strong style="color: #C8A96A">R50</strong> de recompensa
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </div> 
+@php
+    $referUsers = \App\Models\User::where('ref_by', auth()->user()->ref_id)
+        ->where('investor', 1)
+        ->count();
+@endphp
 
-    <div class="common_item_title" style="margin-left: 15px;">Recompensas de Tarefas</div> 
-
+@foreach(\App\Models\Task::all() as $task)
     @php
-        $referUsers = \App\Models\User::where('ref_by', auth()->user()->ref_id)
-            ->where('investor', 1)
-            ->count();
+        $apply = \App\Models\TaskRequest::where('task_id', $task->id)
+                ->where('user_id', auth()->id())
+                ->where('status', '!=', 'rejected')
+                ->first();
+
+        $progress = min(100, ($referUsers / $task->team_size) * 100);
+        $currentCount = min($referUsers, $task->team_size);
+        $isClaimable = !$apply && $referUsers >= $task->team_size;
     @endphp
 
-    @foreach(\App\Models\Task::all() as $task)
-        @php
-            $apply = \App\Models\TaskRequest::where('task_id', $task->id)
-                    ->where('user_id', auth()->id())
-                    ->where('status', '!=', 'rejected')
-                    ->first();
-
-            $progress = min(100, ($referUsers / $task->team_size) * 100);
-            $currentCount = min($referUsers, $task->team_size);
-            $isClaimable = !$apply && $referUsers >= $task->team_size;
-        @endphp
-
-        <div class="common_card common_margin_15" style="padding: 0"> 
-            <div class="flex_left common_padding_15" style="padding-top: 15px"> 
-                <div style="background: none;margin-right: 10px;"> 
-                    <img src="/v2/img/tasks/rewards_icon.png" style="height: 70px;width: 70px"> 
-                </div> 
-                <div style="width: 100%"> 
-                    <div style="margin-bottom: 10px;"> 
-                        <div class="label">
-                            Requisito:
-                            <strong>Convidar {{ $task->team_size }} pessoas ativas</strong>
-                        </div>
-                        <div class="value position" style="margin-top: 10px">
-                            Recompensa:
-                            <strong style="color: #C8A96A">{{ price($task->bonus) }}</strong>
-                        </div> 
-                    </div> 
-                    <div class="flex_space"> 
-                        <div class="layui-progress" style="width: 160px;height: 10px;margin-top: 5px"> 
-                            <div class="layui-progress-bar"
-                                lay-percent="{{ $progress }}%"
-                                style="height: 10px; background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%); width: {{ $progress }}%;">
-                            </div> 
-                        </div> 
-                        <div class="value">
-                            <span style="color: #C8A96A;font-weight:700">{{ $currentCount }}</span> / {{ $task->team_size }}
-                        </div> 
-                    </div> 
-
-                    <div style="margin-top: 10px;">
-                        @if($apply)
-                            <button class="layui-btn layui-btn-sm" style="background: #A3B18A; border-radius: 20px;" disabled>Resgatado</button>
-                        @elseif($isClaimable)
-                            <a href="{{ route('user.received.reward', $task->id) }}" class="layui-btn layui-btn-sm" style="background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%); color: #1C1C1C; border-radius: 20px;">Resgatar Agora</a>
-                        @else
-                            <button class="layui-btn layui-btn-sm layui-btn-disabled" style="border-radius: 20px;">Não Disponível</button>
-                        @endif
-                    </div>
-                </div> 
-            </div> 
-        </div> 
-    @endforeach
-
-    <div style="height: 80px;"></div> 
-
-    <textarea style="height: 1px;opacity: 0" name="copyTxt" id="copyTxt" readonly></textarea> 
-
-    <div class="footer_menu"> 
-        <div class="content"> 
-            <a href="/" class="item " style="margin-top: 10px;">
-                <img src="/v2/img/footer/home.png">
-                <p>Início</p>
-            </a>
-            <a href="/product" class="item " style="margin-top: 10px;">
-                <img src="/v2/img/footer/invest.png">
-                <p>Investir</p>
-            </a>
-            <a href="/invitation" class="item" style="padding: 0px;position: relative">
-                <img src="/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px;">
-            </a>
-            <a href="/blog" class="item " style="margin-top: 10px;">
-                <img src="/v2/img/footer/blog.png">
-                <p>Blog</p>
-            </a>
-            <a href="/my" class="item " style="margin-top: 10px;">
-                <img src="/v2/img/footer/account.png">
-                <p>Conta</p>
-            </a> 
-        </div> 
+    <div class="task-card">
+        <div class="task-top">
+            <img src="/v2/img/tasks/rewards_icon.png" class="task-icon" alt="Tarefa">
+            <div class="task-info">
+                <div class="task-req">
+                    Requisito: <strong>Convidar {{ $task->team_size }} pessoas ativas</strong>
+                </div>
+                <div class="task-reward">
+                    Recompensa: <strong>{{ price($task->bonus) }}</strong>
+                </div>
+            </div>
+        </div>
+        <div class="task-progress-row">
+            <div class="progress-bar-bg" style="flex:1">
+                <div class="progress-bar-fill" style="width:{{ $progress }}%"></div>
+            </div>
+            <div class="task-progress-count">
+                <span>{{ $currentCount }}</span> / {{ $task->team_size }}
+            </div>
+        </div>
+        <div class="task-action">
+            @if($apply)
+                <span class="btn-claimed">Resgatado</span>
+            @elseif($isClaimable)
+                <a href="{{ route('user.received.reward', $task->id) }}" class="btn-claim">Resgatar Agora</a>
+            @else
+                <span class="btn-unavailable">Não Disponível</span>
+            @endif
+        </div>
     </div>
-    @include('alert-message')
+@endforeach
 
-<!-- ✅ Global Copy Function -->
+<div style="height:20px"></div>
+<textarea style="height:1px;opacity:0" name="copyTxt" id="copyTxt" readonly></textarea>
+
+@include('app.layout.menu')
+@include('alert-message')
+
 <script>
 function copyLink(text) {
     const body = document.body;

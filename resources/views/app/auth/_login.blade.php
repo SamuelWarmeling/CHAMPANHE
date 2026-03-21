@@ -2,162 +2,168 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Entrar – EMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Entrar – EMI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #F8F6F2;
-      font-family: Arial, sans-serif;
-      color: #1C1C1C;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+    *{font-family:'Inter',sans-serif;box-sizing:border-box}
+    body{
+      margin:0;
+      background:#F8F6F2;
+      background-image:radial-gradient(circle at 20% 20%, rgba(200,169,106,0.08) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 80%, rgba(200,169,106,0.06) 0%, transparent 50%);
+      color:#1C1C1C;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:24px 16px;
     }
-    .login_wrap {
-      width: 100%;
-      max-width: 420px;
+    h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
+
+    .auth-wrap{width:100%;max-width:380px}
+
+    .auth-logo{text-align:center;margin-bottom:32px}
+    .auth-logo img{
+      width:88px;height:88px;border-radius:50%;
+      border:3px solid #C8A96A;
+      box-shadow:0 4px 16px rgba(200,169,106,0.3);
+      object-fit:cover;
     }
-    .login_logo {
-      text-align: center;
-      margin-bottom: 30px;
+    .auth-logo h2{
+      font-family:'Playfair Display',serif;
+      margin:14px 0 0;font-size:22px;font-weight:700;color:#1C1C1C;
     }
-    .login_logo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid #C8A96A;
+    .auth-logo p{
+      font-family:'Playfair Display',serif;
+      font-style:italic;margin:4px 0 0;font-size:14px;color:#C8A96A;font-weight:400;
     }
-    .login_logo h2 {
-      margin: 12px 0 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #1C1C1C;
+
+    .auth-card{
+      background:#fff;
+      border:1px solid #E8DCC8;
+      border-radius:16px;
+      padding:28px 24px;
+      box-shadow:0 4px 20px rgba(200,169,106,0.15);
     }
-    .login_logo p {
-      margin: 4px 0 0;
-      font-size: 13px;
-      color: #888;
+    .auth-card-title{
+      font-family:'Playfair Display',serif;
+      font-size:22px;font-weight:600;color:#1C1C1C;
+      margin:0 0 24px;text-align:center;
     }
-    .login_card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+    .form-tab{
+      display:flex;margin-bottom:24px;
+      border-bottom:2px solid #E8DCC8;
     }
-    .form_tab {
-      display: flex;
-      margin-bottom: 24px;
-      border-bottom: 2px solid #EDE8DF;
+    .form-tab .tab-item{
+      flex:1;text-align:center;padding:10px 0;font-size:15px;font-weight:600;
+      color:#6B6B6B;text-decoration:none;
+      border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.2s;
     }
-    .form_tab .tab_item {
-      flex: 1;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 16px;
-      font-weight: 600;
-      color: #888;
-      text-decoration: none;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      transition: all 0.2s;
+    .form-tab .tab-item.active{color:#C8A96A;border-bottom-color:#C8A96A;}
+
+    .field-label{font-size:13px;font-weight:500;color:#6B6B6B;margin-bottom:6px;display:block;}
+    .field-wrap{
+      display:flex;align-items:center;
+      background:#F8F6F2;border:1px solid #E8DCC8;
+      border-radius:10px;margin-bottom:16px;overflow:hidden;height:48px;
+      transition:border-color 0.2s;
     }
-    .form_tab .tab_item.active {
-      color: #C8A96A;
-      border-bottom-color: #C8A96A;
+    .field-wrap:focus-within{border-color:#C8A96A;}
+    .field-prefix{
+      padding:0 12px;font-size:14px;color:#6B6B6B;
+      border-right:1px solid #E8DCC8;line-height:48px;white-space:nowrap;
     }
-    .field_label {
-      font-size: 13px;
-      font-weight: 600;
-      color: #555;
-      margin-bottom: 6px;
+    .field-wrap input{
+      flex:1;border:none;background:transparent;
+      padding:0 14px;font-size:15px;color:#1C1C1C;outline:none;height:48px;
     }
-    .field_wrap {
-      display: flex;
-      align-items: center;
-      background: #F8F6F2;
-      border: 1px solid #EDE8DF;
-      border-radius: 10px;
-      margin-bottom: 16px;
-      overflow: hidden;
-      height: 48px;
+    .field-wrap input::placeholder{color:#BBBBBB;}
+    .pw-wrap{position:relative;display:flex;align-items:center;}
+    .pw-wrap input{padding-right:44px !important;}
+    .pw-toggle{
+      position:absolute;right:12px;top:50%;transform:translateY(-50%);
+      background:none;border:none;cursor:pointer;padding:0;color:#6B6B6B;
+      display:flex;align-items:center;
     }
-    .field_prefix {
-      padding: 0 12px;
-      font-size: 14px;
-      color: #888;
-      border-right: 1px solid #EDE8DF;
-      line-height: 48px;
-      white-space: nowrap;
+    .pw-toggle svg{width:20px;height:20px;}
+
+    .remember-row{
+      display:flex;align-items:center;gap:8px;margin-bottom:20px;
+      font-size:13px;color:#6B6B6B;
     }
-    .field_wrap input {
-      flex: 1;
-      border: none;
-      background: transparent;
-      padding: 0 14px;
-      font-size: 15px;
-      color: #1C1C1C;
-      outline: none;
-      height: 48px;
+    .remember-row input[type=checkbox]{
+      accent-color:#C8A96A;width:16px;height:16px;cursor:pointer;
     }
-    .field_wrap input::placeholder {
-      color: #BBBBBB;
+
+    .btn-submit{
+      display:block;width:100%;padding:14px;
+      background:linear-gradient(135deg,#C8A96A 0%,#D6A86B 100%);
+      color:#fff;font-size:16px;font-weight:700;
+      border:none;border-radius:10px;cursor:pointer;
+      letter-spacing:0.5px;transition:opacity 0.2s;
     }
-    .btn_submit {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
-      color: #1C1C1C;
-      font-size: 16px;
-      font-weight: 700;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 8px;
-      letter-spacing: 0.5px;
-    }
-    .btn_submit:active {
-      opacity: 0.88;
-    }
+    .btn-submit:active{opacity:0.88;}
+
+    .auth-link{text-align:center;margin-top:20px;font-size:14px;color:#6B6B6B;}
+    .auth-link a{color:#C8A96A;font-weight:600;text-decoration:none;}
+    .auth-link a:hover{text-decoration:underline;}
   </style>
 </head>
 <body>
-  <div class="login_wrap">
-    <div class="login_logo">
+  <div class="auth-wrap">
+    <div class="auth-logo">
       <img src="{{setting('logo')}}" alt="EMI Logo">
-      <h2>EMI – Enoteca Millesimi</h2>
-      <p>Plataforma de Investimento em Vinhos Premium</p>
+      <h2>EMI</h2>
+      <p>Enoteca Millesimi</p>
     </div>
 
-    <div class="login_card">
-      <div class="form_tab">
-        <span class="tab_item active">Entrar</span>
-        <a href="{{ url('register') }}" class="tab_item">Cadastrar</a>
+    <div class="auth-card">
+      <div class="form-tab">
+        <span class="tab-item active">Entrar</span>
+        <a href="{{ url('register') }}" class="tab-item">Cadastrar</a>
       </div>
+
+      <h2 class="auth-card-title">Bem-vindo de volta</h2>
 
       <form action="{{ url('login') }}" method="post" id="loginForm">
         @csrf
 
-        <div class="field_label">Número de Telefone</div>
-        <div class="field_wrap">
-          <span class="field_prefix">+27</span>
+        <label class="field-label">Número de Telefone</label>
+        <div class="field-wrap">
+          <span class="field-prefix">+27</span>
           <input type="text" name="phone" placeholder="Digite seu número" required autocomplete="off">
         </div>
 
-        <div class="field_label">Senha</div>
-        <div class="field_wrap">
-          <input type="password" name="password" placeholder="Digite sua senha" required autocomplete="off">
+        <label class="field-label">Senha</label>
+        <div class="field-wrap" style="position:relative;">
+          <div class="pw-wrap" style="flex:1;height:48px;">
+            <input type="password" name="password" id="pwField" placeholder="Digite sua senha" required autocomplete="off" style="width:100%;padding-right:44px;">
+            <button type="button" class="pw-toggle" onclick="togglePw()" aria-label="Mostrar/ocultar senha">
+              <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <button type="submit" class="btn_submit">Entrar Agora</button>
+        <div class="remember-row">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Lembrar senha</label>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btnSubmit">Entrar</button>
       </form>
+
+      <div class="auth-link">
+        Não tem conta? <a href="{{ url('register') }}">Cadastre-se</a>
+      </div>
     </div>
   </div>
 
@@ -166,8 +172,19 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     document.getElementById('loginForm').addEventListener('submit', function() {
-      document.querySelector('.btn_submit').textContent = 'Aguarde...';
+      document.getElementById('btnSubmit').textContent = 'Aguarde...';
     });
+    function togglePw() {
+      var f = document.getElementById('pwField');
+      var icon = document.getElementById('eyeIcon');
+      if (f.type === 'password') {
+        f.type = 'text';
+        icon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+      } else {
+        f.type = 'password';
+        icon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+      }
+    }
   </script>
 </body>
 </html>
