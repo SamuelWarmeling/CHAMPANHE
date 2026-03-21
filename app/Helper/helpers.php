@@ -36,7 +36,7 @@ if (! function_exists('admin')) {
 if (! function_exists('price')) {
     function price($price)
     {
-        return currency().number_format($price, 0);
+        return currency().number_format((float)$price, 0);
     }
 }
 
