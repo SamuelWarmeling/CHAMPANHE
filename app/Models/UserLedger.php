@@ -10,17 +10,8 @@ class UserLedger extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
-        'get_balance_from_user_id',
-        'reason',
-        'perticulation',
-        'amount',
-        'debit',
-        'credit',
-        'status',
-        'date',
-        'step',
+        'user_id', 'get_balance_from_user_id', 'purchase_id',
+        'reason', 'perticulation', 'amount', 'debit', 'credit',
+        'step', 'date', 'status',
     ];
-
-    public $timestamps = true; // Use this if your table has `created_at` & `updated_at`
 }

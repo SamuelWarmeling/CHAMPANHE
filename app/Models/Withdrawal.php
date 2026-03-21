@@ -9,6 +9,11 @@ class Withdrawal extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id', 'method_name', 'trx', 'account_info', 'number',
+        'amount', 'currency', 'charge', 'final_amount', 'oid', 'status',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -18,5 +23,4 @@ class Withdrawal extends Model
     {
         return $this->belongsTo(PaymentMethod::class);
     }
-
 }

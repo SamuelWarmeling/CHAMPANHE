@@ -13,20 +13,25 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name',
+        'username',
         'email',
+        'phone',
+        'phone_code',
+        'realname',
+        'bank_name',
+        'gateway_method',
+        'gateway_address',
         'password',
         'ref_id',
         'ref_by',
-        'username',
         'code',
+        'type',
+        'balance',
         'total_income',
         'today_income',
-        'balance',
-        'phone',
         'ip',
         'vip_level',
-        'phone_code',
-        'remember_token',
+        'investor',
     ];
 
     protected $hidden = [
@@ -36,5 +41,8 @@ class User extends Authenticatable
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'balance'           => 'float',
+        'total_income'      => 'float',
+        'today_income'      => 'float',
     ];
 }

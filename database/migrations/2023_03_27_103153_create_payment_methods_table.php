@@ -24,6 +24,7 @@ return new class extends Migration
             $table->double('minimum_withdraw', 2);
             $table->double('maximum_withdraw', 2);
             $table->double('withdraw_charge', 2);
+            $table->string('tag')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });

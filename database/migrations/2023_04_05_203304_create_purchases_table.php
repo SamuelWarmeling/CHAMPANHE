@@ -21,8 +21,11 @@ return new class extends Migration
             $table->unsignedBigInteger('package_id');
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
 
-            $table->double('amount', 2)->default(0);
-            $table->string('date');
+            $table->double('amount', 20, 2)->default(0);
+            $table->double('daily_income', 20, 2)->default(0);
+            $table->double('hourly', 20, 2)->default(0);
+            $table->string('date')->nullable();
+            $table->timestamp('validity')->nullable();
             $table->text('note')->nullable();
             $table->enum('status', ['active', 'inactive', 'pending'])->default('pending');
             $table->timestamps();

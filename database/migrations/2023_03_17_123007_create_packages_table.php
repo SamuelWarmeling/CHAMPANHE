@@ -27,6 +27,9 @@ return new class extends Migration
             $table->double('first_ref', 2)->default(0);
             $table->double('second_ref', 2)->default(0);
             $table->double('third_ref', 2)->default(0);
+            $table->string('category')->nullable();
+            $table->integer('vip_level')->default(0);
+            $table->integer('max_purchase_limit')->default(1);
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->enum('is_default', ['1', '0'])->default('0');
             $table->timestamps();

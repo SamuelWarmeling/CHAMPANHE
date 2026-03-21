@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('amount')->comment('User Deposit Amount');
             $table->string('date');
             $table->text('feedback')->nullable();
-            $table->enum('status', ['active', 'inactive'])->default('inactive');
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }
