@@ -6,7 +6,7 @@
   '{{ $package->validity }}',
   '{{ price($package->commission_with_avg_amount / $package->validity) }}',
   '{{ price($package->commission_with_avg_amount) }}',
-  '{{ $package->max_share }}',
+  '{{ $package->max_purchase_limit }}',
   '{{ $package->vip_level ?? 0 }}',
   '',
   'Days',

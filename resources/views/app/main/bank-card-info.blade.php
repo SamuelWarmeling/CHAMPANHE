@@ -14,8 +14,9 @@ fphp
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>Bank Card Info</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-    <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
-    <link rel="stylesheet" href="/public/site/css/common.css"> 
+    <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+    <link rel="stylesheet" href="/v2/css/common.css"
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">> 
     <style>
         .layui-form-item {
             background: none;

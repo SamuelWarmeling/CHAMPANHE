@@ -4,8 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>Setting Info</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-  <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/site/css/common.css"> 
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css"
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">> 
   <style>
         .layui-panel-window {
             background: #FFFFFF !important;
@@ -83,7 +84,7 @@
    </div> 
   </div> 
   <!--	底部内容-开始	  --> 
-  <a href="/help" target="_blank" id="service"> <img src="/public/site/img/common/service.png" style="width: 40px;height: 40px"> </a> 
+  <a href="/help" target="_blank" id="service"> <img src="/v2/img/common/service.png" style="width: 40px;height: 40px"> </a> 
   <!--	底部内容-结束	  --> 
   <!-- body 末尾处引入 layui --> 
   <script>

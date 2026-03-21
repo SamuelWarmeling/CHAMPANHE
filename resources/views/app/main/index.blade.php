@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css"> 
   <link rel="stylesheet" href="/v2/css/common.css?t=1.2">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <link rel="stylesheet" href="/public/site/css/swiper-bundle.min.css">
   <style>
         .layui-col-space10>* {

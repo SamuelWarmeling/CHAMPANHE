@@ -31,6 +31,8 @@ if [ "$DB_FRESH" = "true" ]; then
 else
     echo "==> Rodando migrations (DB_CONNECTION=${DB_CONNECTION})..."
     php artisan migrate --force
+    echo "==> Sincronizando pacotes EMI (upsert)..."
+    php artisan db:seed --class=PackageSeeder --force
 fi
 
 echo "==> Iniciando nginx + php-fpm..."

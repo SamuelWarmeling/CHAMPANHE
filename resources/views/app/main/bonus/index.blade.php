@@ -6,8 +6,9 @@
   <title>Redeem Code</title> 
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-  <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/site/css/common.css"> 
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css"
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">> 
   <style>
     body {
       background: #f2f5fa;
@@ -135,7 +136,7 @@
   </div>
 
   <a href="/help" target="_blank" id="service">
-    <img src="/public/site/img/common/service.png" style="width: 40px;height: 40px">
+    <img src="/v2/img/common/service.png" style="width: 40px;height: 40px">
   </a>
 
   <div id="confetti">

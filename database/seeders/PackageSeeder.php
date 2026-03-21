@@ -10,8 +10,6 @@ class PackageSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('packages')->truncate();
-
         $packages = [
             // ── EXP Series ───────────────────────────────────────────────
             [
@@ -189,9 +187,11 @@ class PackageSeeder extends Seeder
         ];
 
         foreach ($packages as $pkg) {
-            $pkg['created_at'] = now();
             $pkg['updated_at'] = now();
-            DB::table('packages')->insert($pkg);
+            DB::table('packages')->updateOrInsert(
+                ['name' => $pkg['name']],
+                array_merge($pkg, ['created_at' => now()])
+            );
         }
     }
 }

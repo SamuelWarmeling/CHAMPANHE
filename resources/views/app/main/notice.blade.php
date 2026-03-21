@@ -4,8 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>Notice</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-  <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/public/site/css/common.css"> 
+  <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css"
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">> 
   <style>
         .mail_title {
           display: -webkit-box;
@@ -37,16 +38,16 @@
   </div> 
   <div class="mail_main"> 
   </div> 
-  <a href="/help" target="_blank" id="service"> <img src="/public/site/img/common/service.png" style="width: 40px;height: 40px"> </a> 
+  <a href="/help" target="_blank" id="service"> <img src="/v2/img/common/service.png" style="width: 40px;height: 40px"> </a> 
   <div class="footer_menu"> 
    <div class="border" style="height: 20px;"> 
    </div> 
    <div class="content"> 
-    <a href="/" class="item "> <img src="/public/site/img/footer/home.png"> <p>Home</p> </a> 
-    <a href="/product" class="item "> <img src="/public/site/img/footer/invest.png"> <p>Invest</p> </a> 
-    <a href="/team" class="item "> <img src="/public/site/img/footer/team.png"> <p>Team</p> </a> 
-    <a href="/blog" class="item "> <img src="/public/site/img/footer/mboard.png"> <p>MBoard</p> </a> 
-    <a href="/my" class="item "> <img src="/public/site/img/footer/account.png"> <p>Account</p> </a> 
+    <a href="/" class="item "> <img src="/v2/img/footer/home.png"> <p>Home</p> </a> 
+    <a href="/product" class="item "> <img src="/v2/img/footer/invest.png"> <p>Invest</p> </a> 
+    <a href="/team" class="item "> <img src="/v2/img/footer/team.png"> <p>Team</p> </a> 
+    <a href="/blog" class="item "> <img src="/v2/img/footer/mboard.png"> <p>MBoard</p> </a> 
+    <a href="/my" class="item "> <img src="/v2/img/footer/account.png"> <p>Account</p> </a> 
    </div> 
   </div> 
   <script>

@@ -12,7 +12,7 @@ $packages = Package::where('status', 'active')->get();
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/v2/css/common.css?t=1.2">
-   
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <style>
         .layui-col-space10>* {
             padding: 0 5px;
