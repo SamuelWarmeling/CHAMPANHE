@@ -27,6 +27,15 @@ return new class extends Migration
             $table->tinyInteger('auto_transfer')->default(0);
             $table->string('auto_transfer_default')->nullable();
             $table->string('telegram')->nullable();
+            $table->string('channel')->nullable();
+            $table->tinyInteger('open_deposit')->default(0);
+            $table->tinyInteger('auto_deposit')->default(0);
+            $table->tinyInteger('w_time_status')->default(0);
+            $table->tinyInteger('checkin')->default(0);
+            $table->integer('total_member_register_reword')->default(0);
+            $table->double('total_member_register_reword_amount', 20, 2)->default(0);
+            $table->double('minimum_recharge', 20, 2)->default(0);
+            $table->double('maximum_recharge', 20, 2)->default(0);
             $table->timestamps();
         });
     }
