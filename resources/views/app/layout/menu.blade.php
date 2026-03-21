@@ -3,7 +3,7 @@
 @php
   $path = request()->path();
   $homeActive    = ($path === '/' || $path === '');
-  $vipActive     = str_contains($path, 'vip') || str_contains($path, 'product') || str_contains($path, 'fund');
+  $vipActive     = str_contains($path, 'product') || str_contains($path, 'fund') || str_contains($path, 'vip/details') || str_contains($path, 'package');
   $inviteActive  = str_contains($path, 'invite') || str_contains($path, 'task');
   $blogActive    = str_contains($path, 'withdrawal-proof') || str_contains($path, 'notice');
   $accountActive = str_contains($path, 'profile') || str_contains($path, 'mine');
@@ -75,7 +75,7 @@
     </a>
 
     {{-- Investir --}}
-    <a href="/vip" class="item {{ $vipActive ? 'active' : '' }}">
+    <a href="/product" class="item {{ $vipActive ? 'active' : '' }}">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v7H3v-7zm4-5h2v12H7V8zm4-3h2v15h-2V5zm4 5h2v10h-2v-10zm4-3h2v13h-2V7z"/></svg>
       <p>Investir</p>
     </a>
