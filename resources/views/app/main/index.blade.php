@@ -31,7 +31,7 @@
       <div class="vip_text">
         This VIP level requires inviting 
        <strong class="people_num">0</strong> people, with a total investment of 
-       <strong class="require_buy">₹0</strong>. 
+       <strong class="require_buy">MIL0</strong>. 
       </div> 
      </div> 
     </div> 
@@ -54,7 +54,7 @@
    <div class="product_information"> 
     <div class="product_item flex_space"> 
      <p class="label">Each Price</p> 
-     <p class="value product_price"> ₹1000 </p> 
+     <p class="value product_price"> MIL1000 </p> 
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Revenue</p> 
@@ -62,11 +62,11 @@
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Daily Income</p> 
-     <p class="value product_daily_income"> ₹100 </p> 
+     <p class="value product_daily_income"> MIL100 </p> 
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Total Income</p> 
-     <p class="value product_total_income"> ₹3000 </p> 
+     <p class="value product_total_income"> MIL3000 </p> 
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Max Investment</p> 
@@ -88,11 +88,11 @@
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Pay Money</p> 
-     <p class="value product_pay_money"> ₹100 </p> 
+     <p class="value product_pay_money"> MIL100 </p> 
     </div> 
     <div class="product_item flex_space"> 
      <p class="label">Expected total revenue</p> 
-     <p class="value product_pay_total_income"> ₹3000 </p> 
+     <p class="value product_pay_total_income"> MIL3000 </p> 
     </div> 
    </div> 
    <button class="buy_btn" type="submit" lay-submit="" lay-filter="buy_product"> Invest Now </button> 

@@ -128,7 +128,7 @@ body {
   <!-- Header -->
   <div class="app-header">
     <img src="/profelar/logo.png" alt="Logo">
-    <div class="app-title">Welcome to {{env ('APP_NAME')}}</div>
+    <div class="app-title">Welcome to EMI – Enoteca Millesimi</div>
     <div class="app-subtitle">Sign in to your account</div>
   </div>
 

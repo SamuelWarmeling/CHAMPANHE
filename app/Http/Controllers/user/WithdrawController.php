@@ -95,10 +95,15 @@ class WithdrawController extends Controller
             return redirect()->back()->with('error', 'Maximum withdrawal is ₦' . number_format($setting->maximum_withdraw, 2));
         }
 
-        $charge = 0;
-        if ($setting->withdraw_charge > 0) {
-            $charge = ($amount * $setting->withdraw_charge) / 100;
+        $vipLevel = $user->vip_level ?? 0;
+        if ($vipLevel >= 10) {
+            $chargeRate = 7;   // Elite
+        } elseif ($vipLevel >= 1) {
+            $chargeRate = 10;  // VIP
+        } else {
+            $chargeRate = 15;  // Comum
         }
+        $charge = ($amount * $chargeRate) / 100;
 
         $debit_wallet = debit_user_wallet($user->id, 2, 'NGN', $amount);
         if ($debit_wallet['status'] == false) {

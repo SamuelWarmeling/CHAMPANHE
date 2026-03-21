@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>CARGILL_recharge</title> 
+  <title>EMI – Recharge</title>
   <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/v2/css/common.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">-->
@@ -61,7 +61,7 @@
   <script id="BalanceTpl" type="text/html">
     <div class="common_margin_10 common_padding_10" >
         <div class="label" style="color: #DEEFFF">Balance</div>
-        <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">R500</div>
+        <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">MIL 0</div>
     </div>
 </script> 
   <div class="common_margin_15" id="balance_card" style="margin-top: 0"> 

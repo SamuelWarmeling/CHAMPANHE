@@ -26,6 +26,8 @@ php artisan view:cache
 if [ "$DB_FRESH" = "true" ]; then
     echo "==> DB_FRESH=true: dropando todas as tabelas e rodando migrate:fresh..."
     php artisan migrate:fresh --force
+    echo "==> Rodando seeders EMI..."
+    php artisan db:seed --force
 else
     echo "==> Rodando migrations (DB_CONNECTION=${DB_CONNECTION})..."
     php artisan migrate --force
