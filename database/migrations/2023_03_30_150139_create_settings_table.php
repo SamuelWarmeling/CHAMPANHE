@@ -26,6 +26,7 @@ return new class extends Migration
             $table->tinyInteger('open_transfer')->default(0);
             $table->tinyInteger('auto_transfer')->default(0);
             $table->string('auto_transfer_default')->nullable();
+            $table->string('telegram')->nullable();
             $table->timestamps();
         });
     }
