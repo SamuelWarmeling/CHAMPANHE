@@ -11,7 +11,7 @@ $purchases = Purchase::where('status', 'active')
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>product_CARGILL</title> 
+  <title>Investir – EMI</title> 
   <link rel="stylesheet" href="/mbtech/layui.css"> 
   <link rel="stylesheet" href="/mbtech/common.css"> 
   <link rel="stylesheet" href="/mbtech/swiper-bundle.min.css">

@@ -1,52 +1,50 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{env('APP_NAME')}}</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <link rel="stylesheet" href="{{asset('public')}}/static/index.97465e7b.css">
-    <link rel="stylesheet" href="{{asset('public')}}/record.css">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <style>
-        uni-page-body {
-            width: 100%;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Histórico de Sorteios – EMI</title>
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
+  <style>
+    .record-list {
+      background: #fff;
+      border-radius: 12px;
+      margin: 10px 15px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .record-icon { width: 40px; height: 40px; border-radius: 8px; }
+    .record-info { flex: 1; }
+    .record-title { font-weight: 600; color: #1C1C1C; margin-bottom: 4px; }
+    .record-time { font-size: 12px; color: #888; }
+    .record-amount { font-size: 18px; font-weight: 700; color: #C8A96A; }
+  </style>
 </head>
-<body class="uni-body pages-bill">
-<uni-app class="">
-    <uni-page data-page="pages/bill">
-        <uni-page-wrapper>
-            <uni-page-body>
-                <uni-view data-v-2c9aa287="" class="content">
-                    <uni-view data-v-373aa5ec="" data-v-2c9aa287="" class="tabbar pr">
-                        <uni-view data-v-373aa5ec="" class="back-wrap">
-                            <img onclick="window.location.href='{{route('span')}}'" src="{{asset('public/left.png')}}" alt="">
-                        </uni-view>
-                        <uni-text data-v-373aa5ec="" class="title" style="color: rgb(255, 255, 255);"><span>Spin History</span></uni-text>
-                        <uni-view data-v-373aa5ec="" class="right"></uni-view>
-                    </uni-view>
+<body class="common_body">
 
-                    @foreach(\App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'spin')->orderByDesc('id')->get() as $element)
-                    <uni-view data-v-2c9aa287="" class="record d-b-c">
-                        <uni-image data-v-2c9aa287="">
-                            <div style="background-image: url({{asset('public')}}/static/img/coin.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
-                            <img src="{{asset('public')}}/static/img/coin.png" draggable="false"></uni-image>
-                        <uni-view data-v-2c9aa287="" class="flex-1">
-                            <uni-view data-v-2c9aa287="" class="ui text-ellipsis">Lucky Draw Rewards</uni-view>
-                            <uni-view data-v-2c9aa287="" class="d-b-c mt10">
-                                <uni-text data-v-2c9aa287="" class="f24"><span>Time:{{$element->created_at}}</span></uni-text>
-                                <uni-text data-v-2c9aa287="" class="ui"><span>{{price($element->amount)}}</span></uni-text>
-                            </uni-view>
-                        </uni-view>
-                    </uni-view>
-                    @endforeach
-                </uni-view>
-            </uni-page-body>
-        </uni-page-wrapper>
-    </uni-page>
-</uni-app>
+<div class="common_header">
+  <a href="{{ route('span') }}" class="back position">
+    <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
+    Histórico de Sorteios
+  </a>
+</div>
+
+<div style="padding-bottom: 20px;">
+  @foreach(\App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'spin')->orderByDesc('id')->get() as $element)
+  <div class="record-list">
+    <div class="record-info">
+      <div class="record-title">Prêmios do Sorteio</div>
+      <div class="record-time">{{ $element->created_at }}</div>
+    </div>
+    <div class="record-amount">{{ price($element->amount) }}</div>
+  </div>
+  @endforeach
+</div>
+
 </body>
 </html>

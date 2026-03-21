@@ -7,7 +7,7 @@ $packages = Package::where('status', 'active')->get();
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>product_CARGILL</title> 
+  <title>Investir – EMI</title> 
   <link rel="stylesheet" href="/public/site/layui/csss/layui.css"> 
   <link rel="stylesheet" href="/public/site/csss/common.css"> 
   <link rel="stylesheet" href="/public/site/csss/swiper-bundle.min.css"> 
@@ -52,7 +52,7 @@ $packages = Package::where('status', 'active')->get();
     <div style="padding-top: 10px"> 
      <img src="/mbtech/IMG-20250601-WA0037.jpg" style="height: 24px;"> 
     </div> 
-    <a href="/help" class="notice" style="background: #22C87F;border-radius: 12px 12px 12px 12px;border: 1px solid #7DD8A2;width:36px;height:36px;line-height: 36px;text-align: center;margin-top: 10px;"> <img src="/public/site/img/common/service.png" style="height: 24px;width: 24px;"> </a> 
+    <a href="/help" class="notice" style="background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);border-radius: 12px 12px 12px 12px;border: 1px solid #D6A86B;width:36px;height:36px;line-height: 36px;text-align: center;margin-top: 10px;"> <img src="/v2/img/common/service.png" style="height: 24px;width: 24px;"> </a> 
    </div> 
    <div class="index_menu" style="position: relative;bottom: -20px;margin-top: 0px"> 
     <div class="nav nav_active" style="text-align: center;width: 33%;" data-type="1" data-image="fixed" onclick="setActiveTab(1)">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Buy Product_CARGILL</title>
+  <title>Comprar – EMI</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/public/site/layui/css/layui.css">
@@ -149,7 +149,7 @@
       <div class="product_details_name" style="border-left: 4px solid #EBD8A3 ;padding-left: 10px;">
         {{$package->category}}
       </div>
-      <div style="font-family: Arial;font-weight: 400;font-size: 14px;color: #2A415C;line-height: 22px;">
+      <div style="font-family: Arial;font-weight: 400;font-size: 14px;color: #1C1C1C;line-height: 22px;">
         <p style="margin-bottom: 10px;">The investment amount of this product is as low as {{price($package->price)}}</p>
         <p style="margin-bottom: 10px;">Period：{{$package->validity}} Days</p>
         <p style="margin-bottom: 10px;">Total income obtained：R {{($package->commission_with_avg_amount)}}</p>

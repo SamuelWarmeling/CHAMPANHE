@@ -41,7 +41,7 @@
       box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
     }
     .record-title {
-      background: #003862;
+      background: #1C1C1C;
       color: #fff;
       font-weight: bold;
       padding: 8px 15px;
@@ -84,7 +84,7 @@
     @php
       $statusColor = match($element->status) {
           'approved' => '#2BE26C',
-          'progress' => '#003862',
+          'progress' => '#1C1C1C',
           'rejected' => '#F44336',
           default => '#FF8725'
       };

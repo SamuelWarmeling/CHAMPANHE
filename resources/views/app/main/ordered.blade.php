@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Product</title>
+  <title>Meus Pedidos – EMI</title>
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="/v2/css/emi-theme.css">
@@ -20,8 +20,8 @@
     }
     .nav_active .title {
       font-weight: bold;
-      color: #1A53CF;
-      border-bottom: 3px solid #1A53CF;
+      color: #C8A96A;
+      border-bottom: 3px solid #C8A96A;
     }
     .product_details_card {
       background: #fff;
@@ -37,23 +37,23 @@
     }
     .product_details_name {
       font-weight: bold;
-      color: #39487E;
+      color: #1C1C1C;
     }
     .product_details_status {
       font-size: 14px;
       padding-left: 10px;
     }
     .normal {
-      color: #486BEA;
+      color: #C8A96A;
     }
     .label {
       color: #666;
     }
     .value {
-      color: #07262C;
+      color: #1C1C1C;
     }
     .price {
-      color: #486BEA;
+      color: #C8A96A;
     }
     .order_details {
       background: #fff;
@@ -71,20 +71,20 @@
   <div class="common_header">
     <a href="javascript:history.back(-1)" class="back position">
       <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
-      My Product
+      Meus Pedidos
     </a>
   </div>
 
   <!-- Tabs -->
   <div class="common_nav_menu flex_space" style="margin-top: 20px; background: #ffffff">
     <div class="nav nav_active" data-type="">
-      <p class="title">All</p>
+      <p class="title">Todos</p>
     </div>
     <div class="nav" data-type="normal">
-      <p class="title">Normal</p>
+      <p class="title">Ativo</p>
     </div>
     <div class="nav" data-type="finish">
-      <p class="title">Finish</p>
+      <p class="title">Concluído</p>
     </div>
   </div>
 
@@ -117,32 +117,32 @@
                 </div>
                 <div class="product_card_body">
                     <div class="product_info">
-                        <p class="label">Purchase Date</p>
+                        <p class="label">Data de Compra</p>
                         <p class="value">{{ $purchase->created_at->format('Y-m-d') }}</p>
                     </div>
                     <div class="product_info">
-                        <p class="label">Amount</p>
+                        <p class="label">Valor</p>
                         <p class="value price">{{ price($purchase->amount) }}</p>
                     </div>
                     <div class="product_info">
-                        <p class="label">Daily Income</p>
+                        <p class="label">Renda Diária</p>
                         <p class="value price">{{ price($dailyIncome) }}</p>
                     </div>
                     <div class="product_info">
-                        <p class="label">Total Income</p>
+                        <p class="label">Renda Total</p>
                         <p class="value price">{{ price($totalIncome) }}</p>
                     </div>
                     <div class="product_info">
-                        <p class="label">Validity</p>
+                        <p class="label">Validade</p>
                         <p class="value">{{ $purchase->validity }}</p>
                     </div>
                     <div class="product_info">
-                        <p class="label">Category</p>
+                        <p class="label">Categoria</p>
                         <p class="value">{{ ucfirst($purchase->category) }}</p>
                     </div>
                     @if($purchase->note)
                     <div class="product_info">
-                        <p class="label">Note</p>
+                        <p class="label">Nota</p>
                         <p class="value">{{ $purchase->note }}</p>
                     </div>
                     @endif
@@ -151,7 +151,7 @@
         @empty
             <div class="product_card empty_card">
                 <img src="/v2/img/order/none_order.png" class="empty_img">
-                <p class="empty_text">No Order</p>
+                <p class="empty_text">Nenhum Pedido</p>
             </div>
         @endforelse
     </div>
@@ -167,18 +167,18 @@
 }
 
 .product_card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+    background: #fff;
     border-radius: 16px;
     padding: 20px;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: #1C1C1C;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid #C8A96A;
 }
 
 .product_card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(200,169,106,0.2);
 }
 
 .product_card_header {
@@ -202,18 +202,18 @@
 }
 
 .product_status.active {
-    background-color: rgba(0,255,0,0.2);
-    color: #0f0;
+    background-color: rgba(163,177,138,0.2);
+    color: #5a7c4a;
 }
 
 .product_status.pending {
-    background-color: rgba(255,255,0,0.2);
-    color: #ff0;
+    background-color: rgba(200,169,106,0.2);
+    color: #8a6c2a;
 }
 
 .product_status.inactive {
-    background-color: rgba(255,0,0,0.2);
-    color: #f00;
+    background-color: rgba(180,120,80,0.15);
+    color: #8a4a30;
 }
 
 .product_card_body {
@@ -224,16 +224,17 @@
 
 .product_info .label {
     font-size: 12px;
-    color: #ccc;
+    color: #888;
 }
 
 .product_info .value {
     font-size: 14px;
     font-weight: 600;
+    color: #1C1C1C;
 }
 
 .product_info .price {
-    color: #4cd137;
+    color: #C8A96A;
 }
 
 .empty_card {
@@ -252,7 +253,7 @@
     font-weight: bold;
     font-size: 18px;
     margin-top: 15px;
-    color: #fff;
+    color: #888;
 }
 </style>
 

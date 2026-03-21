@@ -15,7 +15,7 @@
         height: 40px;
         text-align: center;
         line-height: 40px;
-        background: #396ED1;
+        background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
         border-radius: 100px 100px 100px 100px;
         cursor: pointer;
       }
@@ -30,7 +30,7 @@
         font-weight: 700;
         font-size: 14px;
         color: #FFFFFF;
-        background: #29BE71;
+        background: #A3B18A;
       }
       .label {
         font-family: Arial, Arial;
@@ -113,7 +113,7 @@
             height: 40px;
             text-align: center;
             line-height: 40px;
-            background: #396ED1;
+            background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
             border-radius: 100px 100px 100px 100px;
             cursor: pointer;
         }
@@ -131,7 +131,7 @@
             font-weight: 700;
             font-size: 14px;
             color: #FFFFFF;
-            background: #29BE71;
+            background: #A3B18A;
 
         }
 

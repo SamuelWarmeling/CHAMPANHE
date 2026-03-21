@@ -10,12 +10,12 @@
   <style>
     body { background: #F4F6FB; }
     .layui-input { background: none; }
-    .common_header { background: #2857AF; }
-    .withdraw-record { background: #234FA4; border-radius: 8px; border: 1px solid #396AC7; padding: 15px; margin-bottom: 15px; }
+    .common_header { background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%); }
+    .withdraw-record { background: #fff; border-radius: 8px; border: 1px solid #EDE8DF; padding: 15px; margin-bottom: 15px; }
     .withdraw-record .item { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px; }
-    .withdraw-record .label { color: #D9E6FF; font-weight: bold; }
-    .withdraw-record .value { color: #2BE26C; font-weight: bold; }
-    .withdraw-record .value.fail { color: #FFA559; }
+    .withdraw-record .label { color: #888; font-weight: bold; }
+    .withdraw-record .value { color: #A3B18A; font-weight: bold; }
+    .withdraw-record .value.fail { color: #B05030; }
     .withdraw-record .sub { font-size: 12px; color: #8AA8E1; margin-top: 2px; }
     .value.pending {
   color: #FFA500; /* orange for pending */

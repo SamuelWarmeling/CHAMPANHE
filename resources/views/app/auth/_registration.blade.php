@@ -1,230 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Register_CARGILL</title>
-  <link rel="stylesheet" href="/public/site/layui/css/layui.css">
-  <link rel="stylesheet" href="/public/site/css/common.css">
+  <title>Cadastro – EMI</title>
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
   <style>
+    * { box-sizing: border-box; }
     body {
-      background: #f5f5f5;
+      margin: 0;
+      background: #F8F6F2;
+      font-family: Arial, sans-serif;
+      color: #1C1C1C;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-
-    .otp-banner {
-      display: none;
-      background: #3766B7;
-      color: #FFFFFF;
+    .login_wrap {
+      width: 100%;
+      max-width: 420px;
+    }
+    .login_logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .login_logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #C8A96A;
+    }
+    .login_logo h2 {
+      margin: 12px 0 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1C1C1C;
+    }
+    .login_logo p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: #888;
+    }
+    .login_card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .form_tab {
+      display: flex;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #EDE8DF;
+    }
+    .form_tab .tab_item {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #888;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.2s;
+    }
+    .form_tab .tab_item.active {
+      color: #C8A96A;
+      border-bottom-color: #C8A96A;
+    }
+    .field_label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .field_wrap {
+      display: flex;
+      align-items: center;
+      background: #F8F6F2;
+      border: 1px solid #EDE8DF;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      height: 48px;
+    }
+    .field_prefix {
+      padding: 0 12px;
       font-size: 14px;
-      padding: 15px;
-      text-align: left;
-      line-height: 1.6;
-      border-radius: 0 0 10px 10px;
-      animation: fadeInDown 0.3s ease-out;
+      color: #888;
+      border-right: 1px solid #EDE8DF;
+      line-height: 48px;
+      white-space: nowrap;
     }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .field_wrap input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 0 14px;
+      font-size: 15px;
+      color: #1C1C1C;
+      outline: none;
+      height: 48px;
     }
-
-    .loadingClass {
+    .field_wrap input::placeholder {
+      color: #BBBBBB;
+    }
+    .otp_row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .otp_row .field_wrap {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .otp_send_btn {
+      height: 48px;
+      padding: 0 16px;
+      background: #EDE8DF;
+      border: 1px solid #C8A96A;
+      border-radius: 10px;
+      color: #C8A96A;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .otp_send_btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+    .btn_submit {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
+      color: #1C1C1C;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+    .btn_submit:active {
+      opacity: 0.88;
+    }
+    .loading_overlay {
       display: none;
       position: fixed;
       z-index: 9999;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       top: 0; left: 0;
       width: 100%; height: 100%;
       justify-content: center;
       align-items: center;
       flex-direction: column;
     }
-
     .spinner {
-      width: 50px; height: 50px;
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #0062E1;
+      width: 48px; height: 48px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #C8A96A;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      animation: spin 0.8s linear infinite;
     }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
-
-<body class="login_body">
-
-<div class="login_bg">
-  <div class="main">
-    <div class="logo">
-      <img src="{{setting('logo')}}" style="width:80px; height:80px;margin-top: 10px;">
+<body>
+  <div class="login_wrap">
+    <div class="login_logo">
+      <img src="{{setting('logo')}}" alt="EMI Logo">
+      <h2>EMI – Enoteca Millesimi</h2>
+      <p>Plataforma de Investimento em Vinhos Premium</p>
     </div>
 
-    <!-- ✅ OTP message banner -->
-    <div id="otpMessage" class="otp-banner">
-      คYou need to ensure that your phone number is correct. To withdraw funds, you need to collect an OTP verification code on your phone.
-    </div>
+    <div class="login_card">
+      <div class="form_tab">
+        <a href="{{ url('login') }}" class="tab_item">Entrar</a>
+        <span class="tab_item active">Cadastrar</span>
+      </div>
 
-    <div class="login_form">
-      <form class="layui-form layui-form-pane" method="POST" action="{{ url('register') }}">
+      <form class="layui-form" method="POST" action="{{ url('register') }}" id="registerForm">
         @csrf
 
-        <div class="form_tab">
-          <div class="left">Register</div>
-          <a href="{{ url('login') }}" class="right">Login</a>
+        <div class="field_label">Número de Telefone</div>
+        <div class="field_wrap">
+          <span class="field_prefix">+27</span>
+          <input type="text" name="phone" id="regPhone" placeholder="Digite seu número" required autocomplete="off">
         </div>
 
-        <div class="form_container">
-
-          <!-- Phone -->
-          <div class="label">Mobile phone number</div>
-          <div class="layui-form-item">
-            <label class="layui-form-label">+27</label>
-            <div class="layui-input-block">
-              <div class="layui-input-wrap">
-                <input type="text" name="phone" lay-verify="required" placeholder="Please enter your phone number" autocomplete="off" class="layui-input" lay-affix="clear">
-                <div class="layui-input-affix layui-input-suffix layui-hide">
-                  <i class="layui-icon layui-icon-clear"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Password -->
-          <div class="label">Password</div>
-          <div class="layui-form-item">
-            <div class="layui-input-wrap">
-              <input type="password" name="password" lay-verify="required" placeholder="Please enter password" autocomplete="off" class="layui-input" lay-affix="eye" style="border-radius:8px;">
-              <div class="layui-input-affix layui-input-suffix">
-                <i class="layui-icon layui-icon-eye-invisible"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Invitation -->
-          <div class="label">Invitation Code</div>
-          <div class="layui-form-item">
-            <div class="layui-input-wrap">
-              <input type="text" name="ref_by" value="{{ $ref_by ?? rand(100000,999999) }}"  lay-verify="required" placeholder="Please enter invitation code" autocomplete="off" class="layui-input" lay-affix="clear">
-              <div class="layui-input-affix layui-input-suffix layui-hide">
-                <i class="layui-icon layui-icon-clear"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hidden ref_by -->
-          <input type="hidden" name="ref_by" value="{{ $ref_by ?? rand(100000,999999) }}">
-
-          <!-- OTP -->
-          <div class="label">Verification code (OTP)</div>
-          <div class="layui-form-item">
-            <div class="layui-row">
-              <div class="layui-col-xs8">
-                <div class="layui-input-wrap">
-                  <input type="number" name="code" id="code" lay-verify="required" placeholder="Verification code" autocomplete="off" class="layui-input" style="border-radius:8px;">
-                </div>
-              </div>
-              <div class="layui-col-xs4">
-                <div style="margin-left: 11px;">
-                  <div class="layui-btn layui-btn-fluid layui-btn-primary" style="color: #1A53CF; border: none; line-height: 50px;" id="getCode">
-                    Send
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Register Button -->
-          <div style="margin-top: 40px">
-            <button class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius login_btn" lay-submit lay-filter="register">Register Now</button>
-          </div>
-
+        <div class="field_label">Senha</div>
+        <div class="field_wrap">
+          <input type="password" name="password" placeholder="Digite sua senha" required autocomplete="off">
         </div>
+
+        <div class="field_label">Código de Convite</div>
+        <div class="field_wrap">
+          <input type="text" name="ref_by" value="{{ $ref_by ?? '' }}" placeholder="Digite o código de convite" required autocomplete="off">
+        </div>
+
+        <div class="field_label">Código de Verificação (OTP)</div>
+        <div class="otp_row">
+          <div class="field_wrap">
+            <input type="number" name="code" id="otpCode" placeholder="Código OTP" required autocomplete="off">
+          </div>
+          <button type="button" class="otp_send_btn" id="sendOtpBtn" onclick="sendOtp()">Enviar</button>
+        </div>
+
+        <button type="submit" class="btn_submit" id="registerBtn">Cadastrar Agora</button>
       </form>
     </div>
   </div>
-</div>
 
-<!-- ✅ Loading Overlay -->
-<div class="loadingClass" id="loadingBox">
-  <div class="spinner"></div>
-  <p style="color:white;margin-top:10px;">Processing...</p>
-</div>
+  <div class="loading_overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p style="color:#fff;margin-top:12px;font-size:14px;">Processando...</p>
+  </div>
 
-<!-- JS Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/layui.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  @include('alert-message')
 
-<script>
-layui.use(['form', 'layer'], function(){
-  var form = layui.form;
-  var layer = layui.layer;
-
-  // Custom required validation
-  form.verify({
-    required: function(value){
-      if(!value.trim()){
-        return 'This field is required';
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function sendOtp() {
+      const phone = document.getElementById('regPhone').value;
+      if (!phone) {
+        alert('Por favor, insira seu número de telefone');
+        return;
       }
-    }
-  });
-
-  // Virtual OTP sender
-  $('#getCode').on('click', function(){
-    const phone = $('input[name="phone"]').val();
-    if (!phone) {
-      layer.msg('Please enter your phone number');
-      return;
-    }
-
-    // Show loading
-    $('#loadingBox').css('display', 'flex');
-
-    // Fake delay
-    setTimeout(() => {
-      $('#loadingBox').hide();
-
-      // Generate fake 6-digit OTP
-      const otp = Math.floor(100000 + Math.random() * 900000);
-      $('#code').val(otp);
-
-      // Show OTP message banner
-      $('#otpMessage').slideDown();
-
+      document.getElementById('loadingOverlay').style.display = 'flex';
       setTimeout(() => {
-        $('#otpMessage').slideUp();
-      }, 2000);
-
-      // Start countdown
-      let timeLeft = 120;
-      $('#getCode').text(timeLeft + 's').attr('disabled', true);
-      let timer = setInterval(() => {
-        timeLeft--;
-        $('#getCode').text(timeLeft + 's');
-        if (timeLeft <= 0) {
-          clearInterval(timer);
-          $('#getCode').text('Send').removeAttr('disabled');
-        }
+        document.getElementById('loadingOverlay').style.display = 'none';
+        const otp = Math.floor(100000 + Math.random() * 900000);
+        document.getElementById('otpCode').value = otp;
+        let timeLeft = 120;
+        const btn = document.getElementById('sendOtpBtn');
+        btn.disabled = true;
+        btn.textContent = timeLeft + 's';
+        const timer = setInterval(() => {
+          timeLeft--;
+          btn.textContent = timeLeft + 's';
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            btn.disabled = false;
+            btn.textContent = 'Enviar';
+          }
+        }, 1000);
       }, 1000);
+    }
 
-    }, 1000);
-  });
-
-  // Submit Form
-  form.on('submit(register)', function(){
-    $('#loadingBox').css('display', 'flex');
-    return true;
-  });
-});
-</script>
-
+    document.getElementById('registerForm').addEventListener('submit', function() {
+      document.getElementById('loadingOverlay').style.display = 'flex';
+    });
+  </script>
 </body>
 </html>

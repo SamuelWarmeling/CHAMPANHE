@@ -29,7 +29,7 @@
             font-size: 18px;
             text-align: right;
             margin-right: 8px;
-            color: #38a61c;
+            color: #A3B18A;
         }
         ul.bottom-menu.list-unstyled.list-inline li img {
             width: 20px;
@@ -47,7 +47,7 @@
             border: none;
         }
         footer{
-            background: #614D7C;
+            background: #F8F6F2;
         }
 
         ::-webkit-scrollbar {
@@ -91,26 +91,26 @@
                 <li>
                     <a href="{{route('vip')}}">
                         <img src="{{asset('public/app/nav/vvvvvv.png')}}" alt="">
-                        <p>Machine</p>
+                        <p>VIP</p>
                     </a>
                 </li>
                 <li>
 
                     <a href="{{route('user.mining')}}">
                         <img src="{{asset('public/app/nav/ttttt.png')}}" alt="">
-                        <p>Mining</p>
+                        <p>Planos</p>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('user.team')}}">
                         <img src="{{asset('public/app/nav/tmtmtmt.png')}}" alt="">
-                        <p>My Team</p>
+                        <p>Equipe</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('my.profile')}}" style="color: #000">
+                    <a href="{{route('my.profile')}}" style="color: #1C1C1C">
                         <img src="{{asset('public/app/nav/m.png')}}" alt="">
-                        <p>Account</p>
+                        <p>Conta</p>
                     </a>
                 </li>
             </ul>

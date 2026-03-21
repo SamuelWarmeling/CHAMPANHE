@@ -1,49 +1,53 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="{{asset('public')}}/CLREnergy/dist/favicon.ico">
-    <title>{{env('APP_NAME')}}</title>
-    <link href="{{asset('public')}}/CLREnergy/dist/css/chunk-vendors.a9285ddb.css" rel="stylesheet">
-    <link href="{{asset('public')}}/CLREnergy/dist/css/app.865ef51f.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/791.be86190f.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/278.5b9352be.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/345.18397afb.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/335.0a1ca413.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/189.6fd946d4.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/764.7f62e783.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('public')}}/CLREnergy/dist/css/4.dcbe59fd.css">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Histórico de Comissões – EMI</title>
+  <link rel="stylesheet" href="/v2/layui/css/layui.css">
+  <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
+  <style>
+    .record-list {
+      background: #fff;
+      border-radius: 12px;
+      margin: 10px 15px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+    .record-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .record-item p { margin: 0 0 4px; font-weight: 600; color: #1C1C1C; }
+    .record-item span { font-size: 12px; color: #888; }
+    .record-amount { font-size: 18px; font-weight: 700; color: #C8A96A; }
+  </style>
 </head>
-<body class="">
-<div id="app" data-v-app="">
-    <div>
-        <div class="aboutpage" data-v-00a2d0b3="">
-            <div class="van-nav-bar van-hairline--bottom navboxi" data-v-00a2d0b3="">
-                <div class="van-nav-bar__content">
-                    <div class="van-nav-bar__left van-haptics-feedback" onclick="window.location.href='{{route('user.team')}}'"><i
-                            class="van-badge__wrapper van-icon van-icon-arrow-left van-nav-bar__arrow"><!----><!---->
-                            <!----></i><!----></div>
-                    <div class="van-nav-bar__title van-ellipsis">Team Commission History</div><!----></div>
-            </div>
-            <div role="feed" class="van-list" aria-busy="false" data-v-00a2d0b3=""><!---->
-                <?php $commissions = \App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'commission')->orderByDesc('id')->get(); ?>
-                @foreach($commissions as $element)
-                <div class="record-list" data-v-00a2d0b3="">
-                    <div class="record-item" data-v-00a2d0b3="">
-                        <div data-v-00a2d0b3=""><p data-v-00a2d0b3="">Commission<span style="color: #ffd500;">({{ucfirst($element->step)}})</span> Level</p><span data-v-00a2d0b3="">{{$element->created_at}}</span>
-                        </div>
-                        <p data-v-00a2d0b3="">{{price($element->amount)}}</p></div>
-                </div>
-                @endforeach
-                <div class="van-list__finished-text"></div><!---->
-                <div class="van-list__placeholder"></div>
-            </div>
-        </div>
-    </div><!---->
+<body class="common_body">
+
+<div class="common_header">
+  <a href="{{ route('user.team') }}" class="back position">
+    <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p>
+    Comissões de Equipe
+  </a>
 </div>
+
+<div style="padding-bottom: 20px;">
+  <?php $commissions = \App\Models\UserLedger::where('user_id', auth()->id())->where('reason', 'commission')->orderByDesc('id')->get(); ?>
+  @foreach($commissions as $element)
+  <div class="record-list">
+    <div class="record-item">
+      <div>
+        <p>Comissão <span style="color: #C8A96A;">({{ ucfirst($element->step) }})</span> Nível</p>
+        <span>{{ $element->created_at }}</span>
+      </div>
+      <div class="record-amount">{{ price($element->amount) }}</div>
+    </div>
+  </div>
+  @endforeach
+</div>
+
 </body>
 </html>

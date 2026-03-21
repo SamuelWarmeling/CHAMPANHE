@@ -3,30 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>My Bill</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
-
+<title>Meu Extrato – EMI</title>
+<link rel="stylesheet" href="/v2/layui/css/layui.css">
+<link rel="stylesheet" href="/v2/css/common.css">
+<link rel="stylesheet" href="/v2/css/emi-theme.css">
 <style>
 body{
   margin:0;
-  background:#F4F6FB;
+  background:#F8F6F2;
   font-family: Arial, sans-serif;
-}
-
-/* Header */
-.common_header{
-  background:#17469F;
-  padding:14px;
-  color:#fff;
-  font-size:18px;
-}
-.common_header .back{
-  color:#fff;
-  text-decoration:none;
-  display:flex;
-  align-items:center;
-  gap:8px;
 }
 
 /* Tabs */
@@ -48,7 +33,7 @@ body{
   color:#666;
 }
 .nav_active{
-  background:#17469F;
+  background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
   color:#fff;
   font-weight:700;
 }
@@ -70,10 +55,10 @@ body{
 
 /* Credit / Debit */
 .history-card.in{
-  border-color:#4E7BFF;
+  border-color:#C8A96A;
 }
 .history-card.out{
-  border-color:#FF6A00;
+  border-color:#D6A86B;
 }
 
 /* Card content */
@@ -95,11 +80,11 @@ body{
 }
 
 .history-amount.in{
-  color:#4E7BFF;
+  color:#C8A96A;
 }
 
 .history-amount.out{
-  color:#FF6A00;
+  color:#A3B18A;
 }
 
 .history-bottom{
@@ -114,7 +99,7 @@ body{
 .none_data{
   text-align:center;
   margin-top:40px;
-  color:#fff;
+  color:#888;
   display:none;
 }
 </style>
@@ -124,22 +109,22 @@ body{
 
 <!-- HEADER -->
 <div class="common_header">
-  <a href="javascript:history.back()" class="back">
-    <i class="layui-icon layui-icon-left"></i> My Bill
+  <a href="javascript:history.back()" class="back position">
+    <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Meu Extrato
   </a>
 </div>
 
 <!-- FILTER TABS -->
 <div class="common_nav_menu">
-  <div class="nav nav_active" data-type="all">All</div>
-  <div class="nav" data-type="recharge">Recharge</div>
-  <div class="nav" data-type="withdrawal">Withdrawal</div>
+  <div class="nav nav_active" data-type="all">Todos</div>
+  <div class="nav" data-type="recharge">Depósito</div>
+  <div class="nav" data-type="withdrawal">Saque</div>
 </div>
 
 <!-- HISTORY -->
 <div class="history-wrap" id="Balance_details">
 
-  {{-- ✅ USER LEDGER --}}
+  {{-- USER LEDGER --}}
   @foreach(\App\Models\UserLedger::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
   @php $credit = $row->amount >= 0; @endphp
   <div class="history-card {{ $credit ? 'in' : 'out' }}" data-type="ledger">
@@ -151,30 +136,30 @@ body{
     </div>
     <div class="history-bottom">
       <span>{{ $row->created_at }}</span>
-      <span>Status:  {{ ucfirst($row->status) }}</span>
+      <span>Status: {{ ucfirst($row->status) }}</span>
     </div>
   </div>
   @endforeach
 
-  {{-- ✅ RECHARGE --}}
+  {{-- RECHARGE --}}
   @foreach(\App\Models\Deposit::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
   <div class="history-card in" data-type="recharge">
     <div class="history-top">
-      <div class="history-title">Recharge</div>
+      <div class="history-title">Depósito</div>
       <div class="history-amount in">+ {{ price($row->amount) }}</div>
     </div>
     <div class="history-bottom">
       <span>{{ $row->created_at }}</span>
-      <span>{{ $row->method ?? 'Payment' }}</span>
+      <span>{{ $row->method ?? 'Pagamento' }}</span>
     </div>
   </div>
   @endforeach
 
-  {{-- ✅ WITHDRAWAL --}}
+  {{-- WITHDRAWAL --}}
   @foreach(\App\Models\Withdrawal::where('user_id',auth()->id())->orderByDesc('id')->get() as $row)
   <div class="history-card out" data-type="withdrawal">
     <div class="history-top">
-      <div class="history-title">Withdrawal</div>
+      <div class="history-title">Saque</div>
       <div class="history-amount out">- {{ price($row->amount) }}</div>
     </div>
     <div class="history-bottom">

@@ -15,8 +15,8 @@
     </style> 
  </head> 
  <body class="common_body"> 
-  <div class="common_header" style=" background: #2857AF;"> 
-   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Bank Card Info </a> 
+  <div class="common_header" style="background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);">
+   <a href="javascript:history.back(-1)" class="back position"> <p class="btn"><i class="layui-icon layui-icon-left layui-font-20"></i></p> Dados Bancários </a>
   </div>
   @php
     $user = auth()->user();
@@ -92,7 +92,7 @@
        </div> 
       </div> 
       <div class="layui-form-item" style="border: none"> 
-       <button type="submit" class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius" style="background: #1A53CF;color: #FFFFFF !important;" lay-submit="" lay-filter="saveBankCardInfo">Add bank card</button> 
+       <button type="submit" class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius" style="background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);color: #1C1C1C !important;font-weight:700;" lay-submit="" lay-filter="saveBankCardInfo">Adicionar Conta Bancária</button> 
       </div> 
      </div> 
     </form> 
@@ -101,10 +101,10 @@
   <div class="common_card" style=" margin: 15px;"> 
    <div class="common_card_content"> 
     <div class="demo-login-container" style=""> 
-     <p class="common_explain">Explain</p> 
-     <div class="common_content"> 
-      <p> 1 - You can only add a bank card for withdrawals </p> 
-      <p> 2 - Please ensure that the bank accounts are correct and functioning properly </p> 
+     <p class="common_explain">Observações</p>
+     <div class="common_content">
+      <p> 1 – Você pode adicionar apenas uma conta bancária para saques </p>
+      <p> 2 – Certifique-se de que os dados bancários estão corretos e que a conta está ativa </p>
      </div> 
     </div> 
    </div> 

@@ -19,21 +19,21 @@
             font-family: Arial, Arial;
             font-weight: 700;
             font-size: 16px;
-            color: #003862;
+            color: #1C1C1C;
         }
         .layui-colla-title .success{color: #2BE26C;}
-        .layui-colla-title .progress{color: #003862;}
+        .layui-colla-title .progress{color: #1C1C1C;}
         .layui-colla-title .returned{color: #FFA559;}
         .layui-colla-content,.layui-colla-item {
             border-top: 1px solid #dddddd;
         }
         .layui-colla-item .label {
-            color: #003862;
+            color: #1C1C1C;
         }
         .layui-colla-item .value {
             font-weight: 700;
             font-size: 16px;
-            color: #003862;
+            color: #1C1C1C;
             padding-left: 10px;
         }
         .padding{ padding: 10px 0}

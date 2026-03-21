@@ -51,7 +51,7 @@
     .redeem_title {
       font-size: 20px;
       font-weight: bold;
-      color: #003862;
+      color: #1C1C1C;
     }
 
     .redeem_subtitle {

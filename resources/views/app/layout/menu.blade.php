@@ -12,7 +12,7 @@
             height: 40px;
             text-align: center;
             line-height: 40px;
-            background: #396ED1;
+            background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
             border-radius: 100px 100px 100px 100px;
             cursor: pointer;
         }
@@ -20,29 +20,27 @@
             font-family: Arial, Arial;
             font-weight: 700;
             font-size: 14px;
-            color: #FFFFFF;
-
+            color: #1C1C1C;
         }
         .qr_code_btn{
             font-family: Arial, Arial;
             font-weight: 700;
             font-size: 14px;
-            color: #FFFFFF;
-            background: #29BE71;
-
+            color: #1C1C1C;
+            background: #A3B18A;
         }
         .label{
             font-family: Arial, Arial;
             font-weight: 400;
             font-size: 14px;
-            color: #95FCBE;
+            color: #EDE8DF;
             line-height: 22px;
         }
         .value{
             font-family: Arial, Arial;
             font-weight: 700;
             font-size: 24px;
-            color: #FFFB00;
+            color: #C8A96A;
             line-height: 28px;
         }
         .common_card .title{
@@ -50,11 +48,11 @@
             font-family: Arial, Arial;
             font-weight: 700;
             font-size: 18px;
-            color: #0F7A5A;
+            color: #1C1C1C;
             height: 30px;
             line-height: 30px;
             display: flex;
-            justify-content:space-between ;
+            justify-content:space-between;
         }
         .reward_card{
             height: auto;
@@ -131,7 +129,7 @@
     color: #A1BFF6;
 }
 .footer_menu .content a{
-    color: #A1BFF6 !important;
+    color: #888888 !important;
     font-weight: 400;
 }
 .footer_menu .content .item{
@@ -153,16 +151,15 @@
     height: 20px;
     line-height: 20px;
 }
-.footer_menu .content  .active{
+.footer_menu .content .active{
     text-align: center;
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #00A576;
+    color: #C8A96A;
 }
 
 #service{
-    /*display: none;*/
     position: fixed;
     z-index:9999;
     bottom: 200px;
@@ -172,10 +169,10 @@
     padding: 3px;
     padding-left: 5px;
     padding-top: 5px;
-    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.1);
-    background: #22C87F;
+    box-shadow: 0px 4px 10px 0px rgba(200,169,106,0.3);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #7DD8A2;
+    border: 1px solid #D6A86B;
     text-align: center;
 }
     </style> 

