@@ -6,6 +6,7 @@
   <title>Blog</title>
   <link rel="stylesheet" href="/v2/layui/css/layui.css">
   <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;

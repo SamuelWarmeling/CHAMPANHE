@@ -1,0 +1,192 @@
+/*
+ * EMI – Enoteca Millesimi Theme
+ * Palette:
+ *   Background  : #F8F6F2  (Branco Suave)
+ *   Text        : #1C1C1C  (Grafite)
+ *   Gold        : #C8A96A  (Dourado – botões e destaques)
+ *   Caramel     : #D6A86B  (Caramelo – cards e detalhes)
+ *   Olive       : #A3B18A  (Verde Oliva – toques pequenos)
+ */
+
+/* ── Corpo e fundo global ─────────────────────────────────── */
+body {
+    background: #F8F6F2 !important;
+    color: #1C1C1C !important;
+}
+.common_body {
+    background: #F8F6F2 !important;
+}
+.common_background {
+    background: #EDE8DF !important;
+}
+
+/* ── Header / Barra de navegação ──────────────────────────── */
+.header {
+    background: #C8A96A !important;
+}
+.lang {
+    background: #A3B18A !important;
+}
+.common_header .back .service {
+    background: #C8A96A !important;
+    border: 1px solid #D6A86B !important;
+}
+
+/* ── Botões principais ────────────────────────────────────── */
+.telegram_btn,
+.wallet_btn,
+#product_dialog .buy_btn,
+.product_card .product_buy_btn,
+.product_card .buy,
+.reward_card .invite_btn {
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%) !important;
+    box-shadow: 0 4px 14px rgba(200,169,106,0.35) !important;
+    border: none !important;
+    color: #1C1C1C !important;
+}
+
+/* ── Valores / preços em destaque ─────────────────────────── */
+.product_item .value,
+.product_card .product_content .value,
+.product_card .product_item .value,
+.copyright,
+.nav_active .title,
+.common_h1 {
+    color: #C8A96A !important;
+}
+
+.product_card .product_content .price {
+    color: #C8A96A !important;
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+.card,
+.product_card,
+.common_main,
+.help_card,
+#product_dialog {
+    background: #FFFFFF !important;
+    border: 1px solid #EDE8DF !important;
+}
+
+.product_card .product_vip {
+    background: #FDF6EC !important;
+    color: #C8A96A !important;
+    border: 1px solid #D6A86B !important;
+}
+
+/* ── Navegação de produtos (tabs) ─────────────────────────── */
+.product_nav_type_desc {
+    background: #C8A96A !important;
+    border: 2px solid #D6A86B !important;
+}
+.product_nav .product_nav_type_active {
+    background: #C8A96A !important;
+    color: #1C1C1C !important;
+}
+.product_nav .product_nav_type_active .product_nav_title {
+    color: #1C1C1C !important;
+}
+.product_nav .product_nav_type_active .product_nav_order,
+.product_nav .product_nav_order {
+    background: #A3B18A !important;
+}
+.index_main .product_type_item {
+    background: #6B5B34 !important;
+    border: 1px solid #C8A96A !important;
+}
+.index_main .product_type_item_active {
+    background: #C8A96A !important;
+    border: 1px solid #D6A86B !important;
+    color: #1C1C1C !important;
+}
+
+/* ── Menu do Index (nav_bg) ───────────────────────────────── */
+.index_header .index_menu {
+    background-image: none !important;
+    background: linear-gradient(160deg, #C8A96A 0%, #D6A86B 100%) !important;
+    border-radius: 16px !important;
+}
+.index_menu .label,
+.index_menu .title,
+.index_header .index_menu .menu_title {
+    color: #1C1C1C !important;
+}
+
+/* ── Saldo / Wallet ───────────────────────────────────────── */
+.wallet_btn {
+    background: rgba(255,255,255,0.9) !important;
+    border: 1px solid #D6A86B !important;
+    color: #C8A96A !important;
+}
+.index_main .balance {
+    background: #FFFFFF !important;
+}
+
+/* ── Notices / Avisos ─────────────────────────────────────── */
+.notice_content {
+    background: #C8A96A !important;
+    border: 1px solid #D6A86B !important;
+}
+.notice_btn_title {
+    color: #1C1C1C !important;
+}
+
+/* ── VIP card ─────────────────────────────────────────────── */
+.vip_main .vip_card {
+    box-shadow: 0 4px 10px rgba(200,169,106,0.2) !important;
+}
+.vip_main .vip_card .vip_icon {
+    background: linear-gradient(270deg, #C8A96A 0%, #D6A86B 41%, #C8A96A 100%) !important;
+}
+.vip_main .vip_card .vip_contents {
+    color: #1C1C1C !important;
+}
+
+/* ── Product card active/sidebar ─────────────────────────── */
+.product_main .left_content .card {
+    background: #EDE8DF !important;
+    color: #1C1C1C !important;
+}
+.product_main .left_content .card_active {
+    background: linear-gradient(135deg, #8B6914 0%, #C8A96A 100%) !important;
+    color: #FFFFFF !important;
+}
+.product_main .left_content .card_order {
+    background: #1C1C1C !important;
+    color: #FFFFFF !important;
+}
+
+/* ── Reward / invite card ─────────────────────────────────── */
+.reward_card .invite_btn { background: #C8A96A !important; }
+.reward_card .copy_link_btn { color: #FFFFFF !important; border-bottom-color: #8B6914 !important; }
+.reward_card .qr_code_btn  { background: #A3B18A !important; border-bottom-color: #7A8F68 !important; }
+.index_main .reward .title { border-left-color: #C8A96A !important; color: #1C1C1C !important; }
+
+/* ── Reward flex backgrounds ──────────────────────────────── */
+.index_main .reward .flex,
+.index_main .reward .flex .left {
+    background: #F8F6F2 !important;
+}
+
+/* ── Layui modal ──────────────────────────────────────────── */
+.layui-layer-page .content .title,
+.layui-layer-page .content .flex .app_name {
+    color: #1C1C1C !important;
+}
+
+/* ── Texts / Labels ───────────────────────────────────────── */
+.none_text { color: #D6A86B !important; }
+.index_main .product_title { color: #D6A86B !important; }
+.reward_card .content .label,
+.reward_card .content .value { color: #F5EDDA !important; }
+
+/* ── Product dialog VIP badge ─────────────────────────────── */
+#product_dialog .product_vip_btn {
+    background: linear-gradient(270deg, #C8A96A 0%, #D6A86B 100%) !important;
+}
+
+/* ── Scrollbar (webkit) ───────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #F8F6F2; }
+::-webkit-scrollbar-thumb { background: #D6A86B; border-radius: 4px; }

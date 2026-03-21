@@ -4,7 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <title>rechargeLists</title> 
   <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
-  <link rel="stylesheet" href="/v2/css/common.css"> 
+  <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css"> 
   <style>
         .layui-layer-page {
             background-color: #FFFFFf;

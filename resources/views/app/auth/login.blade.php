@@ -21,7 +21,8 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(160deg, #e7f0ff 0%, #ffffff 60%);
+  background: #F8F6F2;
+  color: #1C1C1C;
 }
 
 /* ===== Mobile App Container ===== */
@@ -29,7 +30,7 @@ body {
   max-width: 420px;
   min-height: 100vh;
   margin: auto;
-  background: #f9fbff;
+  background: #F8F6F2;
   display: flex;
   flex-direction: column;
 }
@@ -48,12 +49,12 @@ body {
 .app-title {
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
+  color: #1C1C1C;
 }
 
 .app-subtitle {
   font-size: 14px;
-  color: #64748b;
+  color: #6B5B3E;
   margin-top: 6px;
 }
 
@@ -62,7 +63,7 @@ body {
   background: #ffffff;
   border-radius: 26px 26px 0 0;
   padding: 28px 22px 40px;
-  box-shadow: 0 -12px 30px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 -12px 30px rgba(200,169,106,0.18);
   flex: 1;
 }
 
@@ -70,7 +71,7 @@ body {
 .form-label {
   font-size: 13px;
   font-weight: 600;
-  color: #334155;
+  color: #1C1C1C;
 }
 
 .input-group {
@@ -80,9 +81,9 @@ body {
 }
 
 .input-group-text {
-  background: #f1f6ff;
+  background: #FDF6EC;
   border: none;
-  color: #2563eb;
+  color: #C8A96A;
   font-size: 15px;
   padding: 0 14px;
 }
@@ -91,31 +92,34 @@ body {
   border: none;
   height: 48px;
   font-size: 15px;
+  background: #FDFBF8;
 }
 
 .form-control:focus {
   box-shadow: none;
+  background: #FDFBF8;
 }
 
 /* ===== Button ===== */
 .btn-login {
   height: 50px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: linear-gradient(135deg, #C8A96A, #D6A86B);
   border: none;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 10px 20px rgba(37,99,235,.35);
+  color: #1C1C1C;
+  box-shadow: 0 10px 20px rgba(200,169,106,.35);
 }
 
 /* ===== Register ===== */
 .register-link {
   font-size: 14px;
-  color: #475569;
+  color: #6B5B3E;
 }
 
 .register-link span {
-  color: #2563eb;
+  color: #C8A96A;
   font-weight: 700;
 }
 </style>

@@ -5,6 +5,7 @@
   <title>withdrawRecord</title> 
   <link rel="stylesheet" href="/v2/layui/css/layui.css"> 
   <link rel="stylesheet" href="/v2/css/common.css">
+  <link rel="stylesheet" href="/v2/css/emi-theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <style>
         .layui-layer-page {
