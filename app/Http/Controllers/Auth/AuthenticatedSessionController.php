@@ -34,26 +34,22 @@ class AuthenticatedSessionController extends Controller
        $user = User::where('phone', $request->phone)->first();
 
        if (!$user){
-           return redirect()->back()->with('error', 'Mobile number not registered.');
+           return response()->json(['error' => 'Mobile number not registered.'], 401);
         }
 
         //Check user ban or unban
-        if ($user->ban_unban == 'ban')
+        if (isset($user->ban_unban) && $user->ban_unban == 'ban')
         {
-            return redirect()->back()->with('error', 'Your account has been banned.');
+            return response()->json(['error' => 'Your account has been banned.'], 403);
         }
 
-        if ($user){
-            //Check password
-            if (Hash::check($request->password, $user->password)){
-                Auth::login($user);
-                return redirect()->route('home')->with('success', 'Login Successful');
-            }else{
-                return redirect()->back()->with('error', 'Incorrect login password.');
-            }
-        }else{
-            return redirect()->back()->with('error', 'Login Successful.');
+        if (Hash::check($request->password, $user->password)){
+            Auth::login($user);
+            $request->session()->regenerate();
+            return response()->json(['success' => true]);
         }
+
+        return response()->json(['error' => 'Incorrect login password.'], 401);
     }
 
     /**

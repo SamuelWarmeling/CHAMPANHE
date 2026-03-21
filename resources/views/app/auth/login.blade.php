@@ -197,36 +197,40 @@ layui.use(['form','layer'], function(){
       headers:{
         'X-CSRF-TOKEN': $('input[name="_token"]').val()
       },
-      success:function(){
+      success:function(res){
         layer.close(load);
 
-        let seconds = 3;
+        if(res && res.success){
+          let seconds = 3;
 
-        let msgIndex = layer.msg(
-          'Login successful. Redirecting in ' + seconds + 's',
-          { time: 0 }
-        );
+          let msgIndex = layer.msg(
+            'Login successful. Redirecting in ' + seconds + 's',
+            { time: 0 }
+          );
 
-        let timer = setInterval(function(){
-          seconds--;
+          let timer = setInterval(function(){
+            seconds--;
 
-          if(seconds <= 0){
-            clearInterval(timer);
-            layer.close(msgIndex);
-
-            // ✅ GO TO HOME
-            window.location.href = '/home';
-          } else {
-            layer.msg(
-              'Login successful. Redirecting in ' + seconds + 's',
-              { time: 0 }
-            );
-          }
-        }, 1000);
+            if(seconds <= 0){
+              clearInterval(timer);
+              layer.close(msgIndex);
+              window.location.href = '/home';
+            } else {
+              layer.msg(
+                'Login successful. Redirecting in ' + seconds + 's',
+                { time: 0 }
+              );
+            }
+          }, 1000);
+        } else {
+          layer.msg((res && res.error) ? res.error : 'Login failed.');
+        }
       },
-      error:function(){
+      error:function(xhr){
         layer.close(load);
-        layer.msg('Invalid phone or password');
+        var msg = 'Invalid phone or password';
+        try { var r = JSON.parse(xhr.responseText); if(r.error) msg = r.error; } catch(e){}
+        layer.msg(msg);
       }
     });
 
