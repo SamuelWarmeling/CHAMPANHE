@@ -25,7 +25,7 @@
                     <div data-v-a2a35538="" class="heads">
                         <div data-v-a2a35538="" class="db">
                             <div data-v-a2a35538="" class="ico"><img data-v-a2a35538=""
-                                                                     src="{{asset(setting('logo'))}}">
+                                                                     src="/images/logo-emi.png">
                             </div>
                             <div data-v-a2a35538="" class="flexs">
                                 <div data-v-a2a35538="" class="n">{{auth()->user()->phone}}</div>

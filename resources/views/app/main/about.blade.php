@@ -81,7 +81,7 @@
   <div class="page-wrap">
 
     <div class="logo-block">
-      <img src="{{setting('logo')}}" alt="EMI Logo">
+      <img src="/images/logo-emi.png" alt="EMI Logo">
       <div class="brand-name">Enoteca Millesimi</div>
       <div class="brand-sub">Investimento em Vinhos Premium</div>
     </div>

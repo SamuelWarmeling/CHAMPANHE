@@ -12,7 +12,7 @@
    <div class="user_info"> 
     <div class="user_contents"> 
      <div class="info"> 
-      <a href="/my-personal-details" style="border: 2px solid #fff;border-radius:50%"><img src="{{setting('logo')}}" class="layui-circle"></a> 
+      <a href="/my-personal-details" style="border: 2px solid #fff;border-radius:50%"><img src="/images/logo-emi.png" class="layui-circle"></a> 
       <div class="username"> 
        <a href="/info" class="nickname"> <p> {{user()->phone}} </p> </a> 
        <p class="">{{substr(auth()->user()->phone, 0, 3)}}******{{substr(strrev(auth()->user()->phone), 0, 2)}} ID:{{user()->ref_id}}</p> 

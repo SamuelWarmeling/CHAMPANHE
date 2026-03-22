@@ -72,7 +72,7 @@
       @foreach ($first_level_users as $user)
    <div class="member_card position"> 
     <div class="flex_left"> 
-     <img src="{{setting('logo')}}" style="width: 50px;height: 50px;border-radius: 50%;margin-right: 5px;"> 
+     <img src="/images/logo-emi.png" style="width: 50px;height: 50px;border-radius: 50%;margin-right: 5px;"> 
      <div> 
       <div class="common_item_title">
        {{ substr($user->phone, 0, 2) }}******{{ substr($user->phone, -2) }}

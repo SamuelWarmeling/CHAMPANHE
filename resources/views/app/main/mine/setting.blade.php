@@ -89,7 +89,7 @@
 
         <div class="avatar-block">
           <div style="position:relative;">
-            <img src="{{setting('logo')}}" style="width:64px;height:64px;" class="layui-circle" id="upload_avatar" alt="Avatar">
+            <img src="/images/logo-emi.png" style="width:64px;height:64px;" class="layui-circle" id="upload_avatar" alt="Avatar">
             <input class="layui-upload-file" type="file" accept="image/*" name="file">
           </div>
           <div class="avatar-hint">

@@ -119,7 +119,7 @@
 <body>
   <div class="auth-wrap">
     <div class="auth-logo">
-      <img src="{{setting('logo')}}" alt="EMI Logo">
+      <img src="/images/logo-emi.png" alt="EMI Logo">
       <h2>EMI</h2>
       <p>Enoteca Millesimi</p>
     </div>

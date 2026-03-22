@@ -583,7 +583,7 @@
   ══════════════════════════════════════ -->
   <div class="emi-top-header">
     <div class="logo-wrap">
-      <img src="{{setting('logo')}}" alt="EMI Logo">
+      <img src="/images/logo-emi.png" alt="EMI Logo">
       <div class="user-info">
         <div class="masked-phone">
           {{substr(auth()->user()->phone, 0, 3)}}******{{substr(strrev(auth()->user()->phone), 0, 2)}}

@@ -11,7 +11,7 @@
  <body> 
   <div class="index_header"> 
    <div class="index_logo"> 
-    <img src="{{setting('logo')}}" style="width:80px; height:80px;border-radius:50px;"> 
+    <img src="/images/logo-emi.png" style="width:80px; height:80px;border-radius:50px;"> 
     <a href="/notice" class="notice" style="line-height: 50px;"><img src="/public/site/img/index/notice.png" style="height: 24px;width: 24px;"></a> 
    </div> 
    <div class="index_banner" style="padding: 20px 25px;height: auto"> 

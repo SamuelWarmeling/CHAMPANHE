@@ -351,7 +351,7 @@
     <!-- Top row: avatar + name + icons -->
     <div class="header-top-row">
       <div class="user-row">
-        <img src="{{setting('logo')}}" alt="Avatar" class="user-avatar">
+        <img src="/images/logo-emi.png" alt="Avatar" class="user-avatar">
         <div class="user-info">
           <div class="user-phone">
             {{substr(auth()->user()->phone, 0, 3)}}******{{substr(strrev(auth()->user()->phone), 0, 2)}}
