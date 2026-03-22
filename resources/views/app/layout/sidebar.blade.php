@@ -13,6 +13,10 @@
         transition: .4s;
         opacity: 0;
     }
+    .ico img {
+        border-radius: 0 !important;
+        width: 80px !important;
+    }
 </style>
 
 <div data-v-a386f8f2="" class="my_index">

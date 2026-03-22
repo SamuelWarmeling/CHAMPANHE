@@ -2,7 +2,7 @@
 <div class="header-with-logo">
     <div class="d-flex justify-content-between">
         <div>
-            <img class="rng_logo" style="width: 44px !important;" src="/images/logo-emi.png">
+            <img class="rng_logo" style="width: 80px !important; border-radius: 0 !important;" src="/images/logo-emi.png">
         </div>
         <div>
             <h4 class="to_time">{{date('Y-m-d')}}</h4>
