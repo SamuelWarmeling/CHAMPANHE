@@ -101,12 +101,20 @@
             class="emi-input" style="padding-left:28px">
         </div>
 
+        <!-- BRL conversion display -->
+        <div id="brl-conversion" style="margin-top:10px;padding:10px 12px;background:#FDF8F0;border:1px solid #E8DCC8;border-radius:8px;display:none">
+          <span style="font-size:13px;color:#6B6B6B">Equivalente: </span>
+          <span id="brl-value" style="font-size:15px;font-weight:700;color:#C8A96A"></span>
+        </div>
+
         <!-- Quick Amounts -->
         <p class="section-title" style="margin-top:16px">Valores Rápidos</p>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
           @foreach([100, 340, 2880, 5750, 15500, 35900, 72000, 119000] as $value)
+            @php $brl = number_format($value * 0.73, 2, ',', '.') @endphp
             <div class="quick-amount {{ $loop->first ? 'active' : '' }}" onclick="getAmount(this, {{ $value }})">
-              {{ number_format($value) }}
+              <div>{{ number_format($value) }} MIL</div>
+              <div style="font-size:10px;color:#9A9087;font-weight:400;margin-top:2px">R$ {{ $brl }}</div>
             </div>
           @endforeach
         </div>
@@ -152,11 +160,42 @@
   @include('alert-message')
 
   <script>
+    const MIL_TO_BRL = 0.73;
+
+    function formatBRL(value) {
+      return 'R$ ' + value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function updateConversion(mil) {
+      const box = document.getElementById('brl-conversion');
+      const display = document.getElementById('brl-value');
+      if (!mil || mil <= 0) {
+        box.style.display = 'none';
+        return;
+      }
+      display.textContent = '= ' + formatBRL(mil * MIL_TO_BRL);
+      box.style.display = 'block';
+    }
+
+    document.getElementById('recharge_amount').addEventListener('input', function () {
+      updateConversion(parseFloat(this.value));
+    });
+
     function getAmount(_this, amount) {
       document.querySelector('input[name="amount"]').value = amount;
       document.querySelectorAll('.quick-amount').forEach(q => q.classList.remove('active'));
       _this.classList.add('active');
+      updateConversion(amount);
     }
+
+    // Show conversion for the pre-selected quick amount on load
+    document.addEventListener('DOMContentLoaded', function () {
+      const first = document.querySelector('.quick-amount.active');
+      if (first) {
+        const val = parseFloat(document.querySelector('input[name="amount"]').value);
+        if (val > 0) updateConversion(val);
+      }
+    });
 
     function goPayment(event) {
       event.preventDefault();
