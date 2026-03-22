@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <title>Register</title>
 
 <!-- Bootstrap -->
@@ -170,7 +171,14 @@ body {
         </div>
       </div>
 
-      <input type="hidden" name="ref_by" value="{{ $ref_by ?? '' }}">
+      <!-- Código de Convite (opcional) -->
+      <div class="mb-4">
+        <label class="form-label">Código de Convite <span style="font-weight:400;color:#9A9087;font-size:11px">(opcional)</span></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa-solid fa-ticket"></i></span>
+          <input type="text" name="ref_by" value="{{ $ref_by ?? '' }}" class="form-control" placeholder="Código de convite (opcional)">
+        </div>
+      </div>
 
       <!-- Submit -->
       <button type="submit" id="regBtn" class="btn btn-register w-100">
@@ -193,9 +201,19 @@ body {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 // Register form submit via AJAX
+$.ajaxSetup({
+  headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+});
+
 $('#registerForm').on('submit', function(e){
   e.preventDefault();
   $('#reg-error').hide();
+
+  var phone = $('input[name="phone"]').val().trim();
+  var pass  = $('input[name="password"]').val();
+
+  if (!phone) { showRegError('Informe o número de telefone.'); return; }
+  if (!pass || pass.length < 6) { showRegError('A senha deve ter pelo menos 6 caracteres.'); return; }
 
   var btn = $('#regBtn');
   btn.prop('disabled', true).text('Processando...');
@@ -204,10 +222,10 @@ $('#registerForm').on('submit', function(e){
     url: '{{ url("register") }}',
     type: 'POST',
     data: {
-      phone:    $('input[name="phone"]').val(),
-      password: $('input[name="password"]').val(),
+      phone:    phone,
+      password: pass,
       nickname: $('input[name="nickname"]').val(),
-      ref_by:   $('input[name="ref_by"]').val(),
+      ref_by:   $('input[name="ref_by"]').val().trim(),
       _token:   $('input[name="_token"]').val()
     },
     success: function(res){
@@ -221,8 +239,17 @@ $('#registerForm').on('submit', function(e){
     },
     error: function(xhr){
       btn.prop('disabled', false).text('Register');
-      var msg = 'Erro ao registrar. Tente novamente.';
-      try { var r = JSON.parse(xhr.responseText); if (r.error) msg = r.error; } catch(ex){}
+      var msg = 'Erro ' + xhr.status + ': ';
+      if (xhr.status === 419) {
+        msg = 'Sessão expirada. Recarregue a página e tente novamente.';
+      } else {
+        try {
+          var r = JSON.parse(xhr.responseText);
+          msg += (r.error || r.message || 'Erro ao registrar.');
+        } catch(ex) {
+          msg += 'Erro ao registrar. Recarregue a página.';
+        }
+      }
       showRegError(msg);
     }
   });

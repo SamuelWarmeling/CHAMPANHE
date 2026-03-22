@@ -31,9 +31,20 @@ class RegisteredUserController extends Controller
 
     public function store(Request $request)
     {
+        // Verificação explícita de telefone duplicado com mensagem em português
+        if (User::where('phone', $request->phone)->exists()) {
+            return response()->json([
+                'error' => 'Este telefone já está cadastrado. Faça login ou use outro número.'
+            ], 422);
+        }
+
         $validate = Validator::make($request->all(), [
-            'phone' => ['required', 'unique:users,phone'],
-            'password' => ['required'],
+            'phone'    => ['required'],
+            'password' => ['required', 'min:6'],
+        ], [
+            'phone.required'    => 'O número de telefone é obrigatório.',
+            'password.required' => 'A senha é obrigatória.',
+            'password.min'      => 'A senha deve ter pelo menos 6 caracteres.',
         ]);
 
         if ($validate->fails()) {
