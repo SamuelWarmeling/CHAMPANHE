@@ -231,16 +231,7 @@ $packages = Package::where('status', 'active')->get();
 {{-- CSRF for AJAX --}}
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-{{-- Footer nav --}}
-<div class="footer_menu">
-  <div class="content">
-    <a href="/" class="item"><img src="/v2/img/footer/home.png"><p>Início</p></a>
-    <a href="/product" class="item active"><img src="/v2/img/footer/invest_active.png"><p>Investir</p></a>
-    <a href="/invitation" class="item"><img src="/v2/img/footer/invite.png" style="width:80px;height:80px;margin-top:-25px"></a>
-    <a href="/blog" class="item"><img src="/v2/img/footer/blog.png"><p>Blog</p></a>
-    <a href="/my" class="item"><img src="/v2/img/footer/account.png"><p>Conta</p></a>
-  </div>
-</div>
+@include('app.layout.menu')
 
 <script src="/v2/layui/layui.js"></script>
 <script>

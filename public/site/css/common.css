@@ -366,7 +366,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #689CFF;
+    color: #999999;
     line-height: 18px;
     line-height: 18px;
     margin-top: 10px;
@@ -375,7 +375,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #E4EDFF;
+    color: #C8A96A;
     line-height: 18px;
     margin-top: 10px;
 }
@@ -927,13 +927,13 @@ body {
     background-repeat: no-repeat;
 }
 .footer_menu .content{
-    background: #2857AF;
+    background: #FFFFFF;
     display: flex;
     width: 100%;
-    color: #A1BFF6;
+    color: #999999;
 }
 .footer_menu .content a{
-    color: #A1BFF6 !important;
+    color: #999999 !important;
     font-weight: 400;
 }
 .footer_menu .content .item{
@@ -955,7 +955,7 @@ body {
 .footer_menu .content  .active{
     text-align: center;
     font-weight: 700;
-    color: #FFFFFF !important;
+    color: #C8A96A !important;
 }
 
 #service{
@@ -970,7 +970,7 @@ body {
     border-radius: 50%;
     background: none;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.1);
-    border: 3px solid #93B8FF;
+    border: 3px solid #C8A96A;
     text-align: center;
 }
 
