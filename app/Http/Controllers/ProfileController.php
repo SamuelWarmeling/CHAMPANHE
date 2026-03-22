@@ -19,7 +19,7 @@ class ProfileController extends Controller
      */
     public function edit(Request $request)
     {
-        return $request->all();
+        return redirect()->route('profile.edit');
     }
 
     /**

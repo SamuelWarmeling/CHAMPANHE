@@ -7,14 +7,12 @@ use App\Models\FundInvest;
 use App\Models\User;
 use App\Models\UserLedger;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UserFundInvestController extends Model
+class UserFundInvestController extends Controller
 {
-    use HasFactory;
 
     public function fund()
     {
