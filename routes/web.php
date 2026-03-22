@@ -226,7 +226,7 @@ Route::middleware('throttle:limit-check')->group(function (){
 
         Route::get('/home', [UserController::class, 'home'])->name('home');
         Route::get('/package-details/{id}', [UserController::class, 'package_details'])->name('package.details');
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::get('/profile', [UserController::class, 'profile'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
