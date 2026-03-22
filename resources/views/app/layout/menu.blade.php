@@ -23,36 +23,43 @@
   background: #FFFFFF; position: relative;
 }
 .footer_menu .content a {
-  color: #999999 !important; text-decoration: none;
+  color: #999999; text-decoration: none;
   font-family: 'Inter', sans-serif; font-weight: 500;
 }
 .footer_menu .content .item {
   flex: 1; padding: 10px 0 8px; text-align: center;
   display: flex; flex-direction: column; align-items: center; gap: 3px;
 }
-.footer_menu .content .item svg { width: 22px; height: 22px; }
-.footer_menu .content .item p {
-  margin: 0; font-size: 11px; color: #999; font-family: 'Inter', sans-serif;
+.footer_menu .content .item svg {
+  width: 22px; height: 22px;
+  color: #999999; fill: #999999;
 }
-.footer_menu .content .item.active svg { color: #C8A96A !important; }
+.footer_menu .content .item p {
+  margin: 0; font-size: 11px; color: #999999; font-family: 'Inter', sans-serif;
+}
+/* FIX 1: active state — gold color on icon and label */
+.footer_menu .content a.active { color: #C8A96A !important; }
+.footer_menu .content a.active svg { color: #C8A96A !important; fill: #C8A96A !important; }
+.footer_menu .content a.active p  { color: #C8A96A !important; }
+.footer_menu .content .item.active svg { color: #C8A96A !important; fill: #C8A96A !important; }
 .footer_menu .content .item.active p  { color: #C8A96A !important; }
 .footer_menu .content .center-item {
   flex: 1; text-align: center; padding: 0 0 8px; position: relative;
   display: flex; flex-direction: column; align-items: center; gap: 3px;
 }
+/* FIX 3: center FAB always gold bg, white icon — never inherit grey */
 .center-fab {
   display: inline-flex; align-items: center; justify-content: center;
   width: 50px; height: 50px; border-radius: 50%;
-  background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
+  background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%) !important;
   box-shadow: 0 4px 14px rgba(200,169,106,0.4);
-  margin-top: -20px; color: #fff;
+  margin-top: -20px;
 }
-.center-fab svg { width: 24px; height: 24px; color: #fff; }
+.center-fab svg { width: 24px; height: 24px; color: #ffffff !important; fill: #ffffff !important; }
 .center-item p {
-  margin: 0; font-size: 11px; font-family: 'Inter', sans-serif;
+  margin: 0; font-size: 11px; font-family: 'Inter', sans-serif; color: #999999;
 }
 .center-item.active p { color: #C8A96A !important; }
-.center-item p { color: #999; }
 
 #service {
   position: fixed; z-index: 9999; bottom: 90px; right: 0;

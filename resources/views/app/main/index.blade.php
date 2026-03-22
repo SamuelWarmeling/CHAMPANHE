@@ -493,6 +493,7 @@
 
     /* ── Telegram Popup ── */
     .emi-tg-popup {
+      display: none; /* FIX: hidden by default; .active shows it */
       position: fixed;
       top: 50%;
       left: 50%;
