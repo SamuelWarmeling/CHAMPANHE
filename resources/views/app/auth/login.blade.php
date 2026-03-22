@@ -180,8 +180,11 @@ body {
 @include('alert-message')
 
 <!-- Scripts -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+$.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+
 $('#loginForm').on('submit', function(e){
   e.preventDefault();
 

@@ -99,12 +99,14 @@ class RegisteredUserController extends Controller
             return response()->json(['success' => true]);
 
         } catch (\Throwable $e) {
-            Log::error('Registration failed', [
-                'message' => $e->getMessage(),
-                'file'    => $e->getFile(),
-                'line'    => $e->getLine(),
+            Log::error('Registration failed: ' . $e->getMessage(), [
+                'file'  => basename($e->getFile()),
+                'line'  => $e->getLine(),
+                'phone' => $request->phone,
             ]);
-            return response()->json(['error' => 'Erro ao registrar: ' . $e->getMessage()], 500);
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], 500);
         }
     }
 

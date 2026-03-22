@@ -219,7 +219,7 @@ $('#registerForm').on('submit', function(e){
   btn.prop('disabled', true).text('Processando...');
 
   $.ajax({
-    url: '{{ url("register") }}',
+    url: '/register',
     type: 'POST',
     data: {
       phone:    phone,
