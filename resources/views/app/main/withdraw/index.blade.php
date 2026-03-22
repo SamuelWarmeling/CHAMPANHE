@@ -70,6 +70,10 @@
             min="{{ $minWithdraw }}" max="{{ $maxWithdraw }}"
             value="" placeholder="Valor entre {{ $minWithdraw }} e {{ $maxWithdraw }}"
             autocomplete="off" class="emi-input">
+          <div id="brl-conversion" style="margin-top:8px;padding:10px 12px;background:#FDF8F0;border:1px solid #E8DCC8;border-radius:8px;display:none">
+            <span style="font-size:13px;color:#6B6B6B">Equivalente: </span>
+            <span id="brl-value" style="font-size:15px;font-weight:700;color:#C8A96A"></span>
+          </div>
         </div>
 
         <!-- Trade Password -->
@@ -141,6 +145,17 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/layui.min.js"></script>
   <script>
+    const MIL_TO_BRL = 0.73;
+
+    document.getElementById('withdrawal_amount').addEventListener('input', function () {
+      const mil = parseFloat(this.value);
+      const box = document.getElementById('brl-conversion');
+      const display = document.getElementById('brl-value');
+      if (!mil || mil <= 0) { box.style.display = 'none'; return; }
+      display.textContent = '= R$ ' + (mil * MIL_TO_BRL).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      box.style.display = 'block';
+    });
+
     function showLoading() {
       document.getElementById('loadingOverlay').style.display = 'flex';
     }
