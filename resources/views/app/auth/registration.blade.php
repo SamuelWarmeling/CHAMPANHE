@@ -189,8 +189,9 @@ body {
 
   <!-- Card -->
   <div class="register-card">
-    <form class="layui-form" method="POST" action="{{ url('register') }}">
+    <form id="registerForm" method="POST" action="{{ url('register') }}">
       @csrf
+      <div id="reg-error" style="display:none;background:#fdecea;color:#8A3A3A;border:1px solid #f5c6cb;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px"></div>
 
       <!-- Phone -->
       <div class="mb-3">
@@ -242,7 +243,7 @@ body {
       </div>
 
       <!-- Submit -->
-      <button type="submit" class="btn btn-register w-100">
+      <button type="submit" id="regBtn" class="btn btn-register w-100">
         Register
       </button>
 
@@ -265,45 +266,71 @@ body {
 </div>
 
 <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/layui.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <script>
-layui.use(['layer'], function(){
-  var layer = layui.layer;
+// OTP send button
+$('#getCode').on('click', function(){
+  var phone = $('input[name="phone"]').val();
+  if (!phone) { showRegError('Por favor, insira o número de telefone.'); return; }
 
-  $('#getCode').on('click', function(){
-    const phone = $('input[name="phone"]').val();
-    if (!phone) {
-      layer.msg('Please enter phone number');
-      return;
+  $('#loadingBox').css('display','flex');
+  setTimeout(function(){
+    $('#loadingBox').hide();
+    var otp = Math.floor(100000 + Math.random() * 900000);
+    $('#code').val(otp);
+    $('#otpMessage').slideDown();
+    setTimeout(function(){ $('#otpMessage').slideUp(); }, 2000);
+    var t = 120;
+    $('#getCode').prop('disabled', true).text(t + 's');
+    var timer = setInterval(function(){
+      t--;
+      $('#getCode').text(t + 's');
+      if (t <= 0) { clearInterval(timer); $('#getCode').prop('disabled', false).text('Send'); }
+    }, 1000);
+  }, 1000);
+});
+
+// Register form submit via AJAX
+$('#registerForm').on('submit', function(e){
+  e.preventDefault();
+  $('#reg-error').hide();
+
+  var btn = $('#regBtn');
+  btn.prop('disabled', true).text('Processando...');
+
+  $.ajax({
+    url: '{{ url("register") }}',
+    type: 'POST',
+    data: {
+      phone:    $('input[name="phone"]').val(),
+      password: $('input[name="password"]').val(),
+      nickname: $('input[name="nickname"]').val(),
+      ref_by:   $('input[name="ref_by"]').val(),
+      code:     $('input[name="code"]').val(),
+      _token:   $('input[name="_token"]').val()
+    },
+    success: function(res){
+      if (res && res.success) {
+        btn.text('Sucesso! Redirecionando...');
+        window.location.href = '/home';
+      } else {
+        btn.prop('disabled', false).text('Register');
+        showRegError((res && res.error) ? res.error : 'Erro ao registrar.');
+      }
+    },
+    error: function(xhr){
+      btn.prop('disabled', false).text('Register');
+      var msg = 'Erro ao registrar. Tente novamente.';
+      try { var r = JSON.parse(xhr.responseText); if (r.error) msg = r.error; } catch(ex){}
+      showRegError(msg);
     }
-
-    $('#loadingBox').css('display','flex');
-
-    setTimeout(function(){
-      $('#loadingBox').hide();
-
-      const otp = Math.floor(100000 + Math.random() * 900000);
-      $('#code').val(otp);
-
-      $('#otpMessage').slideDown();
-      setTimeout(()=>$('#otpMessage').slideUp(),2000);
-
-      let t = 120;
-      $('#getCode').prop('disabled', true).text(t+'s');
-      let timer = setInterval(function(){
-        t--;
-        $('#getCode').text(t+'s');
-        if(t <= 0){
-          clearInterval(timer);
-          $('#getCode').prop('disabled', false).text('Send');
-        }
-      },1000);
-
-    },1000);
   });
 });
+
+function showRegError(msg) {
+  $('#reg-error').text(msg).show();
+  window.scrollTo(0, 0);
+}
 </script>
 <script>
 (function(){

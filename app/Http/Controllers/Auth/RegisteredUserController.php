@@ -36,7 +36,7 @@ class RegisteredUserController extends Controller
         ]);
 
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate->errors());
+            return response()->json(['error' => $validate->errors()->first()], 422);
         }
 
         /*/ ✅ Check for IP limit
@@ -89,10 +89,10 @@ class RegisteredUserController extends Controller
             ]);
 
             Auth::login($user);
-            return redirect()->route('home');
+            return response()->json(['success' => true]);
         }
 
-        return redirect()->back()->with('error', 'Something went wrong. Please try again.');
+        return response()->json(['error' => 'Something went wrong. Please try again.'], 500);
     }
 
     private function generateUniqueReferralCode($length = 6)

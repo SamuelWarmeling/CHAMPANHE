@@ -164,7 +164,7 @@ body {
       </div>
 
       <!-- Button -->
-      <button class="btn btn-login w-100" lay-submit lay-filter="login">
+      <button type="submit" class="btn btn-login w-100">
         Login
       </button>
 
@@ -180,63 +180,49 @@ body {
 @include('alert-message')
 
 <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/layui.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-layui.use(['form','layer'], function(){
-  var form = layui.form;
-  var layer = layui.layer;
+$('#loginForm').on('submit', function(e){
+  e.preventDefault();
 
-  form.on('submit(login)', function(data){
-    var load = layer.load(2,{shade:[0.2,'#000']});
+  var btn = $(this).find('button[type="submit"]');
+  btn.prop('disabled', true).text('Entrando...');
 
-    $.ajax({
-      url:'/login',
-      type:'POST',
-      data:data.field,
-      headers:{
-        'X-CSRF-TOKEN': $('input[name="_token"]').val()
-      },
-      success:function(res){
-        layer.close(load);
-
-        if(res && res.success){
-          let seconds = 3;
-
-          let msgIndex = layer.msg(
-            'Login successful. Redirecting in ' + seconds + 's',
-            { time: 0 }
-          );
-
-          let timer = setInterval(function(){
-            seconds--;
-
-            if(seconds <= 0){
-              clearInterval(timer);
-              layer.close(msgIndex);
-              window.location.href = '/home';
-            } else {
-              layer.msg(
-                'Login successful. Redirecting in ' + seconds + 's',
-                { time: 0 }
-              );
-            }
-          }, 1000);
-        } else {
-          layer.msg((res && res.error) ? res.error : 'Login failed.');
-        }
-      },
-      error:function(xhr){
-        layer.close(load);
-        var msg = 'Invalid phone or password';
-        try { var r = JSON.parse(xhr.responseText); if(r.error) msg = r.error; } catch(e){}
-        layer.msg(msg);
+  $.ajax({
+    url: '/login',
+    type: 'POST',
+    data: {
+      phone:    $('input[name="phone"]').val(),
+      password: $('input[name="password"]').val(),
+      _token:   $('input[name="_token"]').val()
+    },
+    success: function(res) {
+      if (res && res.success) {
+        btn.text('Sucesso! Redirecionando...');
+        window.location.href = '/home';
+      } else {
+        btn.prop('disabled', false).text('Login');
+        showError((res && res.error) ? res.error : 'Login failed.');
       }
-    });
-
-    return false;
+    },
+    error: function(xhr) {
+      btn.prop('disabled', false).text('Login');
+      var msg = 'Invalid phone or password';
+      try { var r = JSON.parse(xhr.responseText); if(r.error) msg = r.error; } catch(e){}
+      showError(msg);
+    }
   });
 });
+
+function showError(msg) {
+  var el = $('#login-error');
+  if (!el.length) {
+    $('<div id="login-error" style="background:#fdecea;color:#8A3A3A;border:1px solid #f5c6cb;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px"></div>')
+      .prependTo('.login-card form');
+    el = $('#login-error');
+  }
+  el.text(msg).show();
+}
 </script>
 
 <script>
