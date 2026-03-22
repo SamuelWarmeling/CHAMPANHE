@@ -22,6 +22,9 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
+# ATENÇÃO: remover a linha abaixo após o próximo deploy bem-sucedido
+DB_FRESH=true
+
 # Roda migrations (funciona com qualquer driver: mysql, pgsql, sqlite)
 if [ "$DB_FRESH" = "true" ]; then
     echo "==> DB_FRESH=true: dropando todas as tabelas e rodando migrate:fresh..."
