@@ -20,7 +20,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #5FB878;
+      background: #C8A96A;
       border-radius: 12px;
       padding: 12px 16px;
       margin: 15px;
@@ -30,7 +30,7 @@
       text-decoration: none;
     }
     .blog_btn:hover {
-      background: #4aa061;
+      background: #b09050;
     }
     .blog_btn img {
       width: 36px;
