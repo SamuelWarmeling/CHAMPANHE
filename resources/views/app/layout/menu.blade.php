@@ -37,12 +37,14 @@
 .footer_menu .content .item p {
   margin: 0; font-size: 11px; color: #999999; font-family: 'Inter', sans-serif;
 }
-/* FIX 1: active state — gold color on icon and label */
+/* active state — gold color on icon and label */
 .footer_menu .content a.active { color: #C8A96A !important; }
 .footer_menu .content a.active svg { color: #C8A96A !important; fill: #C8A96A !important; }
 .footer_menu .content a.active p  { color: #C8A96A !important; }
 .footer_menu .content .item.active svg { color: #C8A96A !important; fill: #C8A96A !important; }
 .footer_menu .content .item.active p  { color: #C8A96A !important; }
+.footer_menu .content .active svg { color: #C8A96A !important; fill: #C8A96A !important; }
+.footer_menu .content .active p  { color: #C8A96A !important; }
 .footer_menu .content .center-item {
   flex: 1; text-align: center; padding: 0 0 8px; position: relative;
   display: flex; flex-direction: column; align-items: center; gap: 3px;

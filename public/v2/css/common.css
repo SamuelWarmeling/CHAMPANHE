@@ -643,7 +643,7 @@ body {
     height: 40px;
     text-align: center;
     line-height: 40px;
-    background: #396ED1;
+    background: #C8A96A;
     border-radius: 100px 100px 100px 100px;
     cursor: pointer;
 }
@@ -652,7 +652,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     color: #FFFFFF;
-    border-bottom: 2px solid #396AC7;
+    border-bottom: 2px solid #C8A96A;
 }
 .reward_card .qr_code_btn{
     font-family: Arial, Arial;
@@ -811,9 +811,9 @@ body {
 }
 .index_main .product_type_item_active{
     width: 30%;
-    background: #6298FF;
+    background: #C8A96A;
     border-radius: 100px;
-    border: 1px solid #93B8FF;
+    border: 1px solid #D6A86B;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
@@ -1287,9 +1287,8 @@ body {
     right: 0px;
     height: 70px;
 
-    background-image:url(/public/v2/img/footer/bg.png) ;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: #FFFFFF;
+    background-image: none;
 
     padding: 0;
     margin: 0;
@@ -1299,7 +1298,7 @@ body {
     background: none;
     display: flex;
     width: 100%;
-    color: #A1BFF6;
+    color: #999999;
 }
 .footer_menu .content a{
     color: #AFAFAF !important;
@@ -1324,7 +1323,7 @@ body {
 .footer_menu .content  .active{
     text-align: center;
     font-weight: 700;
-    color: #4C6EEC !important;
+    color: #C8A96A !important;
 }
 
 #service{
@@ -1339,7 +1338,7 @@ body {
     border-radius: 50%;
     background: none;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.1);
-    border: 3px solid #93B8FF;
+    border: 3px solid #C8A96A;
     text-align: center;
 }
 
