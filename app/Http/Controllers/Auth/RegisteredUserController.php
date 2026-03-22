@@ -46,53 +46,47 @@ class RegisteredUserController extends Controller
             return redirect()->back()->with('error', 'Only one account allowed per IP address.');
         }*/
 
-        // ✅ Get registration bonus from settings
-        $bonus = Setting::first()?->registration_bonus ?? 0;
+        try {
+            $bonus = Setting::first()?->registration_bonus ?? 0;
 
-        // ✅ Generate referral code
-        $referralCode = $this->generateUniqueReferralCode();
+            $referralCode = $this->generateUniqueReferralCode();
 
-        // ✅ Create user
-        $user = User::create([
-            'name' => 'u' . $request->phone,
-            'username' => env('APP_NAME'),
-            'ref_id' => $referralCode,
-            'ref_by' => $request->ref_by ?? env('APP_NAME'),
-            'email' => 'user' . rand(1000, 9999) . Str::random(2) . '@gmail.com',
-            'phone' => $request->phone,
-            'password' => Hash::make($request->password),
-            'type' => 'user',
-            'balance' => $bonus,
-            'code' => $request->code,
-            'remember_token' => Str::random(30),
-            //'ip' => $userIP,
-        ]);
-
-        if ($user) {
-            // ✅ Record check-in
-            Checkin::create([
-                'user_id' => $user->id,
-                'date' => now(),
-                'amount' => 0,
+            $user = User::create([
+                'name'     => 'u' . $request->phone,
+                'username' => env('APP_NAME'),
+                'ref_id'   => $referralCode,
+                'ref_by'   => $request->ref_by ?? env('APP_NAME'),
+                'email'    => 'user' . rand(1000, 9999) . Str::random(2) . '@gmail.com',
+                'phone'    => $request->phone,
+                'password' => Hash::make($request->password),
+                'type'     => 'user',
+                'balance'  => $bonus,
             ]);
 
-            // ✅ Ledger entry for signup bonus
-            UserLedger::create([
+            Checkin::create([
                 'user_id' => $user->id,
-                'reason' => 'signup_bonus',
+                'date'    => now()->format('Y-m-d H:i:s'),
+                'amount'  => 0,
+            ]);
+
+            UserLedger::create([
+                'user_id'       => $user->id,
+                'reason'        => 'signup_bonus',
                 'perticulation' => 'Registration bonus',
-                'amount' => $bonus,
-                'credit' => $bonus,
-                'status' => 'approved',
-                'step' => 'self',
-                'date' => now()->format('Y-m-d H:i'),
+                'amount'        => $bonus,
+                'credit'        => $bonus,
+                'status'        => 'approved',
+                'step'          => 'self',
+                'date'          => now()->format('Y-m-d H:i'),
             ]);
 
             Auth::login($user);
+            $request->session()->regenerate();
             return response()->json(['success' => true]);
-        }
 
-        return response()->json(['error' => 'Something went wrong. Please try again.'], 500);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Erro ao registrar: ' . $e->getMessage()], 500);
+        }
     }
 
     private function generateUniqueReferralCode($length = 6)

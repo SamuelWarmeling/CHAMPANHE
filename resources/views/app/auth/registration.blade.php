@@ -58,16 +58,6 @@ body {
   margin-top: 6px;
 }
 
-/* ===== OTP Banner ===== */
-.otp-banner {
-  display: none;
-  background: #C8A96A;
-  color: #1C1C1C;
-  font-size: 13px;
-  padding: 14px 18px;
-  line-height: 1.6;
-}
-
 /* ===== Card ===== */
 .register-card {
   background: #ffffff;
@@ -110,16 +100,6 @@ body {
   background: #FDFBF8;
 }
 
-/* ===== OTP Button ===== */
-.btn-otp {
-  height: 48px;
-  border-radius: 12px;
-  background: #FDF6EC;
-  color: #C8A96A;
-  font-weight: 600;
-  border: 1px solid #D6A86B;
-}
-
 /* ===== Register Button ===== */
 .btn-register {
   height: 50px;
@@ -143,31 +123,6 @@ body {
   font-weight: 700;
 }
 
-/* ===== Loading Overlay ===== */
-.loadingClass {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid #EDE8DF;
-  border-top: 4px solid #C8A96A;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 </style>
 </head>
 
@@ -180,11 +135,6 @@ body {
     <img src="/profelar/logo.png" alt="Logo">
     <div class="app-title">Create Account</div>
     <div class="app-subtitle">Sign up to continue</div>
-  </div>
-
-  <!-- OTP Info -->
-  <div id="otpMessage" class="otp-banner">
-    Please ensure your phone number is correct. OTP is required for withdrawals.
   </div>
 
   <!-- Card -->
@@ -229,19 +179,6 @@ body {
         </div>
       </div>
 
-      <!-- OTP -->
-      <div class="mb-4">
-        <label class="form-label">Verification Code</label>
-        <div class="row g-2">
-          <div class="col-8">
-            <input type="number" id="code" name="code" class="form-control" placeholder="OTP Code">
-          </div>
-          <div class="col-4">
-            <button type="button" id="getCode" class="btn btn-otp w-100">Send</button>
-          </div>
-        </div>
-      </div>
-
       <!-- Submit -->
       <button type="submit" id="regBtn" class="btn btn-register w-100">
         Register
@@ -259,37 +196,9 @@ body {
 
 @include('alert-message')
 
-<!-- Loading -->
-<div class="loadingClass" id="loadingBox">
-  <div class="spinner"></div>
-  <p style="color:white;margin-top:10px;">Processing...</p>
-</div>
-
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// OTP send button
-$('#getCode').on('click', function(){
-  var phone = $('input[name="phone"]').val();
-  if (!phone) { showRegError('Por favor, insira o número de telefone.'); return; }
-
-  $('#loadingBox').css('display','flex');
-  setTimeout(function(){
-    $('#loadingBox').hide();
-    var otp = Math.floor(100000 + Math.random() * 900000);
-    $('#code').val(otp);
-    $('#otpMessage').slideDown();
-    setTimeout(function(){ $('#otpMessage').slideUp(); }, 2000);
-    var t = 120;
-    $('#getCode').prop('disabled', true).text(t + 's');
-    var timer = setInterval(function(){
-      t--;
-      $('#getCode').text(t + 's');
-      if (t <= 0) { clearInterval(timer); $('#getCode').prop('disabled', false).text('Send'); }
-    }, 1000);
-  }, 1000);
-});
-
 // Register form submit via AJAX
 $('#registerForm').on('submit', function(e){
   e.preventDefault();
@@ -306,7 +215,6 @@ $('#registerForm').on('submit', function(e){
       password: $('input[name="password"]').val(),
       nickname: $('input[name="nickname"]').val(),
       ref_by:   $('input[name="ref_by"]').val(),
-      code:     $('input[name="code"]').val(),
       _token:   $('input[name="_token"]').val()
     },
     success: function(res){
