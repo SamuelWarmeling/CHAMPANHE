@@ -131,7 +131,7 @@ body {
 
   <!-- Header -->
   <div class="app-header">
-    <img src="/profelar/logo.png" alt="Logo">
+    <img src="/images/logo-emi.png" alt="EMI Logo">
     <div class="app-title">Welcome to EMI – Enoteca Millesimi</div>
     <div class="app-subtitle">Sign in to your account</div>
   </div>

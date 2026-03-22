@@ -33,6 +33,8 @@ else
     php artisan migrate --force
     echo "==> Limpando usuarios de teste..."
     php artisan db:seed --class=CleanTestUsersSeeder --force
+    echo "==> Atualizando logo EMI..."
+    php artisan db:seed --class=UpdateLogoSeeder --force
     echo "==> Sincronizando pacotes EMI (upsert)..."
     php artisan db:seed --class=PackageSeeder --force
 fi

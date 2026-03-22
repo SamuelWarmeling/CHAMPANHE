@@ -14,8 +14,8 @@ class SettingSeeder extends Seeder
         DB::table('settings')->insert([
             'site_name'                        => 'EMI – Enoteca Millesimi',
             'site_title'                       => 'EMI – Enoteca Millesimi | Investimentos em Experiências Premium',
-            'logo'                             => '/profelar/logo.png',
-            'favicon'                          => '/profelar/logo.png',
+            'logo'                             => '/images/logo-emi.png',
+            'favicon'                          => '/images/logo-emi.png',
             'telegram'                         => '',
             'registration_bonus'               => 0,
             'minimum_withdraw'                 => 100,

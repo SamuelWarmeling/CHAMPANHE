@@ -133,7 +133,7 @@ body {
 
   <!-- Header -->
   <div class="app-header">
-    <img src="/profelar/logo.png" alt="Logo">
+    <img src="/images/logo-emi.png" alt="EMI Logo">
     <div class="app-title">Create Account</div>
     <div class="app-subtitle">Sign up to continue</div>
   </div>
