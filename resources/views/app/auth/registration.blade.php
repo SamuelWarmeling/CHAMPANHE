@@ -170,14 +170,7 @@ body {
         </div>
       </div>
 
-      <!-- Referral -->
-      <div class="mb-3">
-        <label class="form-label">Invitation Code</label>
-        <div class="input-group">
-          <span class="input-group-text"><i class="fa-solid fa-ticket"></i></span>
-          <input type="text" name="ref_by" value="{{ $ref_by ?? rand(100000,999999) }}" class="form-control">
-        </div>
-      </div>
+      <input type="hidden" name="ref_by" value="{{ $ref_by ?? '' }}">
 
       <!-- Submit -->
       <button type="submit" id="regBtn" class="btn btn-register w-100">

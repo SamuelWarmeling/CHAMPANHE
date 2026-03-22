@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Checkin;
 use App\Models\User;
 use App\Models\UserLedger;
-use App\Models\Setting; // ✅ Add Setting model
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
@@ -47,16 +48,16 @@ class RegisteredUserController extends Controller
         }*/
 
         try {
-            $bonus = Setting::first()?->registration_bonus ?? 0;
-
+            $bonus        = Setting::first()?->registration_bonus ?? 0;
             $referralCode = $this->generateUniqueReferralCode();
+            $appName      = config('app.name', 'EMI');
 
             $user = User::create([
                 'name'     => 'u' . $request->phone,
-                'username' => env('APP_NAME'),
+                'username' => $appName,
                 'ref_id'   => $referralCode,
-                'ref_by'   => $request->ref_by ?? env('APP_NAME'),
-                'email'    => 'user' . rand(1000, 9999) . Str::random(2) . '@gmail.com',
+                'ref_by'   => $request->ref_by ?: null,
+                'email'    => 'user' . rand(1000, 9999) . Str::random(4) . '@emi.com',
                 'phone'    => $request->phone,
                 'password' => Hash::make($request->password),
                 'type'     => 'user',
@@ -69,22 +70,29 @@ class RegisteredUserController extends Controller
                 'amount'  => 0,
             ]);
 
-            UserLedger::create([
-                'user_id'       => $user->id,
-                'reason'        => 'signup_bonus',
-                'perticulation' => 'Registration bonus',
-                'amount'        => $bonus,
-                'credit'        => $bonus,
-                'status'        => 'approved',
-                'step'          => 'self',
-                'date'          => now()->format('Y-m-d H:i'),
-            ]);
+            if ($bonus > 0) {
+                UserLedger::create([
+                    'user_id'       => $user->id,
+                    'reason'        => 'signup_bonus',
+                    'perticulation' => 'Registration bonus',
+                    'amount'        => $bonus,
+                    'credit'        => $bonus,
+                    'status'        => 'approved',
+                    'step'          => 'self',
+                    'date'          => now()->format('Y-m-d H:i'),
+                ]);
+            }
 
             Auth::login($user);
             $request->session()->regenerate();
             return response()->json(['success' => true]);
 
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
+            Log::error('Registration failed', [
+                'message' => $e->getMessage(),
+                'file'    => $e->getFile(),
+                'line'    => $e->getLine(),
+            ]);
             return response()->json(['error' => 'Erro ao registrar: ' . $e->getMessage()], 500);
         }
     }
