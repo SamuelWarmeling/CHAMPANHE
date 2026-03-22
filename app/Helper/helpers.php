@@ -40,6 +40,13 @@ if (! function_exists('price')) {
     }
 }
 
+if (! function_exists('priceDecimal')) {
+    function priceDecimal($price)
+    {
+        return currency().number_format((float)$price, 2, ',', '.');
+    }
+}
+
 
 if (! function_exists('depositPrice')) {
     function depositPrice($amount){

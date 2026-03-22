@@ -137,8 +137,8 @@ $harmonieThumbs = [
           '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
-          '{{ price($package->commission_with_avg_amount / $package->validity) }}',
-          '{{ price($package->commission_with_avg_amount) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount) }}',
           '{{ $package->max_purchase_limit }}',
           '{{ $package->vip_level ?? 0 }}',
           '',
@@ -162,11 +162,11 @@ $harmonieThumbs = [
               <div class="n">Duração</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount / $package->validity) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}</div>
               <div class="n">Renda Diária</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount) }}</div>
               <div class="n">Total</div>
             </div>
           </div>
@@ -188,8 +188,8 @@ $harmonieThumbs = [
           '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
-          '{{ price($package->commission_with_avg_amount / $package->validity) }}',
-          '{{ price($package->commission_with_avg_amount) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount) }}',
           '{{ $package->max_purchase_limit }}',
           '{{ $package->vip_level ?? 0 }}',
           '',
@@ -213,11 +213,11 @@ $harmonieThumbs = [
               <div class="n">Duração</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount / $package->validity) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}</div>
               <div class="n">Renda Diária</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount) }}</div>
               <div class="n">Total</div>
             </div>
           </div>
@@ -239,8 +239,8 @@ $harmonieThumbs = [
           '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
-          '{{ price($package->commission_with_avg_amount / $package->validity) }}',
-          '{{ price($package->commission_with_avg_amount) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}',
+          '{{ priceDecimal($package->commission_with_avg_amount) }}',
           '{{ $package->max_purchase_limit }}',
           '{{ $package->vip_level ?? 0 }}',
           '',
@@ -264,11 +264,11 @@ $harmonieThumbs = [
               <div class="n">Duração</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount / $package->validity) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount / $package->validity) }}</div>
               <div class="n">Renda Diária</div>
             </div>
             <div class="stat-box">
-              <div class="s">{{ price($package->commission_with_avg_amount) }}</div>
+              <div class="s">{{ priceDecimal($package->commission_with_avg_amount) }}</div>
               <div class="n">Total</div>
             </div>
           </div>
