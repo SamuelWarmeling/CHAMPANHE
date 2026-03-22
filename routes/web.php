@@ -290,10 +290,11 @@ Route::middleware('throttle:limit-check')->group(function (){
         Route::get('purchase/vip/{id}', [PurchaseController::class, 'purchase_vip'])->name('user.purchase.vip');
         Route::get('purchase/confirmation/{id}', [PurchaseController::class, 'purchaseConfirmation'])->name('purchase.confirmation');
 
-        //invite 
+        //invite
         Route::get('/vip', [UserController::class, 'community'])->name('community');
         Route::get('/add/community', [UserController::class, 'add_com'])->name('add.com');
         Route::get('/invitation', [UserController::class, 'invite'])->name('user.invite');
+        Route::get('/invite', [UserController::class, 'invite'])->name('invite');
         Route::get('/help', [UserController::class, 'service'])->name('service');
         Route::get('/appreview', [UserController::class, 'appreview'])->name('appreview');
         Route::get('/rule', [UserController::class, 'rule'])->name('user.rule');
@@ -325,6 +326,7 @@ Route::middleware('throttle:limit-check')->group(function (){
         Route::post('/spin-now', [SpinController::class, 'spinNow'])->name('spin.now');
 
         Route::get('/blog', [WithdrawProofPublicController::class, 'index'])->name('withdrawal.public.index');
+        Route::get('/withdrawal-proofs', [WithdrawProofPublicController::class, 'index'])->name('withdrawal-proofs');
         Route::get('/postBlog', [WithdrawProofController::class, 'create'])->name('proof.create');
         Route::post('/submit-proof', [WithdrawProofController::class, 'store'])->name('proof.store');
 
