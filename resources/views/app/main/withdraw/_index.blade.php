@@ -16,7 +16,7 @@
     .withdraw-record .label { color: #888; font-weight: bold; }
     .withdraw-record .value { color: #A3B18A; font-weight: bold; }
     .withdraw-record .value.fail { color: #B05030; }
-    .withdraw-record .sub { font-size: 12px; color: #8AA8E1; margin-top: 2px; }
+    .withdraw-record .sub { font-size: 12px; color: #9A9087; margin-top: 2px; }
     .value.pending {
   color: #FFA500; /* orange for pending */
  .value.fail {
@@ -36,8 +36,8 @@
     <div class="common_card_content" style="background: #FFFFFF;">
       <form class="layui-form" method="post" action="{{route('user.withdraw.request')}}">
         @csrf
-        <h3 style="font-family: PingFang SC; font-weight: 400; font-size: 16px; color: #17469F;">
-          Withdrawal Balance：<span style="color:#0751A0;font-weight: 700">{{ price(auth()->user()->balance) }}</span>
+        <h3 style="font-family: PingFang SC; font-weight: 400; font-size: 16px; color: #C8A96A;">
+          Withdrawal Balance：<span style="color:#C8A96A;font-weight: 700">{{ price(auth()->user()->balance) }}</span>
         </h3>
 
         <div class="layui-form-item" style="margin-top: 20px">

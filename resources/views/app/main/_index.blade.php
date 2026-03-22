@@ -43,14 +43,14 @@
    <div class="reward_card"> 
     <div class="title"> 
      <p>Invitation</p> 
-     <a href="/team" style="font-size: 13px;color: #9BBBFF;line-height: 20px;"> My Team <img src="/public/site/img/common/right.png" style="width:16px; padding-right: 70px;display: inline-block"> </a> 
+     <a href="/team" style="font-size: 13px;color: #FFFFFF;line-height: 20px;"> My Team <img src="/public/site/img/common/right.png" style="width:16px; padding-right: 70px;display: inline-block"> </a> 
     </div> 
     <div class="content flex_left"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
-      <p style="font-family: Arial Rounded MT Bold, Arial Rounded MT Bold;font-weight: 400;font-size: 14px;color: #9BBBFF;line-height: 16px;">Promotional Links</p> 
+      <p style="font-family: Arial Rounded MT Bold, Arial Rounded MT Bold;font-weight: 400;font-size: 14px;color: #FFFFFF;line-height: 16px;">Promotional Links</p> 
       <p style="margin-top:10px;font-family: Arial, Arial;font-weight: 400;font-size: 12px;color: #ffffff;line-height: 14px;text-align: left;font-style: normal;text-transform: none;"> {{url('register').'?ref='.auth()->user()->ref_id}} </p> 
      </div> 
     </div> 
@@ -82,7 +82,7 @@
     </div> 
     <a href="#" class="go_lottery layui-btn layui-btn-primary layui-btn-radius" style="text-align:center;color:#ffffff"> Sign In Record </a> 
    </div> 
-   <div class="reward_card" style="background: #2B5CB9;height:100%;padding-bottom:20px;padding: 15px;"> 
+   <div class="reward_card" style="background: #C8A96A;height:100%;padding-bottom:20px;padding: 15px;"> 
     <div class="title"> 
      <p>Quest Rewards</p> 
     </div> 
@@ -103,8 +103,8 @@
     $isClaimable = !$apply && $referUsers >= $task->team_size;
   @endphp
 
-  <div class="content flex_left" style="background: #2B5CB9;"> 
-    <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+  <div class="content flex_left" style="background: #C8A96A;"> 
+    <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
     </div> 
     <div style="width: 100%"> 
@@ -117,7 +117,7 @@
       <div class="flex_space"> 
         <div class="layui-progress" style="width: 160px;height: 10px;margin-top: 5px"> 
           <div class="layui-progress-bar layui-bg-blue"
-               style="height: 10px;background: #83ADFF;width: {{ $progress }}%;"></div> 
+               style="height: 10px;background: #E8DCC8;width: {{ $progress }}%;"></div> 
         </div> 
         <div class="value">
           <span style="color: #FFE048">{{ $currentCount }}</span> / {{ $task->team_size }}
@@ -139,8 +139,8 @@
 
      
 
-    <!--<div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <!--<div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -154,7 +154,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 10
@@ -162,8 +162,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -177,7 +177,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 20
@@ -185,8 +185,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -200,7 +200,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 100
@@ -208,8 +208,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -223,7 +223,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 500
@@ -231,8 +231,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -246,7 +246,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 1000
@@ -254,8 +254,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -269,7 +269,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 1500
@@ -277,8 +277,8 @@
       </div> 
      </div> 
     </div> 
-    <div class="content flex_left" style=" background: #2B5CB9;"> 
-     <div style="background: #3E70CE;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
+    <div class="content flex_left" style=" background: #C8A96A;"> 
+     <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
@@ -292,7 +292,7 @@
       </div> 
       <div class="flex_space"> 
        <div class="layui-progress " style="width: 160px;height: 10px;margin-top: 5px"> 
-        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #83ADFF"></div> 
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="%" style="height: 10px;background: #E8DCC8"></div> 
        </div> 
        <div class="value">
         <span style="color: #FFE048">0</span> / 3000

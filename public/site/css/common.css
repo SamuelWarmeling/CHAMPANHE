@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient( 181deg, #17469F 0%, #032363 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
 }
 .common_body{
-    background: #17469F;
+    background: #C8A96A;
 }
 .hide {
     display: none;
@@ -12,7 +12,7 @@ body {
     display: block
 }
 .header{
-    background: linear-gradient( 133deg, #004B6E 0%, #0397C9 99%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 0px 0px 0px 0px;
     height: 30px;
     line-height: 30px;
@@ -22,9 +22,9 @@ body {
     margin:30px 15px ;
 }
 .mail_main .mail_card{
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #3F70CD;
+    border: 1px solid #E8DCC8;
     padding: 15px;
     margin-bottom: 15px;
 }
@@ -46,14 +46,14 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #ADC4F1;
+    color: #FFFFFF;
     margin-bottom: 10px;
 }
 .mail_main .mail_card .mail_contents{
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #D6E4FF;
+    color: #FFFFFF;
 }
 .help_header{
     background-image: url("/public/site/img/user/help_bg.png");
@@ -68,7 +68,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 28px;
-    color: #35506F;
+    color: #6B6B6B;
     line-height: 22px;
 }
 .help_header .describe{
@@ -84,9 +84,9 @@ body {
 .help_card{
     margin: 20px;
     padding: 15px 20px;
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #3F70CD;
+    border: 1px solid #E8DCC8;
 }
 .help_card .help_flex{
     display: flex;
@@ -102,22 +102,22 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 22px;
 }
 .help_card .help_flex .describe{
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 22px;
 }
 .vip_main{ margin: 15px;}
 
 .vip_main .vip_card {
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #3F70CD;
+    border: 1px solid #E8DCC8;
     margin-bottom: 15px;
 }
 
@@ -139,7 +139,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 28px;
 }
 
@@ -212,7 +212,7 @@ body {
     background-image:url(/public/site/img/common/down_bg.png) ;
     background-size: 100% 20px;
     background-repeat: no-repeat;
-    border-top:1px solid #2857AF;
+    border-top:1px solid #E8DCC8;
 }
 .common_header .back{
     display: block;
@@ -220,7 +220,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     text-align: center;
     padding: 15px 0;
     line-height: 36px;
@@ -229,9 +229,9 @@ body {
 .common_header .back .btn{
     width: 36px;
     height: 36px;
-    background: #2250A8;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3060B9;
+    border: 1px solid #E8DCC8;
     line-height: 36px;
     text-align: center;
     position: absolute;
@@ -245,9 +245,9 @@ body {
     width: 36px;
     height: 36px;
     line-height: 36px;
-    background: #2250A8;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3060B9;
+    border: 1px solid #E8DCC8;
 }
 .common_header .back .service img{
      width: 19px;
@@ -261,7 +261,7 @@ body {
 
 .common_main{
     overflow: hidden;
-    background: #5779B9;
+    background: #C8A96A;
     background-image: url(/public/site/img/common/card_header_bg.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -269,9 +269,9 @@ body {
     border-radius: 20px 20px 0px 0px;
 }
 .common_bg{
-    background: #17469F;
+    background: #C8A96A;
     border-radius: 16px 16px 0px 0px;
-    border: 1px solid #17469F;
+    border: 1px solid #C8A96A;
     padding: 15px;
 }
 .index_header .index_logo{
@@ -320,7 +320,7 @@ body {
      font-family: Arial, Arial;
      font-weight: 400;
      font-size: 15px;
-     color: #80A8F4;
+     color: #FFFFFF;
      line-height: 17px;
      margin-top: 17px;
     margin-bottom: 6px;
@@ -344,7 +344,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #0751A0;
+    color: #C8A96A;
     line-height: 16px;
 }
 .wallet_btn img{ display: inline-block;height: 20px;}
@@ -403,7 +403,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     color: #FFFFFF;
-    border-bottom: 2px solid #396AC7;
+    border-bottom: 2px solid #E8DCC8;
 }
 .reward_card .qr_code_btn{
     font-family: Arial, Arial;
@@ -430,7 +430,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #E4EDFF;
+    color: #FFFFFF;
     line-height: 16px;
     text-align: left;
 }
@@ -438,7 +438,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #E4EDFF;
+    color: #FFFFFF;
     padding-left: 5px;
 }
 .position{
@@ -450,7 +450,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #B2C7EE;
+    color: #FFFFFF;
 
 }
 .index_main {
@@ -463,7 +463,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #D4E2FF;
+    color: #FFFFFF;
     margin-bottom: 10px;
 }
 .index_main .product_type{
@@ -471,9 +471,9 @@ body {
 }
 .index_main .product_type_item{
     width: 30%;
-    background: #2452AC;
+    background: #C8A96A;
     border-radius: 100px;
-    border: 1px solid #3565C2;
+    border: 1px solid #E8DCC8;
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
@@ -483,7 +483,7 @@ body {
 }
 .index_main .product_type_item_active{
     width: 30%;
-    background: #6298FF;
+    background: #C8A96A;
     border-radius: 100px;
     border: 1px solid #93B8FF;
     font-family: Arial, Arial;
@@ -634,7 +634,7 @@ body {
     width: 107px;height: auto;
 }
 .none_text{
-    margin-top:15px;font-family: Arial, Arial;font-weight: 700;font-size: 18px;color: #A6C3F9;line-height: 21px;text-align: center;
+    margin-top:15px;font-family: Arial, Arial;font-weight: 700;font-size: 18px;color: #FFFFFF;line-height: 21px;text-align: center;
 }
 .card{
     background: #FFFFFF;
@@ -693,7 +693,7 @@ body {
     margin-bottom: 7px;
 }
 .product_main .left_content .card_active{
-    background: linear-gradient( 135deg, #004B6E 0%, #0295C7 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 0px 10px 10px 0px;
     color: #FFFFFF;
 }
@@ -724,7 +724,7 @@ body {
    position: absolute;
     right: 0px;
     top: 0px;
-    background: #6A99F3;
+    background: #C8A96A;
     border-radius: 100px 100px 100px 100px;
     width: 25%;
     font-family: Arial, Arial;
@@ -765,7 +765,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     padding-left: 5px;
     line-height: 20px;
 }
@@ -791,7 +791,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     padding-left: 5px;
     line-height: 20px;
     margin-top: 8px;
@@ -804,9 +804,9 @@ body {
 .product_details_card{
     position: relative;
     display: block;
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #2B5CB9;
+    border: 1px solid #C8A96A;
     padding: 20px;
     margin-bottom: 15px;
 }
@@ -843,10 +843,10 @@ body {
 
 }
 .product_details_card .product_details_order{
-    border-bottom: 1px solid #4777D3;
+    border-bottom: 1px solid #E8DCC8;
 }
 .product_details_card .buy_btn{
-    background: #2257BB;
+    background: #C8A96A;
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 700;
@@ -871,7 +871,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #17469F;
+    color: #C8A96A;
     line-height: 21px;
     margin-bottom: 20px;
 }
@@ -887,7 +887,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #17469F;
+    color: #C8A96A;
     line-height: 21px;
     text-align: left;
 }
@@ -916,7 +916,7 @@ body {
     height: 80px;
     background:none;
     /*box-shadow: 0px 4px 10px 0px rgba(42,65,92,0.3);*/
-    /*border: 1px solid #ACC8FD;*/
+    /*border: 1px solid #E8DCC8;*/
     border-radius: 120px 120px 0  0;
     padding: 0;
     margin: 0;
@@ -978,11 +978,11 @@ body {
 .login_body{
     height: 100%;
     background-size :100%;
-    background: #17469F;
+    background: #C8A96A;
 }
 .login_body .login_bg{
    padding-bottom: 400px;
-   background: #17469F;
+   background: #C8A96A;
 }
 .login_body .main{
     /*background: #3364C1;*/
@@ -1005,13 +1005,13 @@ body {
     background: #3364C1;
     height: 55px;
     width: 100%;
-    border-bottom: 1px solid #ACC8FD;
+    border-bottom: 1px solid #E8DCC8;
     border-radius: 160%;
     filter: blur(1px);
 
 }
 .login_body .main .login_form{
-    background: #366CC1;
+    background: #C8A96A;
     border-radius:30px;
     margin: 15px;
     margin-top: 60px;
@@ -1020,12 +1020,12 @@ body {
 .login_body .main .login_form .form_tab{
    display: flex;
    justify-content: space-between;
-   background: #366CC1;
+   background: #C8A96A;
    border-radius: 30px 30px 0px 0px;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #DDE9FF;
+    color: #FFFFFF;
     line-height: 60px;
     text-align: center;
     font-style: normal;
@@ -1036,14 +1036,14 @@ body {
     width: 50%;
     height: 60px;
     background: #FFFFFF;
-    color: #17469F;
+    color: #C8A96A;
     border-radius: 30px 30px 0px 0px;
 }
 .login_body .main .login_form .form_tab .right{
     width: 50%;
     height: 60px;
-    background: #366CC1;
-    color: #DDE9FF!important;
+    background: #C8A96A;
+    color: #FFFFFF!important;
     border-radius: 30px 30px 0px 0px;
 }
 
@@ -1077,7 +1077,7 @@ body {
     height: 30px;
     font-weight: 400;
     font-size: 18px;
-    color: #17469F;
+    color: #C8A96A;
 
 }
 .login_body .main .login_form .form_container .layui-input-block{
@@ -1102,7 +1102,7 @@ body {
 }
 .login_btn{
     margin-bottom: 20px;
-    background: #17469F;
+    background: #C8A96A;
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 700;
@@ -1117,9 +1117,9 @@ body {
 
 .user_header{
     position: relative;
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3769C7;
+    border: 1px solid #E8DCC8;
     height: 130px;
     margin:26px 42px;
     padding: 20px 10px;
@@ -1140,7 +1140,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #96BAF3;
+    color: #FFFFFF;
     line-height: 15px;
 }
 .user_info .balance .value{
@@ -1230,7 +1230,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #97BBFF;
+    color: #FFFFFF;
     line-height: 18px;
     margin-top: 8px;
     margin-bottom: 3px;
@@ -1260,7 +1260,7 @@ body {
     width: 50%;
 }
 .user_main .balance .flex .item .value{
-    color: #35506F;
+    color: #6B6B6B;
 }
 
 .user_main .menu{
@@ -1293,7 +1293,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #004B6E;
+    color: #C8A96A;
     text-align: left;
     font-style: normal;
     text-transform: none;
@@ -1306,14 +1306,14 @@ body {
 
 .user_main .user_list {
     margin-top: 15px;
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #3769C7;
+    border: 1px solid #E8DCC8;
 }
 .user_main .user_card{
     margin: 0 15px;
     padding: 15px 0;
-    border-bottom: 1px solid #3669C8;
+    border-bottom: 1px solid #E8DCC8;
 }
 .user_main .user_card .item{
     display: flex;
@@ -1326,7 +1326,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #97BBFF;
+    color: #FFFFFF;
     line-height: 18px;
 }
 .user_main .user_card .item img{
@@ -1342,7 +1342,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #97BBFF;
+    color: #FFFFFF;
     line-height: 21px;
 }
 .logout img{
@@ -1361,7 +1361,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 22px;
     text-align: center;
     padding-top: 20px;
@@ -1370,9 +1370,9 @@ body {
 .team_header .back .btn{
     width: 36px;
     height: 36px;
-    background: #2250A8;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3060B9;
+    border: 1px solid #E8DCC8;
     line-height: 36px;
     text-align: center;
     position: absolute;
@@ -1386,7 +1386,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #BAD5FF;
+    color: #FFFFFF;
     line-height: 22px;
     text-align: center;
     margin-bottom: 12px;
@@ -1417,16 +1417,16 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 19px;
-    color: #BED4FF;
+    color: #FFFFFF;
     line-height: 22px;
     margin-bottom: 20px;
 }
 .team_card .left {
     width: 100px !important;
     height: 100px !important;
-    background: #3A6BC7;
+    background: #C8A96A;
     border-radius: 8px 8px 8px 8px;
-    border: 1px solid #497CDE;
+    border: 1px solid #E8DCC8;
     text-align: center;
 
 }
@@ -1440,7 +1440,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 11px;
-    color: #9EBDF9;
+    color: #FFFFFF;
     line-height: 22px;
     margin-bottom: 12px;
 }
@@ -1465,26 +1465,26 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #9EBDF9;
+    color: #FFFFFF;
     line-height: 22px;
 }
 .team_card .right .value{
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #EBF2FF;
+    color: #FFFFFF;
     line-height: 18px;
     padding-left: 5px;
 }
 
 .common_card{
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 16px 16px 16px 16px;
-    border: 1px solid #3F70CD;
+    border: 1px solid #E8DCC8;
     padding: 15px;
 }
 .common_card .common_card_content{
-    background: #F0F5FF;
+    background: #F8F6F2;
     border-radius: 16px 16px 16px 16px;
     padding: 15px;
 }
@@ -1494,7 +1494,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #0751A0;
+    color: #C8A96A;
     line-height: 21px;
 }
 .common_content{
@@ -1540,7 +1540,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #0751A0;
+    color: #C8A96A;
     line-height: 18px;
     margin-bottom: 20px;
 }
@@ -1561,7 +1561,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #17469F;
+    color: #C8A96A;
     line-height: 21px;
 }
 .dialog .explain{
@@ -1570,7 +1570,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #17469F;
+    color: #C8A96A;
     margin-bottom: 20px;
 }
 
@@ -1590,7 +1590,7 @@ body {
 
 .dialog .cancel{
     border-radius: 100px 100px 100px 100px;
-    border: 1px solid #F0F5FF;
+    border: 1px solid #F8F6F2;
     background: none;
     text-align: center;
     height: 40px;
@@ -1598,21 +1598,21 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #F0F5FF;
+    color: #F8F6F2;
     width: 45%;
 }
 .dialog .confirm{
     width: 45%;
     border-radius: 100px 100px 100px 100px;
-    border: 1px solid #17469F;
-    background: #17469F;
+    border: 1px solid #C8A96A;
+    background: #C8A96A;
     text-align: center;
     height: 40px;
     line-height: 40px;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #F0F5FF;
+    color: #F8F6F2;
 }
 
 .layui-layer-setwin {

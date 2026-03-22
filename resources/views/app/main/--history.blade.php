@@ -22,9 +22,9 @@
       margin: 15px;
     }
     .record {
-      background: #234FA4;
+      background: #C8A96A;
       border-radius: 8px;
-      border: 1px solid #396AC7;
+      border: 1px solid #E8DCC8;
       margin-bottom: 15px;
     }
     .record .right {
@@ -39,14 +39,14 @@
       font-family: Arial;
       font-weight: 700;
       font-size: 16px;
-      color: #D9E6FF;
+      color: #FFFFFF;
       line-height: 18px;
     }
     .record .right .item .date {
       font-family: PingFang SC;
       font-weight: 400;
       font-size: 13px;
-      color: #8AA8E1;
+      color: #9A9087;
       line-height: 18px;
     }
     .record .right .item .value {
@@ -92,7 +92,7 @@
     }
     .bill_main {
       overflow: hidden;
-      background: #5779B9;
+      background: #C8A96A;
       background-image: url(/public/site/img/common/card_header_bg.png);
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -100,9 +100,9 @@
       border-radius: 20px 20px 0 0;
     }
     .bill_bg {
-      background: #17469F;
+      background: #C8A96A;
       border-radius: 16px 16px 0 0;
-      border: 1px solid #17469F;
+      border: 1px solid #C8A96A;
     }
     .nav {
       text-align: center;

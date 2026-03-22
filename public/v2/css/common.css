@@ -96,7 +96,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 28px;
-    color: #35506F;
+    color: #6B6B6B;
     line-height: 22px;
 }
 .help_header .describe{
@@ -167,7 +167,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 16px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 28px;
 }
 
@@ -267,9 +267,9 @@ body {
     width: 36px;
     height: 36px;
     line-height: 36px;
-    background: #2250A8;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3060B9;
+    border: 1px solid #E8DCC8;
 }
 .common_header .back .service img{
     width: 19px;
@@ -313,7 +313,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #4C6FEC;
+    color: #C8A96A;
     padding-left: 12px;
     line-height: 20px;
     padding-left: 0px;
@@ -322,7 +322,7 @@ body {
     /*background-image: url("/public/v2/img/product/btn_bg.png");*/
     /*background-size: 100%;*/
     /*background-repeat: no-repeat;*/
-    background: linear-gradient( 270deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-weight: 700;
     font-size: 16px;
@@ -431,7 +431,7 @@ body {
     display: block;
     width: 100%;
     height: 40px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     box-shadow: 0px 4px 10px 0px rgba(18,132,246,0.15);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
@@ -531,7 +531,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #F1F4FF;
+    color: #FFFFFF;
     line-height: 16px;
     text-align: center;
     font-style: normal;
@@ -561,7 +561,7 @@ body {
 .common_h1{
     font-weight: 700;
     font-size: 18px;
-    color: #39487E;
+    color: #6B6B6B;
     line-height: 25px;
     text-align: left;
     font-style: normal;
@@ -599,7 +599,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #0751A0;
+    color: #C8A96A;
     line-height: 16px;
 }
 .wallet_btn img{ display: inline-block;height: 20px;}
@@ -679,7 +679,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #E4EDFF;
+    color: #FFFFFF;
     line-height: 16px;
     text-align: left;
 }
@@ -687,7 +687,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #E4EDFF;
+    color: #FFFFFF;
     padding-left: 12px;
 }
 .position{
@@ -699,7 +699,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #B2C7EE;
+    color: #FFFFFF;
 
 }
 .product_nav{
@@ -791,7 +791,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #D4E2FF;
+    color: #FFFFFF;
     margin-bottom: 10px;
 }
 .index_main .product_type{
@@ -799,9 +799,9 @@ body {
 }
 .index_main .product_type_item{
     width: 30%;
-    background: #2452AC;
+    background: #C8A96A;
     border-radius: 100px;
-    border: 1px solid #3565C2;
+    border: 1px solid #E8DCC8;
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
@@ -962,7 +962,7 @@ body {
     width: 107px;height: auto;
 }
 .none_text{
-    margin-top:15px;font-family: Arial, Arial;font-weight: 700;font-size: 18px;color: #A6C3F9;line-height: 21px;text-align: center;
+    margin-top:15px;font-family: Arial, Arial;font-weight: 700;font-size: 18px;color: #FFFFFF;line-height: 21px;text-align: center;
 }
 .card{
     background: #FFFFFF;
@@ -1021,7 +1021,7 @@ body {
     margin-bottom: 7px;
 }
 .product_main .left_content .card_active{
-    background: linear-gradient( 135deg, #004B6E 0%, #0295C7 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 0px 10px 10px 0px;
     color: #FFFFFF;
 }
@@ -1094,7 +1094,7 @@ body {
     line-height: 34px;
     width: 110px;
     height: 34px;
-    background: linear-gradient( 270deg, #4A6DEB 0%, #5C7DF5 100%) !important;
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%) !important;
     border-radius: 6px;
     text-align: center;
     font-weight: 700;
@@ -1137,7 +1137,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #4B6DEB;
+    color: #C8A96A;
     padding-left: 12px;
     line-height: 20px;
     margin-top: 5px;
@@ -1164,7 +1164,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 14px;
-    color: #4B6DEB;
+    color: #C8A96A;
     padding-left: 12px;
     line-height: 20px;
     padding-left: 0px;
@@ -1345,14 +1345,14 @@ body {
 
 .login_body{
     height: 100vh;
-    background: linear-gradient( 180deg, #E3ECFD 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(180deg, #F5EDD8 0%, rgba(255,255,255,0) 100%);
     background-image: url("/public/v2/img/login/bg.png");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .login_body .login_bg{
     padding-bottom: 400px;
-    /*background: #17469F;*/
+    /*background: #C8A96A;*/
 }
 .login_body .main{
     /*background: #3364C1;*/
@@ -1395,12 +1395,12 @@ body {
 .login_body .main .login_form .form_tab{
     display: flex;
     justify-content: space-between;
-    background: #366CC1;
+    background: #C8A96A;
     border-radius: 30px 30px 0px 0px;
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #DDE9FF;
+    color: #FFFFFF;
     line-height: 60px;
     text-align: center;
     font-style: normal;
@@ -1411,14 +1411,14 @@ body {
     width: 50%;
     height: 60px;
     background: #FFFFFF;
-    color: #17469F;
+    color: #C8A96A;
     border-radius: 30px 30px 0px 0px;
 }
 .login_body .main .login_form .form_tab .right{
     width: 50%;
     height: 60px;
-    background: #366CC1;
-    color: #DDE9FF!important;
+    background: #C8A96A;
+    color: #FFFFFF!important;
     border-radius: 30px 30px 0px 0px;
 }
 
@@ -1499,7 +1499,7 @@ body {
     margin-top: 10px;
 }
 .login_btn{
-    background: #4568E8;
+    background: #C8A96A;
     box-shadow: 0px 4px 10px 0px rgba(18,132,246,0.15);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
@@ -1515,9 +1515,9 @@ body {
 
 .user_header{
     position: relative;
-    background: #2B5CB9;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3769C7;
+    border: 1px solid #E8DCC8;
     height: 130px;
     margin:26px 42px;
     padding: 20px 10px;
@@ -1538,7 +1538,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #96BAF3;
+    color: #FFFFFF;
     line-height: 15px;
 }
 .user_info .balance .value{
@@ -1720,7 +1720,7 @@ body {
     width: 50%;
 }
 .user_main .balance .flex .item .value{
-    color: #35506F;
+    color: #6B6B6B;
 }
 
 .user_main .menu{
@@ -1753,7 +1753,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #004B6E;
+    color: #C8A96A;
     text-align: left;
     font-style: normal;
     text-transform: none;
@@ -1814,7 +1814,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 18px;
-    color: #5072EE;
+    color: #C8A96A;
     line-height: 21px;
 }
 .logout img{
@@ -1833,7 +1833,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 20px;
-    color: #D6E4FF;
+    color: #FFFFFF;
     line-height: 22px;
     text-align: center;
     padding-top: 20px;
@@ -1842,9 +1842,9 @@ body {
 .team_header .back .btn{
     width: 36px;
     height: 36px;
-    background: #2250A8;
+    background: #C8A96A;
     border-radius: 12px 12px 12px 12px;
-    border: 1px solid #3060B9;
+    border: 1px solid #E8DCC8;
     line-height: 36px;
     text-align: center;
     position: absolute;
@@ -1858,7 +1858,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 14px;
-    color: #BAD5FF;
+    color: #FFFFFF;
     line-height: 22px;
     text-align: center;
     margin-bottom: 12px;
@@ -1884,16 +1884,16 @@ body {
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 19px;
-    color: #BED4FF;
+    color: #FFFFFF;
     line-height: 22px;
     margin-bottom: 20px;
 }
 .team_card .left {
     width: 100px !important;
     height: 100px !important;
-    background: #3A6BC7;
+    background: #C8A96A;
     border-radius: 8px 8px 8px 8px;
-    border: 1px solid #497CDE;
+    border: 1px solid #E8DCC8;
     text-align: center;
 
 }
@@ -1907,7 +1907,7 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 11px;
-    color: #9EBDF9;
+    color: #FFFFFF;
     line-height: 22px;
     margin-bottom: 12px;
 }
@@ -1932,14 +1932,14 @@ body {
     font-family: Arial, Arial;
     font-weight: 400;
     font-size: 13px;
-    color: #9EBDF9;
+    color: #FFFFFF;
     line-height: 22px;
 }
 .team_card .right .value{
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #EBF2FF;
+    color: #FFFFFF;
     line-height: 18px;
     padding-left: 12px;
 }
@@ -1958,7 +1958,7 @@ body {
 .common_explain{
     font-weight: 700;
     font-size: 16px;
-    color: #4A6DEB;
+    color: #C8A96A;
     line-height: 21px;
 }
 .common_content{
@@ -2005,7 +2005,7 @@ body {
 .dialog .dialog_title{
     font-weight: 700;
     font-size: 16px;
-    color: #4A6DEB;
+    color: #C8A96A;
     line-height: 28px;
     padding-bottom: 20px;
 }
@@ -2070,13 +2070,13 @@ body {
     width: 145px;
     height: 36px;
     line-height: 36px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);    border-radius: 100px;
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);    border-radius: 100px;
     text-align: center;
 
     font-family: Arial, Arial;
     font-weight: 700;
     font-size: 16px;
-    color: #F0F5FF;
+    color: #F8F6F2;
 }
 
 
@@ -2234,7 +2234,7 @@ body {
     margin-bottom: 20px;
 }
 #blog_dialog .i_know{
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     width: 100%;
     height: 44px;
     line-height: 44px;
@@ -2383,7 +2383,7 @@ body {
     width: 50px;
     height: 18px;
     padding: 4px 10px;
-    background: linear-gradient( 90deg, #5C7DF5 0%, #4A6DEB 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-weight: 700;
     font-size: 16px;
@@ -2530,13 +2530,13 @@ body {
     margin-bottom: 20px !important;
 }
 .common_color{
-    color: #5668A8;
+    color: #6B6B6B;
 }
 .common_a_btn{
     display: block;
     width: 60px;
     height: 22px;
-    background: linear-gradient( 90deg, #8FA8FF 1%, #708FFF 99%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 400;
@@ -2550,7 +2550,7 @@ body {
 .copy_btn{
     width: 60px;
     height: 26px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     border-radius: 100px 100px 100px 100px;
     font-family: Arial, Arial;
     font-weight: 400;
@@ -2788,7 +2788,7 @@ body {
     right: 0;
     width: 80px;
     height: 30px;
-    background: #4A6DEB;
+    background: #C8A96A;
     border-radius: 100px 0px 0px 100px;
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
@@ -2810,14 +2810,14 @@ body {
 }
 .withdraw_btn{
     height: 44px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     line-height: 44px;
     text-align: center;
 }
 
 .common_btn{
     height: 44px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     box-shadow: 0px 4px 10px 0px rgba(103,173,79,0.15);
     line-height: 44px;
     font-weight: 700;
@@ -2884,7 +2884,7 @@ body {
     left: 50%;
     width: 20px;
     height: 4px;
-    background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+    background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
     transform: translateX(-50%);
 }
 .common_nav_menu .nav{

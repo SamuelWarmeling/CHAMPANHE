@@ -26,7 +26,7 @@
             width: 80px;
             height: 24px;
             line-height: 24px;
-            background: linear-gradient( 180deg, #4A6DEB 0%, #5C7DF5 100%);
+            background: linear-gradient(135deg, #C8A96A 0%, #D6A86B 100%);
             border-radius: 0px 12px 0px 12px;
             font-family: PingFang SC, PingFang SC;
             font-weight: 400;

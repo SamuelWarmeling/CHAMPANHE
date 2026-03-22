@@ -20,7 +20,7 @@
    <!--    <p class="value" ><span class="unit">₱</span>40.00</p>--> 
   </div> 
   <div class="team_main"> 
-   <div class="team_card" style="height: auto;border-bottom: 2px solid #007aff;"> 
+   <div class="team_card" style="height: auto;border-bottom: 2px solid #C8A96A;"> 
     <p class="title">Level 1 teams</p> 
     <div class="flex_left" style="justify-content: start"> 
      <div class="left"> 
@@ -45,7 +45,7 @@
     </div> 
     <a href="/member/1" style="text-align: center; color: #ffffff;margin-bottom: 10px;"> <p style="transform: rotate(90deg);"><i class="layui-icon layui-icon-next layui-font-28"></i></p> </a> 
    </div> 
-   <div class="team_card" style="height: auto;border-bottom: 2px solid #007aff;"> 
+   <div class="team_card" style="height: auto;border-bottom: 2px solid #C8A96A;"> 
     <p class="title">Level 2 teams</p> 
     <div class="flex_left" style="justify-content: start"> 
      <div class="left"> 
@@ -70,7 +70,7 @@
     </div> 
     <a href="/member/2" style="text-align: center; color: #ffffff;margin-bottom: 10px;"> <p style="transform: rotate(90deg);"><i class="layui-icon layui-icon-next layui-font-28"></i></p> </a> 
    </div> 
-   <div class="team_card" style="height: auto;border-bottom: 2px solid #007aff;"> 
+   <div class="team_card" style="height: auto;border-bottom: 2px solid #C8A96A;"> 
     <p class="title">Level 3 teams</p> 
     <div class="flex_left" style="justify-content: start"> 
      <div class="left"> 

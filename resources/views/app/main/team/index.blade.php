@@ -190,7 +190,7 @@ h1,h2,h3,.playfair{font-family:'Playfair Display',serif}
 <!-- Hidden template scripts preserved -->
 <script id="InviteTpl" type="text/html">
     <div class="common_margin_10 common_padding_10">
-        <div class="label" style="color: #DEEFFF">Comissão</div>
+        <div class="label" style="color: #FFFFFF">Comissão</div>
         <div class="value commission_amount common_margin_top_10" style="font-weight: 700;font-size: 22px;color: #FFFFFF;">r600</div>
     </div>
     <div class="common_card common_margin_top_20 flex_space position" style="padding-left: 50px;">

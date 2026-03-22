@@ -48,7 +48,7 @@
     }
 
     .status.completed {
-      background: #007bff;
+      background: #C8A96A;
       color: white;
     }
 

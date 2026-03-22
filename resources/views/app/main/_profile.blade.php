@@ -40,7 +40,7 @@
 
     $progressPercent = $nextTarget > 0 ? min(100, ($totalInvestment / $nextTarget) * 100) : 0;
 @endphp
-     <div style=" background: #B6CDFA;border-radius: 50%;width: 35px;height: 35px;text-align: center;line-height: 35px;"> 
+     <div style=" background: #F5EDD8;border-radius: 50%;width: 35px;height: 35px;text-align: center;line-height: 35px;"> 
       <a href="/vip"> <img src="{{ asset('public/site/img/vip/lv' . $vipLevel . '.png') }}" style="width: 24px;height: 24px;display: inline"> </a> 
      </div> 
     </div>

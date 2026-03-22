@@ -108,7 +108,7 @@
             color: #ffffff;
         }
         .spin-click-button {
-            background: #1d70bc;
+            background: #C8A96A;
             border-radius: 50px;
             padding: 8px 35px;
         }
@@ -119,7 +119,7 @@
             background: #01539f;
         }
         input[type="text"] {
-            background: #1d70bc;
+            background: #C8A96A;
         }
         input[type="text"]::placeholder{
             color: #FFFFFf;

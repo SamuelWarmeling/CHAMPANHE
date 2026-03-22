@@ -22,7 +22,7 @@
         }
         #spin-chances {
             font-weight: bold;
-            color: #007bff;
+            color: #C8A96A;
         }
         #wheel {
             width: 240px;
