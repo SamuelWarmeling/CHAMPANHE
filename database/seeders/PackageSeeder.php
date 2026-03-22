@@ -111,7 +111,7 @@ class PackageSeeder extends Seeder
             [
                 'name'                       => 'Harmonie I – Perrier-Jouët',
                 'title'                      => 'Harmonia entre investimento e prazer enogastronômico.',
-                'photo'                      => '/v2/img/product/welfare.png',
+                'photo'                      => '/images/experiencias/harmonie-1-perrier-jouet.jpg',
                 'price'                      => 1000,
                 'code'                       => Str::uuid(),
                 'validity'                   => 30,      // 30 dias
@@ -130,7 +130,7 @@ class PackageSeeder extends Seeder
             [
                 'name'                       => 'Harmonie II – Ruinart',
                 'title'                      => 'Experiência ampliada com curadoria exclusiva de vinhos.',
-                'photo'                      => '/v2/img/product/welfare.png',
+                'photo'                      => '/images/experiencias/harmonie-2-ruinart.jpg',
                 'price'                      => 2000,
                 'code'                       => Str::uuid(),
                 'validity'                   => 30,      // 30 dias
@@ -149,7 +149,7 @@ class PackageSeeder extends Seeder
             [
                 'name'                       => 'Harmonie III – Dom Pérignon',
                 'title'                      => 'Nível premium de harmonia com retornos expressivos.',
-                'photo'                      => '/v2/img/product/activity.png',
+                'photo'                      => '/images/experiencias/harmonie-3-dom-perignon.jpg',
                 'price'                      => 3000,
                 'code'                       => Str::uuid(),
                 'validity'                   => 40,      // 40 dias
@@ -168,7 +168,7 @@ class PackageSeeder extends Seeder
             [
                 'name'                       => 'Harmonie IV – Krug',
                 'title'                      => 'O mais alto nível Harmonie: retorno de 120% sobre o investimento.',
-                'photo'                      => '/v2/img/product/activity.png',
+                'photo'                      => '/images/experiencias/harmonie-4-krug.jpg',
                 'price'                      => 5000,
                 'code'                       => Str::uuid(),
                 'validity'                   => 40,      // 40 dias

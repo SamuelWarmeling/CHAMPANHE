@@ -116,6 +116,15 @@ $packages = Package::where('status', 'active')->get();
   <div class="tab-item" data-type="3" onclick="setActiveTab(3)">Premium</div>
 </div>
 
+@php
+$harmonieThumbs = [
+  'Harmonie I – Perrier-Jouët'  => '/images/experiencias/harmonie-1-perrier-jouet.jpg',
+  'Harmonie II – Ruinart'       => '/images/experiencias/harmonie-2-ruinart.jpg',
+  'Harmonie III – Dom Pérignon' => '/images/experiencias/harmonie-3-dom-perignon.jpg',
+  'Harmonie IV – Krug'          => '/images/experiencias/harmonie-4-krug.jpg',
+];
+@endphp
+
 {{-- Product lists --}}
 <div class="product-list-wrap">
 
@@ -125,7 +134,7 @@ $packages = Package::where('status', 'active')->get();
         <div class="emi-card" onclick="buyDialog(
           '{{ $package->id }}',
           '{{ $package->name }}',
-          '{{ asset($package->photo) }}',
+          '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
           '{{ price($package->commission_with_avg_amount / $package->validity) }}',
@@ -137,7 +146,7 @@ $packages = Package::where('status', 'active')->get();
           'Renda Diária'
         )" style="cursor:pointer">
           <div class="flex-left" style="margin-bottom:12px">
-            <img src="{{ asset($package->photo) }}" class="pkg-photo" alt="">
+            <img src="{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}" class="pkg-photo" alt="{{ $package->name }}">
             <div style="flex:1;min-width:0">
               <div class="pkg-name">{{ $package->name }}</div>
               <span class="pkg-vip">VIP{{ $package->vip_level ?? 0 }}</span>
@@ -176,7 +185,7 @@ $packages = Package::where('status', 'active')->get();
         <div class="emi-card" onclick="buyDialog(
           '{{ $package->id }}',
           '{{ $package->name }}',
-          '{{ asset($package->photo) }}',
+          '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
           '{{ price($package->commission_with_avg_amount / $package->validity) }}',
@@ -188,7 +197,7 @@ $packages = Package::where('status', 'active')->get();
           'Renda Diária'
         )" style="cursor:pointer">
           <div class="flex-left" style="margin-bottom:12px">
-            <img src="{{ asset($package->photo) }}" class="pkg-photo" alt="">
+            <img src="{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}" class="pkg-photo" alt="{{ $package->name }}">
             <div style="flex:1;min-width:0">
               <div class="pkg-name">{{ $package->name }}</div>
               <span class="pkg-vip">VIP{{ $package->vip_level ?? 0 }}</span>
@@ -227,7 +236,7 @@ $packages = Package::where('status', 'active')->get();
         <div class="emi-card" onclick="buyDialog(
           '{{ $package->id }}',
           '{{ $package->name }}',
-          '{{ asset($package->photo) }}',
+          '{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}',
           '{{ price($package->price) }}',
           '{{ $package->validity }}',
           '{{ price($package->commission_with_avg_amount / $package->validity) }}',
@@ -239,7 +248,7 @@ $packages = Package::where('status', 'active')->get();
           'Renda Diária'
         )" style="cursor:pointer">
           <div class="flex-left" style="margin-bottom:12px">
-            <img src="{{ asset($package->photo) }}" class="pkg-photo" alt="">
+            <img src="{{ $harmonieThumbs[$package->name] ?? asset($package->photo) }}" class="pkg-photo" alt="{{ $package->name }}">
             <div style="flex:1;min-width:0">
               <div class="pkg-name">{{ $package->name }}</div>
               <span class="pkg-vip">VIP{{ $package->vip_level ?? 0 }}</span>
