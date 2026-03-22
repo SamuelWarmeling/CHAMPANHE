@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>Register</title>
+<title>Cadastro – EMI</title>
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -134,8 +134,8 @@ body {
   <!-- Header -->
   <div class="app-header">
     <img src="/images/logo-emi.png" alt="EMI Logo">
-    <div class="app-title">Create Account</div>
-    <div class="app-subtitle">Sign up to continue</div>
+    <div class="app-title">Criar Conta</div>
+    <div class="app-subtitle">Cadastre-se para continuar</div>
   </div>
 
   <!-- Card -->
@@ -146,28 +146,28 @@ body {
 
       <!-- Phone -->
       <div class="mb-3">
-        <label class="form-label">Phone Number</label>
+        <label class="form-label">Número de Telefone</label>
         <div class="input-group">
           <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-          <input type="text" name="phone" class="form-control" placeholder="Enter phone number">
+          <input type="text" name="phone" class="form-control" placeholder="Digite seu telefone">
         </div>
       </div>
 
       <!-- Password -->
       <div class="mb-3">
-        <label class="form-label">Password</label>
+        <label class="form-label">Senha</label>
         <div class="input-group">
           <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-          <input type="password" name="password" class="form-control" placeholder="Create password">
+          <input type="password" name="password" class="form-control" placeholder="Crie uma senha">
         </div>
       </div>
 
       <!-- Nickname -->
       <div class="mb-3">
-        <label class="form-label">Nickname</label>
+        <label class="form-label">Apelido</label>
         <div class="input-group">
           <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-          <input type="text" name="nickname" class="form-control" placeholder="Enter nickname">
+          <input type="text" name="nickname" class="form-control" placeholder="Digite seu apelido">
         </div>
       </div>
 
@@ -182,12 +182,12 @@ body {
 
       <!-- Submit -->
       <button type="submit" id="regBtn" class="btn btn-register w-100">
-        Register
+        Cadastrar
       </button>
 
       <div class="text-center mt-4 login-link">
-        Already have an account?
-        <a href="/login"><span>Login</span></a>
+        Já tem conta?
+        <a href="/login"><span>Entrar</span></a>
       </div>
 
     </form>
@@ -233,12 +233,12 @@ $('#registerForm').on('submit', function(e){
         btn.text('Sucesso! Redirecionando...');
         window.location.href = '/home';
       } else {
-        btn.prop('disabled', false).text('Register');
+        btn.prop('disabled', false).text('Cadastrar');
         showRegError((res && res.error) ? res.error : 'Erro ao registrar.');
       }
     },
     error: function(xhr){
-      btn.prop('disabled', false).text('Register');
+      btn.prop('disabled', false).text('Cadastrar');
       var msg = 'Erro ' + xhr.status + ': ';
       if (xhr.status === 419) {
         msg = 'Sessão expirada. Recarregue a página e tente novamente.';

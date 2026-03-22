@@ -14,7 +14,7 @@
     .withdraw-record { background: #fff; border-radius: 8px; border: 1px solid #EDE8DF; padding: 15px; margin-bottom: 15px; }
     .withdraw-record .item { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px; }
     .withdraw-record .label { color: #888; font-weight: bold; }
-    .withdraw-record .value { color: #A3B18A; font-weight: bold; }
+    .withdraw-record .value { color: #C8A96A; font-weight: bold; }
     .withdraw-record .value.fail { color: #B05030; }
     .withdraw-record .sub { font-size: 12px; color: #9A9087; margin-top: 2px; }
     .value.pending {
@@ -37,12 +37,12 @@
       <form class="layui-form" method="post" action="{{route('user.withdraw.request')}}">
         @csrf
         <h3 style="font-family: PingFang SC; font-weight: 400; font-size: 16px; color: #C8A96A;">
-          Withdrawal Balance：<span style="color:#C8A96A;font-weight: 700">{{ price(auth()->user()->balance) }}</span>
+          Saldo de Saque:<span style="color:#C8A96A;font-weight: 700">{{ price(auth()->user()->balance) }}</span>
         </h3>
 
         <div class="layui-form-item" style="margin-top: 20px">
           <div class="layui-input-wrap">
-            <input type="number" name="amount" min="{{ $minWithdraw }}" max="{{ $maxWithdraw }}" placeholder="Withdrawal amount {{ price($minWithdraw) }} - {{ price($maxWithdraw) }}" class="layui-input">
+            <input type="number" name="amount" min="{{ $minWithdraw }}" max="{{ $maxWithdraw }}" placeholder="Valor do saque {{ price($minWithdraw) }} - {{ price($maxWithdraw) }}" class="layui-input">
           </div>
         </div>
 
@@ -64,8 +64,8 @@
         </div>
 
         <div class="layui-form-item" style="margin-top: 30px">
-          <button type="submit" class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius" style="background:#0062E1;border: none;color: #FFFFFF!important;">
-            Apply Withdrawal
+          <button type="submit" class="layui-btn layui-btn-lg layui-btn-fluid layui-btn-radius" style="background:#C8A96A;border: none;color: #FFFFFF!important;">
+            Solicitar Saque
           </button>
         </div>
       </form>
@@ -90,7 +90,7 @@
     <img class="lianjie lianjie_left" src="/public/site/img/common/lianjie.png">
     <img class="lianjie lianjie_right" src="/public/site/img/common/lianjie.png">
     <div class="common_card_content">
-      <p class="common_explain">My Withdrawal Records</p>
+      <p class="common_explain">Meu Histórico de Saques</p>
       <div class="common_content" style="border-radius: 15px;">
           @foreach(\App\Models\Withdrawal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
         <div class="withdraw-record">

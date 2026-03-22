@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Login</title>
+<title>EMI – Enoteca Millesimi</title>
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -132,8 +132,8 @@ body {
   <!-- Header -->
   <div class="app-header">
     <img src="/images/logo-emi.png" alt="EMI Logo">
-    <div class="app-title">Welcome to EMI – Enoteca Millesimi</div>
-    <div class="app-subtitle">Sign in to your account</div>
+    <div class="app-title">Bem-vindo à EMI</div>
+    <div class="app-subtitle">Acesse sua conta</div>
   </div>
 
   <!-- Card -->
@@ -143,34 +143,34 @@ body {
 
       <!-- Phone -->
       <div class="mb-3">
-        <label class="form-label">Phone Number</label>
+        <label class="form-label">Número de Telefone</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="fa-solid fa-phone"></i>
           </span>
-          <input type="text" name="phone" required class="form-control" placeholder="Enter phone number">
+          <input type="text" name="phone" required class="form-control" placeholder="Digite seu telefone">
         </div>
       </div>
 
       <!-- Password -->
       <div class="mb-4">
-        <label class="form-label">Password</label>
+        <label class="form-label">Senha</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="fa-solid fa-lock"></i>
           </span>
-          <input type="password" name="password" required class="form-control" placeholder="Enter password">
+          <input type="password" name="password" required class="form-control" placeholder="Digite sua senha">
         </div>
       </div>
 
       <!-- Button -->
       <button type="submit" class="btn btn-login w-100">
-        Login
+        Entrar
       </button>
 
       <div class="text-center mt-4 register-link">
-        Don’t have an account?
-        <a href="/register"><span>Register</span></a>
+        Não tem conta?
+        <a href="/register"><span>Cadastro</span></a>
       </div>
     </form>
   </div>
@@ -204,12 +204,12 @@ $('#loginForm').on('submit', function(e){
         btn.text('Sucesso! Redirecionando...');
         window.location.href = '/home';
       } else {
-        btn.prop('disabled', false).text('Login');
+        btn.prop('disabled', false).text('Entrar');
         showError((res && res.error) ? res.error : 'Login failed.');
       }
     },
     error: function(xhr) {
-      btn.prop('disabled', false).text('Login');
+      btn.prop('disabled', false).text('Entrar');
       var msg = 'Invalid phone or password';
       try { var r = JSON.parse(xhr.responseText); if(r.error) msg = r.error; } catch(e){}
       showError(msg);

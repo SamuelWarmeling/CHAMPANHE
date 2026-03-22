@@ -30,20 +30,20 @@
         font-weight: 700;
         font-size: 14px;
         color: #FFFFFF;
-        background: #A3B18A;
+        background: #C8A96A;
       }
       .label {
         font-family: Arial, Arial;
         font-weight: 400;
         font-size: 14px;
-        color: #95FCBE;
+        color: #F8F6F2;
         line-height: 22px;
       }
       .value {
         font-family: Arial, Arial;
         font-weight: 700;
         font-size: 24px;
-        color: #FFFB00;
+        color: #C8A96A;
         line-height: 28px;
       }
       .common_card .title {
@@ -51,7 +51,7 @@
         font-family: Arial, Arial;
         font-weight: 700;
         font-size: 18px;
-        color: #0F7A5A;
+        color: #C8A96A;
         height: 30px;
         line-height: 30px;
         display: flex;

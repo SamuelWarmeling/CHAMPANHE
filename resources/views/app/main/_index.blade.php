@@ -2,7 +2,7 @@
  <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-  <title>Home_</title>
+  <title>Início – EMI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.5.7/css/layui.min.css">
   <link rel="stylesheet" href="/public/site/layui/css/layui.css"> 
   <link rel="stylesheet" href="/public/site/css/common.css?t=1.2"> 
@@ -11,58 +11,58 @@
  <body> 
   <div class="index_header"> 
    <div class="index_logo"> 
-    <img src="/images/logo-emi.png" style="width:80px; height:80px;border-radius:50px;"> 
+    <img src="/images/logo-emi.png" style="width:80px; height:80px;border-radius:0;"> 
     <a href="/notice" class="notice" style="line-height: 50px;"><img src="/public/site/img/index/notice.png" style="height: 24px;width: 24px;"></a> 
    </div> 
    <div class="index_banner" style="padding: 20px 25px;height: auto"> 
     <div class="title">
-     Main Wallet
-    </div> 
+     Carteira Principal
+    </div>
     <div class="label">
-     Your Balnace
+     Seu Saldo
     </div> 
     <div class="title" style="font-size: 26px;margin-top: 10px">
      {{price(auth()->user()->balance)}}
     </div> 
     <div class="flex_space" style="margin-top: 20px"> 
-     <a href="/recharge" class="wallet_btn" style="margin-right: 15px;"> <img src="/public/site/img/index/recharge.png"> Recharge </a> 
-     <a href="/withdraw" class="wallet_btn"> <img src="/public/site/img/index/withdraw.png"> Withdraw </a> 
+     <a href="/recharge" class="wallet_btn" style="margin-right: 15px;"> <img src="/public/site/img/index/recharge.png"> Depositar </a>
+     <a href="/withdraw" class="wallet_btn"> <img src="/public/site/img/index/withdraw.png"> Sacar </a> 
     </div> 
    </div> 
    <div class="index_menu"> 
     <div class="nav_active" style="text-align: center;width: 30%;"> 
-     <a href="/team"> <img src="/public/site/img/index/team.png" style="width: 50px;height: 50px;"> <p class="menu-title">Team</p> </a> 
+     <a href="/team"> <img src="/public/site/img/index/team.png" style="width: 50px;height: 50px;"> <p class="menu-title">Equipe</p> </a> 
     </div> 
     <div class="nav_active" style="text-align: center;width: 30%"> 
-     <a href="/my-personal-details"> <img src="/public/site/img/index/message.png" style="width: 50px;height: 50px;"> <p class="menu-title">Message</p> </a> 
+     <a href="/my-personal-details"> <img src="/public/site/img/index/message.png" style="width: 50px;height: 50px;"> <p class="menu-title">Mensagem</p> </a> 
     </div> 
     <div class="nav_active" style="text-align: center;width: 30%"> 
-     <a href="/orders"> <img src="/public/site/img/index/order.png" style="width: 50px;height: 50px;"> <p class="menu-title">Orders</p> </a> 
+     <a href="/orders"> <img src="/public/site/img/index/order.png" style="width: 50px;height: 50px;"> <p class="menu-title">Pedidos</p> </a> 
     </div> 
    </div> 
    <div class="reward_card"> 
     <div class="title"> 
      <p>Invitation</p> 
-     <a href="/team" style="font-size: 13px;color: #FFFFFF;line-height: 20px;"> My Team <img src="/public/site/img/common/right.png" style="width:16px; padding-right: 70px;display: inline-block"> </a> 
+     <a href="/team" style="font-size: 13px;color: #FFFFFF;line-height: 20px;"> Minha Equipe <img src="/public/site/img/common/right.png" style="width:16px; padding-right: 70px;display: inline-block"> </a> 
     </div> 
     <div class="content flex_left"> 
      <div style="background: #C8A96A;border-radius: 12px;padding: 7px;margin-right: 10px;"> 
       <img src="/public/site/img/index/reward.png" style="width: 34px;height: 34px;"> 
      </div> 
      <div style="width: 100%"> 
-      <p style="font-family: Arial Rounded MT Bold, Arial Rounded MT Bold;font-weight: 400;font-size: 14px;color: #FFFFFF;line-height: 16px;">Promotional Links</p> 
+      <p style="font-family: Arial Rounded MT Bold, Arial Rounded MT Bold;font-weight: 400;font-size: 14px;color: #FFFFFF;line-height: 16px;">Links Promocionais</p> 
       <p style="margin-top:10px;font-family: Arial, Arial;font-weight: 400;font-size: 12px;color: #ffffff;line-height: 14px;text-align: left;font-style: normal;text-transform: none;"> {{url('register').'?ref='.auth()->user()->ref_id}} </p> 
      </div> 
     </div> 
     <div class="flex_space" style="margin-top: 20px;"> 
-     <p class="invite_btn copy_link_btn" id="copy" onclick="copyLink('{{url('register').'?ref='.auth()->user()->ref_id}}')">Copy invitation link</p> 
+     <p class="invite_btn copy_link_btn" id="copy" onclick="copyLink('{{url('register').'?ref='.auth()->user()->ref_id}}')">Copiar link de convite</p> 
     </div> 
    </div> 
   </div> 
   <div class="index_main"> 
    <a href="/get-bonus" class="common_card invite" style="display:block;margin-bottom:15px;"> 
     <div class="title" style="color:#ffffff;font-weight:700;font-size: 18px;">
-     Treasure Chest
+     Baú de Recompensas
     </div> 
     <div class="desc" style="color:#ffffff;margin: 10px 0;">
      Copy your treasure code and redeem cash
@@ -72,19 +72,19 @@
     </div> </a> 
    <div class="common_card invite" style="margin-bottom:15px;"> 
     <div class="title" style="padding-left:0px;color:#ffffff;;font-weight:700;font-size: 18px;">
-     Sign in to receive rewards
-    </div> 
+     Faça check-in e ganhe recompensas
+    </div>
     <div class="desc" style="margin: 10px 0;;color:#ffffff">
      Daily check-in can receive R{{setting('checkin')}}
-    </div> 
+    </div>
     <div class="go_lottery layui-btn layui-btn-normal layui-btn-radius" id="sign_in" style="text-align:center;color:#ffffff" onclick="checkin()">
-      Sign in now 
-    </div> 
-    <a href="#" class="go_lottery layui-btn layui-btn-primary layui-btn-radius" style="text-align:center;color:#ffffff"> Sign In Record </a> 
+      Fazer Check-in
+    </div>
+    <a href="#" class="go_lottery layui-btn layui-btn-primary layui-btn-radius" style="text-align:center;color:#ffffff"> Histórico de Check-in </a> 
    </div> 
    <div class="reward_card" style="background: #C8A96A;height:100%;padding-bottom:20px;padding: 15px;"> 
     <div class="title"> 
-     <p>Quest Rewards</p> 
+     <p>Recompensas de Tarefas</p> 
     </div> 
 
 @php
@@ -116,7 +116,7 @@
       </div> 
       <div class="flex_space"> 
         <div class="layui-progress" style="width: 160px;height: 10px;margin-top: 5px"> 
-          <div class="layui-progress-bar layui-bg-blue"
+          <div class="layui-progress-bar"
                style="height: 10px;background: #E8DCC8;width: {{ $progress }}%;"></div> 
         </div> 
         <div class="value">
@@ -126,11 +126,11 @@
 
       <div style="margin-top: 10px;">
         @if($apply)
-          <button class="layui-btn layui-btn-sm" style="background: #00c48f; border-radius: 20px;" disabled>Claimed</button>
+          <button class="layui-btn layui-btn-sm" style="background: #9AA898; border-radius: 20px;" disabled>Resgatado</button>
         @elseif($isClaimable)
-          <a href="{{ route('user.received.reward', $task->id) }}" class="layui-btn layui-btn-sm" style="background: #FFE048; color: #000; border-radius: 20px;">Claim Now</a>
+          <a href="{{ route('user.received.reward', $task->id) }}" class="layui-btn layui-btn-sm" style="background: #C8A96A; color: #fff; border-radius: 20px;">Resgatar Agora</a>
         @else
-          <button class="layui-btn layui-btn-sm layui-btn-disabled" style="border-radius: 20px;">Not Ready</button>
+          <button class="layui-btn layui-btn-sm layui-btn-disabled" style="border-radius: 20px;">Não Disponível</button>
         @endif
       </div>
     </div> 

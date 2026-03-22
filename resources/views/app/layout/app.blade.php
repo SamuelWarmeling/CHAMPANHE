@@ -29,7 +29,7 @@
             font-size: 18px;
             text-align: right;
             margin-right: 8px;
-            color: #A3B18A;
+            color: #C8A96A;
         }
         ul.bottom-menu.list-unstyled.list-inline li img {
             width: 20px;
@@ -71,7 +71,7 @@
         </circle>
     </svg>
     <div>
-        <span>Loading...</span>
+        <span>Carregando...</span>
     </div>
 </div>
 {{--End loading--}}

@@ -130,10 +130,10 @@
             <p class="title">All</p>
         </div>
         <div class="nav" onclick="tabber(this, 2)" style="text-align: center;width: 30%" data-type="2" data-image="recharge">
-            <p class="title">Recharge</p>
+            <p class="title">Depósito</p>
         </div>
         <div class="nav" onclick="tabber(this, 3)" style="text-align: center;width: 30%" data-type="1" data-image="withdrawal">
-            <p class="title">Withdrawal</p>
+            <p class="title">Saque</p>
         </div>
     </div>
     <div class="bill_main" style="margin: 0px"> 
@@ -161,7 +161,7 @@
                         
                             <div class="right">
                                 <div class="item">
-                                    <p class="label">Recharge</p>
+                                    <p class="label">Depósito</p>
                                     <p class="value in">+ {{price($element->amount)}}</p>
                                 </div>
                                 <div class="item" style="margin-top: 5px;">
@@ -180,7 +180,7 @@
                         @foreach(\App\Models\Withdrawal::where('user_id', auth()->id())->orderByDesc('id')->get() as $element)
                             <div class="right">
                                 <div class="item">
-                                    <p class="label">Withdrawal</p>
+                                    <p class="label">Saque</p>
                                     <p class="value out">- R{{ number_format($element->amount, 2) }}</p>
                                 </div>
                                 <div class="item" style="margin-top: 5px;">
