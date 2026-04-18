@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>EMI – Conta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#c8a165', dark: '#b08a4e', light: '#ddb97a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .gold-header { background: linear-gradient(135deg, #c8a165 0%, #a07840 100%); }
+    .bottom-nav { box-shadow: 0 -2px 16px rgba(0,0,0,0.07); }
+    .center-fab { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); width: 52px; height: 52px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,99,235,0.4); border: 3px solid #fafaf9; }
+    body { background: #f5f5f4; }
+    .menu-row { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #f5f5f4; background: white; transition: background 0.1s; }
+    .menu-row:last-child { border-bottom: none; }
+    .menu-row:active { background: #faf9f8; }
+  </style>
+</head>
+<body class="flex justify-center min-h-screen">
+  <div class="w-full max-w-md min-h-screen bg-stone-50 flex flex-col pb-24">
+
+    <!-- HEADER / PROFILE CARD -->
+    <div class="gold-header px-4 pt-10 pb-8">
+      <div class="flex items-center gap-4 mb-5">
+        <!-- Avatar -->
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-white/25 flex items-center justify-center">
+            <svg class="w-9 h-9 text-white" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-300 rounded-full border-2 border-amber-600 flex items-center justify-center">
+            <span class="text-[8px] font-black text-amber-900">0</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <p class="text-white font-bold text-base">919******13</p>
+          <p class="text-amber-100 text-xs mt-0.5">ID: RUD5NZ</p>
+          <div class="flex items-center gap-1.5 mt-2">
+            <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">VIP 0</span>
+            <span class="bg-white/20 text-white text-[10px] font-medium px-2 py-0.5 rounded-full">Membro</span>
+          </div>
+        </div>
+        <button class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center active:scale-95 transition-transform">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"/></svg>
+        </button>
+      </div>
+
+      <!-- VIP Progress bar -->
+      <div class="bg-white/15 rounded-xl px-4 py-3">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-amber-100 text-xs font-medium">VIP 0</span>
+          <span class="text-white text-xs font-bold">Próximo: VIP 1</span>
+        </div>
+        <div class="w-full bg-white/20 rounded-full h-2 overflow-hidden">
+          <div class="h-2 rounded-full bg-white" style="width: 0%"></div>
+        </div>
+        <p class="text-amber-100 text-[10px] mt-1.5">Deposite MIL 50 para alcançar VIP 1</p>
+      </div>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <section class="px-4 mt-4 mb-4">
+      <div class="grid grid-cols-2 gap-3">
+        <button class="bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-2xl py-4 flex flex-col items-center gap-2 shadow-sm active:scale-95 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          <span class="text-sm font-bold">Depósito</span>
+        </button>
+        <button class="bg-white border border-stone-200 text-stone-700 rounded-2xl py-4 flex flex-col items-center gap-2 shadow-sm active:scale-95 transition-transform">
+          <svg class="w-6 h-6 text-stone-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"/></svg>
+          <span class="text-sm font-bold">Saque</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- QUICK GRID (4 icons) -->
+    <section class="px-4 mb-4">
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 grid grid-cols-4 divide-x divide-stone-100 py-1">
+        <!-- Meus Pedidos -->
+        <button class="flex flex-col items-center justify-center gap-1.5 py-3 active:bg-stone-50 transition-colors rounded-l-2xl">
+          <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"/></svg>
+          </div>
+          <span class="text-[10px] font-medium text-stone-600 text-center leading-tight">Meus<br>Pedidos</span>
+        </button>
+        <!-- Meu Extrato -->
+        <button class="flex flex-col items-center justify-center gap-1.5 py-3 active:bg-stone-50 transition-colors">
+          <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z"/></svg>
+          </div>
+          <span class="text-[10px] font-medium text-stone-600 text-center leading-tight">Meu<br>Extrato</span>
+        </button>
+        <!-- Minha Equipe -->
+        <button class="flex flex-col items-center justify-center gap-1.5 py-3 active:bg-stone-50 transition-colors">
+          <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+          </div>
+          <span class="text-[10px] font-medium text-stone-600 text-center leading-tight">Minha<br>Equipe</span>
+        </button>
+        <!-- Cartão Bancário -->
+        <button class="flex flex-col items-center justify-center gap-1.5 py-3 active:bg-stone-50 transition-colors rounded-r-2xl">
+          <div class="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"/></svg>
+          </div>
+          <span class="text-[10px] font-medium text-stone-600 text-center leading-tight">Cartão<br>Bancário</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- INCOME SUMMARY -->
+    <section class="px-4 mb-4">
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-4">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-1 h-5 rounded-full bg-amber-500"></div>
+          <p class="text-sm font-bold text-stone-800">Minha Renda</p>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between py-2 border-b border-stone-50">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+              <p class="text-sm text-stone-600">Saldo de Depósito</p>
+            </div>
+            <p class="text-sm font-bold text-stone-800">MIL 0</p>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-stone-50">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+              <p class="text-sm text-stone-600">Renda de Produtos</p>
+            </div>
+            <p class="text-sm font-bold text-stone-800">MIL 0</p>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-stone-50">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+              <p class="text-sm text-stone-600">Comissão de Equipe</p>
+            </div>
+            <p class="text-sm font-bold text-stone-800">MIL 0</p>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-stone-50">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+              <p class="text-sm text-stone-600">Bônus e Recompensas</p>
+            </div>
+            <p class="text-sm font-bold text-stone-800">MIL 0</p>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <p class="text-sm font-bold text-stone-800">Total Geral</p>
+            <p class="text-base font-extrabold text-amber-600">MIL 0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE MENU -->
+    <section class="px-4 mb-6">
+      <h2 class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3">Serviços</h2>
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
+
+        <!-- VIP -->
+        <div class="menu-row cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-amber-50 flex items-center justify-center mr-3 shrink-0">
+            <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm font-semibold text-stone-700 flex-1">VIP</span>
+          <svg class="w-4 h-4 text-stone-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </div>
+
+        <!-- Central de Ajuda -->
+        <div class="menu-row cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center mr-3 shrink-0">
+            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"/></svg>
+          </div>
+          <span class="text-sm font-semibold text-stone-700 flex-1">Central de Ajuda</span>
+          <svg class="w-4 h-4 text-stone-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </div>
+
+        <!-- Telegram -->
+        <div class="menu-row cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-sky-50 flex items-center justify-center mr-3 shrink-0">
+            <svg class="w-5 h-5 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </div>
+          <span class="text-sm font-semibold text-stone-700 flex-1">Telegram Oficial</span>
+          <svg class="w-4 h-4 text-stone-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </div>
+
+        <!-- Configurações -->
+        <div class="menu-row cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center mr-3 shrink-0">
+            <svg class="w-5 h-5 text-stone-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <span class="text-sm font-semibold text-stone-700 flex-1">Configurações</span>
+          <svg class="w-4 h-4 text-stone-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </div>
+
+        <!-- Sair -->
+        <div class="menu-row cursor-pointer" onclick="confirmLogout()">
+          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center mr-3 shrink-0">
+            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"/></svg>
+          </div>
+          <span class="text-sm font-semibold text-red-400 flex-1">Sair da Conta</span>
+          <svg class="w-4 h-4 text-red-200 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM NAV -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white bottom-nav z-50">
+      <div class="relative flex items-end justify-around px-2 pt-3 pb-2">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Início</span>
+        </a>
+        <a href="investir.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Investir</span>
+        </a>
+        <!-- FAB -->
+        <div class="relative w-16 flex justify-center" style="margin-top:-10px">
+          <a href="investir.html" class="center-fab active:scale-95 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+          </a>
+        </div>
+        <a href="equipe.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Equipe</span>
+        </a>
+        <!-- Conta (ACTIVE) -->
+        <a href="conta.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd"/></svg>
+          <span class="text-[10px] font-bold text-amber-500">Conta</span>
+          <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+        </a>
+      </div>
+      <div style="height: env(safe-area-inset-bottom, 0px);"></div>
+    </nav>
+
+  </div>
+
+  <!-- Logout modal -->
+  <div id="logout-modal" class="fixed inset-0 bg-black/40 z-50 flex items-end justify-center hidden">
+    <div class="bg-white w-full max-w-md rounded-t-3xl p-6">
+      <p class="text-base font-bold text-stone-800 text-center mb-1">Sair da Conta</p>
+      <p class="text-sm text-stone-400 text-center mb-6">Tem certeza que deseja sair?</p>
+      <div class="grid grid-cols-2 gap-3">
+        <button onclick="document.getElementById('logout-modal').classList.add('hidden')" class="py-3 rounded-xl bg-stone-100 text-stone-600 font-semibold text-sm active:scale-95 transition-transform">Cancelar</button>
+        <button class="py-3 rounded-xl bg-red-400 text-white font-bold text-sm active:scale-95 transition-transform">Confirmar Saída</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function confirmLogout() {
+      document.getElementById('logout-modal').classList.remove('hidden');
+    }
+    document.getElementById('logout-modal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

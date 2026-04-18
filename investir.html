@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>EMI – Investir</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#c8a165', dark: '#b08a4e', light: '#ddb97a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .gold-header { background: linear-gradient(135deg, #c8a165 0%, #a07840 100%); }
+    .bottom-nav { box-shadow: 0 -2px 16px rgba(0,0,0,0.07); }
+    .center-fab { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); width: 52px; height: 52px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,99,235,0.4); border: 3px solid #fafaf9; }
+    body { background: #f5f5f4; }
+    .plan-card { transition: transform 0.15s ease; }
+    .plan-card:active { transform: scale(0.98); }
+  </style>
+</head>
+<body class="flex justify-center min-h-screen">
+  <div class="w-full max-w-md min-h-screen bg-stone-50 flex flex-col pb-24">
+
+    <!-- HEADER -->
+    <div class="gold-header px-4 pt-10 pb-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-white text-xl font-bold">Lista de Investimentos</p>
+          <p class="text-amber-100 text-xs mt-0.5">Escolha seu plano e comece a crescer</p>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
+        </div>
+      </div>
+      <!-- Stats strip -->
+      <div class="grid grid-cols-3 gap-2 mt-4">
+        <div class="bg-white/15 rounded-xl px-3 py-2 text-center">
+          <p class="text-white text-base font-bold">9</p>
+          <p class="text-amber-100 text-[10px]">Planos Ativos</p>
+        </div>
+        <div class="bg-white/15 rounded-xl px-3 py-2 text-center">
+          <p class="text-white text-base font-bold">35%</p>
+          <p class="text-amber-100 text-[10px]">Retorno Máx.</p>
+        </div>
+        <div class="bg-white/15 rounded-xl px-3 py-2 text-center">
+          <p class="text-white text-base font-bold">5 dias</p>
+          <p class="text-amber-100 text-[10px]">Menor Duração</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="px-4 py-3 bg-stone-50">
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide">
+        <button class="shrink-0 px-4 py-1.5 rounded-full bg-amber-500 text-white text-xs font-bold shadow-sm">Todos</button>
+        <button class="shrink-0 px-4 py-1.5 rounded-full bg-white text-stone-500 text-xs font-medium border border-stone-200">Fixo</button>
+        <button class="shrink-0 px-4 py-1.5 rounded-full bg-white text-stone-500 text-xs font-medium border border-stone-200">Welfare</button>
+        <button class="shrink-0 px-4 py-1.5 rounded-full bg-white text-stone-500 text-xs font-medium border border-stone-200">Premium</button>
+      </div>
+    </div>
+
+    <!-- PLAN CARDS -->
+    <section class="px-4 space-y-4 pb-4">
+
+      <!-- Plan 1: EXP I -->
+      <div class="plan-card bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
+        <div class="flex items-center justify-between px-4 pt-4 pb-3 border-b border-stone-50">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center">
+              <span class="text-lg">🍾</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-sm font-bold text-stone-800">EXP I – Champagne Moët</p>
+              </div>
+              <div class="flex items-center gap-1.5 mt-0.5">
+                <span class="bg-amber-100 text-amber-700 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">VIP</span>
+                <span class="bg-stone-100 text-stone-500 text-[9px] font-medium px-2 py-0.5 rounded-full">Fixo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <div class="grid grid-cols-3 gap-2 mb-3">
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Duração</p>
+              <p class="text-sm font-bold text-stone-700">5 dias</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Retorno Diário</p>
+              <p class="text-sm font-bold text-emerald-600">1,5%</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Total</p>
+              <p class="text-sm font-bold text-amber-600">7,5%</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-stone-400">Valor do plano</p>
+              <p class="text-lg font-extrabold text-stone-800">MIL 50</p>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-600 active:scale-95 transition-all text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-sm">Investir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2: EXP II -->
+      <div class="plan-card bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
+        <div class="flex items-center justify-between px-4 pt-4 pb-3 border-b border-stone-50">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-rose-50 flex items-center justify-center">
+              <span class="text-lg">🍷</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-sm font-bold text-stone-800">EXP II – Barolo Reserva</p>
+              </div>
+              <div class="flex items-center gap-1.5 mt-0.5">
+                <span class="bg-amber-100 text-amber-700 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">VIP</span>
+                <span class="bg-stone-100 text-stone-500 text-[9px] font-medium px-2 py-0.5 rounded-full">Welfare</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <div class="grid grid-cols-3 gap-2 mb-3">
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Duração</p>
+              <p class="text-sm font-bold text-stone-700">10 dias</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Retorno Diário</p>
+              <p class="text-sm font-bold text-emerald-600">2,0%</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Total</p>
+              <p class="text-sm font-bold text-amber-600">20%</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-stone-400">Valor do plano</p>
+              <p class="text-lg font-extrabold text-stone-800">MIL 150</p>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-600 active:scale-95 transition-all text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-sm">Investir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 3: EXP III -->
+      <div class="plan-card bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden relative">
+        <!-- HOT badge -->
+        <div class="absolute top-3 right-3 bg-orange-400 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">HOT 🔥</div>
+        <div class="flex items-center justify-between px-4 pt-4 pb-3 border-b border-stone-50">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-violet-50 flex items-center justify-center">
+              <span class="text-lg">🥂</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-sm font-bold text-stone-800">EXP III – Brunello</p>
+              </div>
+              <div class="flex items-center gap-1.5 mt-0.5">
+                <span class="bg-amber-100 text-amber-700 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">VIP</span>
+                <span class="bg-violet-100 text-violet-600 text-[9px] font-medium px-2 py-0.5 rounded-full">Premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <div class="grid grid-cols-3 gap-2 mb-3">
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Duração</p>
+              <p class="text-sm font-bold text-stone-700">15 dias</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Retorno Diário</p>
+              <p class="text-sm font-bold text-emerald-600">2,5%</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Total</p>
+              <p class="text-sm font-bold text-amber-600">37,5%</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-stone-400">Valor do plano</p>
+              <p class="text-lg font-extrabold text-stone-800">MIL 500</p>
+            </div>
+            <button class="bg-gradient-to-r from-amber-500 to-orange-400 active:scale-95 transition-all text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-sm">Investir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 4: EXP IV -->
+      <div class="plan-card bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden relative">
+        <div class="absolute top-3 right-3 bg-gradient-to-r from-amber-400 to-amber-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">ELITE ⭐</div>
+        <div class="flex items-center justify-between px-4 pt-4 pb-3 border-b border-stone-50">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center">
+              <span class="text-lg">👑</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-sm font-bold text-stone-800">EXP IV – Grand Cru</p>
+              </div>
+              <div class="flex items-center gap-1.5 mt-0.5">
+                <span class="bg-amber-100 text-amber-700 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">VIP</span>
+                <span class="bg-amber-50 text-amber-700 text-[9px] font-medium px-2 py-0.5 rounded-full border border-amber-200">Elite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <div class="grid grid-cols-3 gap-2 mb-3">
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Duração</p>
+              <p class="text-sm font-bold text-stone-700">30 dias</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Retorno Diário</p>
+              <p class="text-sm font-bold text-emerald-600">3,5%</p>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-2.5 text-center">
+              <p class="text-[10px] text-stone-400 mb-0.5">Total</p>
+              <p class="text-sm font-bold text-amber-600">105%</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-stone-400">Valor do plano</p>
+              <p class="text-lg font-extrabold text-stone-800">MIL 2.000</p>
+            </div>
+            <button class="bg-gradient-to-r from-amber-500 to-amber-600 active:scale-95 transition-all text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-md">Investir</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BOTTOM NAV -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white bottom-nav z-50">
+      <div class="relative flex items-end justify-around px-2 pt-3 pb-2">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Início</span>
+        </a>
+        <!-- Investir (ACTIVE) -->
+        <a href="investir.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
+          <span class="text-[10px] font-bold text-amber-500">Investir</span>
+          <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+        </a>
+        <!-- FAB -->
+        <div class="relative w-16 flex justify-center" style="margin-top:-10px">
+          <a href="investir.html" class="center-fab active:scale-95 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+          </a>
+        </div>
+        <a href="equipe.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Equipe</span>
+        </a>
+        <a href="conta.html" class="flex flex-col items-center gap-0.5 pb-1 w-12">
+          <svg class="w-6 h-6 text-stone-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+          <span class="text-[10px] font-medium text-stone-400">Conta</span>
+        </a>
+      </div>
+      <div style="height: env(safe-area-inset-bottom, 0px);"></div>
+    </nav>
+
+  </div>
+</body>
+</html>
